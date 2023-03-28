@@ -1,19 +1,58 @@
-# Developer-Portfolio-2023
+# Laura Salgado Portfolio 2023
 
-https://laurasalgado.com
+https://laurasalgado.com <br>
 
-## nuxt3
+# Nuxt 3 Minimal Starter
 
-https://nuxt.com/
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## modules usage
+## Setup
 
-https://nuxt.com/modules/swiper
-https://nuxt.com/modules/seo-kit
-https://nuxt.com/modules/vue-transitions#usage-with-nuxt
-https://v1.image.nuxtjs.org/get-started
-https://nuxt.com/modules/icon
+Make sure to install the dependencies:
 
-## plugins usage
+```bash
+# yarn
+yarn install
 
-https://animejs.com/
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Modules
+
+https://nuxt.com/modules/swiper <br>
+https://nuxt.com/modules/seo-kit <br>
+https://nuxt.com/modules/vue-transitions#usage-with-nuxt <br>
+https://v1.image.nuxtjs.org/get-started <br>
+https://nuxt.com/modules/icon <br>
+
+## Plugins
+
+https://animejs.com/ <br>
