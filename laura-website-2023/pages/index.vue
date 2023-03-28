@@ -4,8 +4,6 @@
 
 <script setup></script>
 
-<style lang="scss" scoped>
-body {
-  background: purple;
-}
-</style>
+<!-- <style lang="scss" scoped>
+
+</style> -->
