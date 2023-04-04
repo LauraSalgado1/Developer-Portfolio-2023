@@ -1,0 +1,57 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.f-ui {
+  font-family: "Roboto", sans-serif;
+  color: $c-black;
+}
+
+.f-ui {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6.4rem;
+  margin: 8px 0 32px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+a {
+  color: $c-black;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.eyebrow {
+  font-size: 1.8rem;
+  margin: 0;
+  color: $c-gold-dark;
+  text-transform: uppercase;
+  font-weight: 300;
+}
