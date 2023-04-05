@@ -41,11 +41,18 @@ h5 {
 }
 
 a {
-  color: $c-black;
   text-decoration: underline;
   &:hover {
     text-decoration: none;
   }
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+  color: $c-black;
 }
 
 .eyebrow {

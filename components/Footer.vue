@@ -1,77 +1,112 @@
 <template>
   <footer id="siteFooter" class="site-footer">
-    <nuxt-img
-      src="/Laura-Salgado-Developer-Since-2016-light.svg"
-      alt="Home page of Laura Salgado Developer Since 2016"
-      width="400"
-    />
-    <p>&copy; Laura Salgado {{ year }}</p>
-    <p>
-      I built this site using
-      <nuxt-img src="/Nuxt3.png" alt="Nuxt 3" width="100" />
-    </p>
+    <div class="footer-wrapper">
+      <div class="left">
+        <div>
+          <nuxt-img
+            class="footer-logo"
+            src="/Laura-Salgado-Developer-Since-2016-light.svg"
+            alt="Home page of Laura Salgado Developer Since 2016"
+            width="400"
+            height="134"
+          />
 
-    <ul class="socials">
-      <li>
-        <a href="mailto:culham.laura@gmail.com" target="_blank" title="Email">
-          <Icon name="material-symbols:mail-outline" width="30" height="30" />
-          <span class="screen-reader-text">Email culham.laura@gmail.com</span>
-        </a>
-      </li>
+          <ul class="socials no-format">
+            <li>
+              <a
+                href="mailto:culham.laura@gmail.com"
+                target="_blank"
+                title="Email"
+              >
+                <Icon name="mdi-email" width="40" height="40" color="#fff" />
+                <span class="screen-reader-text"
+                  >Email culham.laura@gmail.com</span
+                >
+              </a>
+            </li>
 
-      <li>
-        <a
-          href="https://github.com/LauraSalgado1"
-          target="_blank"
-          title="GitHub"
-        >
-          <Icon name="logos:github-icon" width="30" height="30" />
-          <span class="screen-reader-text">Github</span>
-        </a>
-      </li>
+            <li>
+              <a
+                href="https://github.com/LauraSalgado1"
+                target="_blank"
+                title="GitHub"
+              >
+                <Icon name="mdi-github" width="40" height="40" color="#fff" />
+                <span class="screen-reader-text">Github</span>
+              </a>
+            </li>
 
-      <li>
-        <a
-          href="https://codepen.io/Laura_Salgado"
-          target="_blank"
-          title="CodePen"
-        >
-          <Icon name="logos:codepen-icon" width="30" height="30" />
-          <span class="screen-reader-text">CodePen</span>
-        </a>
-      </li>
+            <li>
+              <a
+                href="https://codepen.io/Laura_Salgado"
+                target="_blank"
+                title="CodePen"
+              >
+                <Icon name="mdi-codepen" width="40" height="40" color="#fff" />
+                <span class="screen-reader-text">CodePen</span>
+              </a>
+            </li>
 
-      <li>
-        <a
-          href="https://www.linkedin.com/in/laura-salgado-developer/"
-          target="_blank"
-          title="LinkedIn"
-        >
-          <Icon name="logos:linkedin-icon" width="30" height="30" />
-          <span class="screen-reader-text">Linked In</span>
-        </a>
-      </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/laura-salgado-developer/"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <Icon name="mdi-linkedin" width="40" height="40" color="#fff" />
+                <span class="screen-reader-text">Linked In</span>
+              </a>
+            </li>
 
-      <li>
-        <a href="https://www.etsy.com/shop/laurasalgadoart" target="_blank">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            class="black"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 384 512"
-            width="30"
-            height="30"
-            role="img"
+            <li>
+              <a
+                href="https://www.etsy.com/shop/laurasalgadoart"
+                target="_blank"
+                title="Etsy"
+              >
+                <Icon name="bxl:etsy" width="50" height="40" color="#fff" />
+                <span class="screen-reader-text">Etsy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-text-line">
+          <span class="copyright">&copy; Laura Salgado {{ year }}</span>
+          <nuxt-link class="about-me" to="/about">About Me</nuxt-link>
+          <span class="built-nuxt">
+            I built this site in
+            <nuxt-img src="/LogosNuxt.svg" alt="Nuxt" width="55" height="13" />
+            . &#8197;
+            <a
+              href="https://github.com/LauraSalgado1/Developer-Portfolio-2023"
+              target="_blank"
+              >Pop the hood</a
+            >
+            &#8197;on
+            <Icon
+              name="octicon:logo-github-16"
+              alt="github"
+              color="#fff"
+              width="55"
+            />
+            .</span
           >
-            <path
-              d="M384 348c-1.75 10.75-13.75 110-15.5 132-117.879-4.299-219.895-4.743-368.5 0v-25.5c45.457-8.948 60.627-8.019 61-35.25 1.793-72.322 3.524-244.143 0-322-1.029-28.46-12.13-26.765-61-36v-25.5c73.886 2.358 255.933 8.551 362.999-3.75-3.5 38.25-7.75 126.5-7.75 126.5H332C320.947 115.665 313.241 68 277.25 68h-137c-10.25 0-10.75 3.5-10.75 9.75V241.5c58 .5 88.5-2.5 88.5-2.5 29.77-.951 27.56-8.502 40.75-65.251h25.75c-4.407 101.351-3.91 61.829-1.75 160.25H257c-9.155-40.086-9.065-61.045-39.501-61.5 0 0-21.5-2-88-2v139c0 26 14.25 38.25 44.25 38.25H263c63.636 0 66.564-24.996 98.751-99.75H384z"
-            ></path>
-          </svg>
-          <span class="screen-reader-text">Etsy</span>
-        </a>
-      </li>
-    </ul>
+        </p>
+      </div>
+
+      <div class="right">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/3woPqZeMzNK241HNAri7xV?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -81,13 +116,113 @@ const year = new Date().getFullYear();
 
 <style lang="scss" scoped>
 .site-footer {
-  padding: 20px;
+  padding: 64px 32px 0;
   background: $c-black;
   color: $c-white;
+  @media (max-width: 700px) {
+    padding: 32px 32px 0;
+  }
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-gap: 96px;
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 250px;
+    grid-gap: 64px;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 48px;
+  position: relative;
+  left: -18px;
+  @media (max-width: 450px) {
+    left: -15px;
+  }
+}
+
+.footer-text-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  img {
+    margin: 0 2px 2px 5px;
+  }
+  svg {
+    margin-right: -4px;
+  }
+}
+
+.built-nuxt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copyright,
+.about-me {
+  margin-right: 48px;
+}
+
+.copyright,
+.about-me,
+.built-nuxt {
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 30px;
+  li {
+    margin: 0 8px;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  a {
+    display: block;
+  }
+  a:not(:first-child) {
+    padding: 5px;
+  }
+  a:first-child {
+    padding: 5px 5px 5px 0;
+  }
 }
 
 .socials svg,
 .socials path {
-  fill: #fff;
+  fill: $c-white;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+  color: $c-white;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.right {
+  margin-bottom: 32px;
 }
 </style>
