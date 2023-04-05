@@ -13,8 +13,11 @@
         </li>
         <li>
           <a href="mailto:culham.laura@gmail.com">
-            <Icon name="material-symbols:mail-outline" width="30" height="30" />
-            culham.laura@gmail.com
+            <Icon
+              name="mdi-email"
+              width="30"
+              height="20"
+            />culham.laura@gmail.com
           </a>
         </li>
       </ul>

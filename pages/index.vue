@@ -169,6 +169,20 @@
           <li>Instructed by Wes Bos</li>
         </ul>
 
+        <h3>
+          2017 Accessibility Workshop: Meet Your Screen Reader with Terry Brey
+        </h3>
+        <ul>
+          <li>Demonstrated his internet use via a screen reader</li>
+          <li>
+            Shared his experiences of attempting to use inaccessible websites
+          </li>
+          <li>
+            Offered context on how our development choices affect people
+            directly
+          </li>
+        </ul>
+
         <h3>2017 Web Animation Workshops</h3>
         <ul>
           <li>
@@ -389,5 +403,6 @@ section.intro {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  grid-gap: 30px;
 }
 </style>
