@@ -1,3 +1,8 @@
+body {
+  background: $c-white;
+  color: $c-black;
+}
+
 img,
 svg,
 iframe {
@@ -27,6 +32,10 @@ iframe {
   text-align: center;
   border-radius: 20px;
   font-size: 1.8rem;
+  &:hover {
+    color: $c-white;
+    text-decoration: underline;
+  }
 }
 
 .screen-reader-text {

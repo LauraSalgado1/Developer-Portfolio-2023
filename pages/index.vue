@@ -20,57 +20,18 @@
     <section>
       <div class="inner">
         <h2>Portfolio</h2>
+      </div>
 
-        <div>
-          <h3>Céline Dion</h3>
-
-          <ul class="tags">
-            <li>Custom WordPress theme</li>
-            <li>PHP</li>
-            <li>CSS Animation</li>
-          </ul>
-
-          <nuxt-link to="/portfolio/celine-dion" class="button"
-            >Project Details</nuxt-link
-          >
-
-          <!-- <a href="https://www.celinedion.com/" target="_blank" class="button">CelineDion.com</nuxt-link> -->
-        </div>
-
-        <div>
-          <h3>Mark Knopfler (Dire Straits)</h3>
-
-          <ul class="tags">
-            <li>Custom WordPress theme</li>
-            <li>PHP</li>
-            <li>Full website design (prior version)</li>
-            <li>
-              Coded
-              <a
-                href="https://www.markknopfler.com/legendsseries/"
-                target="_blank"
-                >custom product page</a
-              >
-            </li>
-          </ul>
-
-          <nuxt-link to="/portfolio/mark-knopfler" class="button"
-            >Project Details</nuxt-link
-          >
-        </div>
-
-        <div>
-          <h3>Animal Movie Generator</h3>
-
-          <ul class="tags">
-            <li>JS App</li>
-            <li>API / Ajax</li>
-          </ul>
-
-          <nuxt-link to="/portfolio/animal-movie-generator" class="button"
-            >Project Details</nuxt-link
-          >
-        </div>
+      <div class="swiper-outer">
+        <Swiper
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :slides-per-view="1.5"
+          :navigation="true"
+        >
+          <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
+            <CardPortfolio :portfolioItem="item" />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
 
@@ -96,6 +57,13 @@
         <ul>
           <li>Custom theming and child theming</li>
           <li>Customization of widely used plugins, e.g. WooCommerce</li>
+        </ul>
+
+        <h3>Code Basics</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 with Sass</li>
+          <li>JS including recent ES features</li>
         </ul>
 
         <h3>Design Tools</h3>
@@ -169,18 +137,13 @@
           <li>Instructed by Wes Bos</li>
         </ul>
 
-        <h3>
-          2017 Accessibility Workshop: Meet Your Screen Reader with Terry Brey
-        </h3>
+        <h3>2017 Accessibility Workshop</h3>
         <ul>
-          <li>Demonstrated his internet use via a screen reader</li>
           <li>
-            Shared his experiences of attempting to use inaccessible websites
+            Demonstrated his internet use via a screen reader and shared his
+            experiences of attempting to use inaccessible websites
           </li>
-          <li>
-            Offered context on how our development choices affect people
-            directly
-          </li>
+          <li>Instructed by Terry Brey</li>
         </ul>
 
         <h3>2017 Web Animation Workshops</h3>
@@ -225,7 +188,10 @@
 
         <h3>Good At</h3>
         <ul>
-          <li>Rolling with ongoing changes to The Plan, agile methodologies</li>
+          <li>
+            Rolling with ongoing changes to The Plan, agile methodologies,
+            iterative development
+          </li>
           <li>Fidelity to design specifics</li>
           <li>
             Tracking my time between projects and sharing daily updates on my
@@ -393,7 +359,33 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+const portfolioCards = [
+  {
+    title: "Céline Dion",
+    image: "",
+    tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
+    slug: "celine-dion",
+  },
+  {
+    title: "Mark Knopfler (Dire Straits)",
+    image: "",
+    tags: [
+      "Agency project",
+      "Custom WordPress theme",
+      "PHP",
+      "Full website design (prior version)",
+    ],
+    slug: "mark-knopfler",
+  },
+  {
+    title: "Animal Movie Generator",
+    image: "",
+    tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
+    slug: "animal-movie-generator",
+  },
+];
+</script>
 
 <style lang="scss" scoped>
 section.intro {
@@ -404,5 +396,10 @@ section.intro {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-gap: 30px;
+}
+
+.swiper-outer {
+  width: calc(1100px + ((100vw - 1100px) / 2));
+  margin: 0 0 0 auto;
 }
 </style>
