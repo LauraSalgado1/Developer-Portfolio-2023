@@ -57,7 +57,7 @@ const closeMenu = function () {
 
 <style lang="scss" scoped>
 .site-header {
-  padding: 20px;
+  padding: 20px 32px;
 }
 
 a {
