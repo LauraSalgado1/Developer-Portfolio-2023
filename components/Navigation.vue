@@ -1,23 +1,41 @@
 <template>
   <header id="siteHeader" class="site-header">
-    <nav>
-      <div>
-        <NuxtLink class="home" to="/"> home </NuxtLink>
-      </div>
+    <nav aria-label="main site navigation">
+      <ul class="no-format f-ui">
+        <li>
+          <NuxtLink class="home" to="/">
+            <nuxt-img
+              src="/Laura-Salgado-Developer-Since-2016.svg"
+              alt="Home page of Laura Salgado Developer Since 2016"
+              width="300"
+            />
+          </NuxtLink>
+        </li>
+        <li>
+          <a href="mailto:culham.laura@gmail.com">
+            <Icon name="material-symbols:mail-outline" width="30" height="30" />
+            culham.laura@gmail.com
+          </a>
+        </li>
+      </ul>
 
-      <button class="hamburger" :class="{ open: opened }" @click="toggleMenu()">
-        hamburger
-      </button>
+      <!-- <button
+          class="hamburger"
+          :class="{ open: opened }"
+          @click="toggleMenu()"
+        >
+          hamburger
+        </button> -->
 
-      <div class="mobile" :class="{ open: opened }">
-        <div class="main">
-          <div class="menuouter" :class="{ open: opened }">
-            <div class="menu" :class="{ open: opened }">
-              <NuxtLink @click.native="closeMenu()">page name</NuxtLink>
+      <!-- <div class="mobile" :class="{ open: opened }">
+          <div class="main">
+            <div class="menuouter" :class="{ open: opened }">
+              <div class="menu" :class="{ open: opened }">
+                <NuxtLink @click.native="closeMenu()">page name</NuxtLink>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
     </nav>
   </header>
 </template>
@@ -36,6 +54,27 @@ const closeMenu = function () {
 
 <style lang="scss" scoped>
 .site-header {
-  background: purple;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.home {
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 </style>
