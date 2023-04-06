@@ -64,7 +64,7 @@ const { courseItem } = defineProps(["courseItem"]);
   }
   .frequency {
     background: $c-grey-mid;
-    padding: 8px 16px;
+    padding: 8px 16px 6px;
     border-radius: 16px;
     display: inline-block;
     text-transform: uppercase;
