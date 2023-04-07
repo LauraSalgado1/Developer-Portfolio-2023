@@ -1,7 +1,5 @@
 <template>
   <div class="skill">
-    <!-- <nuxt-img/> -->
-
     <div class="header">
       <Icon
         v-if="skillItem.icon"
@@ -14,8 +12,6 @@
 
       <h3 v-html="skillItem.heading"></h3>
     </div>
-    <!-- <p class="p1" v-if="skillItem.paragraph" v-html="skillItem.paragraph"></p>
-    <p class="p1" v-if="skillItem.paragraph2" v-html="skillItem.paragraph2"></p> -->
 
     <ul>
       <li v-for="(listItem, index) in skillItem.list" :key="index">
@@ -34,15 +30,13 @@ const { skillItem } = defineProps(["skillItem"]);
   background: $c-white;
   padding: 32px;
   border-radius: 32px;
-  //   border: 2px solid $c-grey-mid;
   margin-bottom: 32px;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
+  @media (max-width: 750px) {
+    border-radius: 16px;
+  }
 }
 h3 {
   margin: 0;
-  //   text-align: right;
 }
 
 ul {

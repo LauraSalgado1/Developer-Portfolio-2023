@@ -25,8 +25,10 @@
       <div class="swiper-outer">
         <Swiper
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
-          :slides-per-view="1.3"
+          :slides-per-view="1.4"
           :navigation="true"
+          :space-between="32"
+          :grab-cursor="true"
         >
           <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
             <CardPortfolio :portfolioItem="item" />
@@ -73,7 +75,7 @@
 
     <section class="agency-skills">
       <div class="inner">
-        <p class="eyebrow">On-the-job education</p>
+        <p class="eyebrow">On-the-job learning</p>
         <h2>7 Years of Figuring It Out</h2>
 
         <div class="text-row">
@@ -94,44 +96,113 @@
         <div class="lists-row">
           <div>
             <h3>New(ish) Skills</h3>
-            <ul>
-              <li>Content creation</li>
-              <li>UX/UI design and development</li>
-              <li>Logo and identity fundamentals</li>
+            <ul class="no-format">
               <li>
-                Regular practice at building forms, handling form data in Nuxt,
-                and connecting submissions to a WordPress admin using the
-                Gravity Forms API
+                <Icon
+                  name="ic:outline-mode-edit-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Content creation
               </li>
-              <li>Real comfortable working with ISO date formatting</li>
+              <li>
+                <Icon
+                  name="majesticons:ux-circle-line"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                UX/UI design and development
+              </li>
+              <li>
+                <Icon
+                  name="material-symbols:grid-on-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Logo and identity fundamentals
+              </li>
+              <li>
+                <Icon
+                  name="mdi:form-textbox"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Practiced at handling form data in Nuxt, connecting submissions
+                to a WordPress admin using the Gravity Forms API
+              </li>
+              <li>
+                <Icon
+                  name="material-symbols:calendar-month"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Real comfortable working with ISO date formatting
+              </li>
             </ul>
           </div>
 
           <div>
             <h3>Good At</h3>
-            <ul>
+            <ul class="no-format">
               <li>
-                Rolling with ongoing changes to The Plan, agile methodologies,
+                <Icon
+                  name="material-symbols:change-circle-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Rolling with ongoing changes to the plan, agile methodologies,
                 iterative development
               </li>
-              <li>Fidelity to design specifics</li>
               <li>
+                <Icon
+                  name="tabler:ruler"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Fidelity to design specifics
+              </li>
+              <li>
+                <Icon
+                  name="ic:sharp-access-time"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
                 Tracking my time between projects and sharing daily updates on
                 my work
               </li>
               <li>
+                <Icon
+                  name="bi:chat-right-heart"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
                 Talking about technical details directly with clients in ways
                 that non-technical people can understand
               </li>
               <li>
-                Using the devs around me to talk out my problems, asking
-                questions when I get stuck
-              </li>
-              <li>
-                Encouraging other devs to talk to me when they get stuck, and
-                figuring out what I would do in their shoes (especially good for
-                me if the thing they're stuck on is ACF in WordPress or PHP
-                customization of themes and plugins)
+                <Icon
+                  name="icon-park-outline:duck"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Both sides of rubber ducking with teammates
               </li>
             </ul>
           </div>
@@ -171,13 +242,13 @@
 const portfolioCards = [
   {
     title: "Céline Dion",
-    image: "",
+    image: "/celine-dion-home.jpg",
     tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
     slug: "celine-dion",
   },
   {
     title: "Mark Knopfler (Dire Straits)",
-    image: "",
+    image: "/mark-knopfler-home.jpg",
     tags: [
       "Agency project",
       "Custom WordPress theme",
@@ -188,7 +259,7 @@ const portfolioCards = [
   },
   {
     title: "Animal Movie Generator",
-    image: "",
+    image: "/animal-movie-generator-home.jpg",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
     slug: "animal-movie-generator",
   },
@@ -423,17 +494,30 @@ const artCards = [
 <style lang="scss" scoped>
 section {
   padding: 96px 0 64px;
+  @media (max-width: 750px) {
+    padding: 64px 0 48px;
+  }
 }
 .intro-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-gap: 30px;
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column-reverse;
+    img {
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
 }
 
 section.skills,
 section.education {
-  background: $c-grey-light-extra;
+  background: $c-grey-mid;
+  background: $c-yellow-light-extra;
+  background: $c-grey-background;
   h2 {
     text-align: center;
   }
@@ -442,15 +526,29 @@ section.education {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  width: 868px;
+  width: 836px;
+  max-width: calc(100% + 64px);
   transform: translateX(-32px);
+  @media (max-width: 750px) {
+    transform: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+    li:nth-child(even) {
+      transform: translateX(-64px);
+    }
+  }
 }
 
 .background {
   width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 32px;
   padding: 32px 0 0;
+  @media (max-width: 750px) {
+    padding: 32px 32px 0;
+    border-radius: 16px;
+  }
   &.yellow {
     background-color: $c-yellow-light-extra;
   }
@@ -475,18 +573,19 @@ section.agency-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background: $c-grey-light-extra;
-    padding: 32px;
+    padding: 64px;
     border-radius: 32px;
-    gap: 64px;
+    gap: 32px;
     > div {
       padding: 32px;
     }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 0;
+    li {
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
     }
-    li:not(:last-child) {
-      margin-bottom: 10px;
+    li:last-child {
+      margin-bottom: 0;
     }
     h3 {
       margin: 0 0 32px;
@@ -515,38 +614,66 @@ section.has-swiper {
 }
 
 .swiper-outer {
-  width: calc(1100px + ((100vw - 1100px) / 2));
+  width: calc(1072px + ((100vw - 1072px) / 2));
   margin: 0 0 0 auto;
+  padding-right: calc((100vw - 1072px) / 2);
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  @media (max-width: 500px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   :deep(.swiper, .swiper-container) {
     overflow: visible;
   }
   :deep(.swiper-button-prev:after) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   :deep(.swiper-button-next:after) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   :deep(.swiper-button-prev) {
-    right: calc((100vw - 950px) / 2);
+    right: 64px;
     color: $c-black;
     left: auto;
-    top: -69px;
-    width: 48px;
-    height: 48px;
+    top: -80px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
-    padding-right: 4px;
+    padding-right: 3px;
+    @media (max-width: 750px) {
+      width: 32px;
+      height: 32px;
+      top: -72px;
+    }
+    &:hover {
+      background: $c-black;
+      color: $c-white;
+    }
   }
   :deep(.swiper-button-next) {
-    right: calc((100vw - 1100px) / 2);
+    right: 0;
     color: $c-black;
     left: auto;
-    top: -69px;
-    width: 48px;
-    height: 48px;
+    top: -80px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
-    padding-left: 4px;
+    padding-left: 3px;
+    @media (max-width: 750px) {
+      width: 32px;
+      height: 32px;
+      top: -72px;
+    }
+    &:hover {
+      background: $c-black;
+      color: $c-white;
+    }
   }
 }
 </style>

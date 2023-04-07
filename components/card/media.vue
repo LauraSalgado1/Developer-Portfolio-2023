@@ -44,6 +44,7 @@ const { mediaItem } = defineProps(["mediaItem"]);
   }
   .author {
     color: $c-black-light;
+    margin-top: 0;
   }
   .more {
     display: flex;

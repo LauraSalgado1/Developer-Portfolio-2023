@@ -18,7 +18,6 @@
       </p>
     </div>
   </div>
-  <!-- <div class="line"></div> -->
 </template>
 
 <script setup>
@@ -46,13 +45,6 @@ const { courseItem } = defineProps(["courseItem"]);
   }
 }
 
-.line {
-  width: 4px;
-  height: 32px;
-  background: $c-yellow-light-extra;
-  margin: 0 auto;
-}
-
 .course {
   padding: 32px;
   margin: 0 auto;
@@ -68,7 +60,7 @@ const { courseItem } = defineProps(["courseItem"]);
     margin: 0 0 10px;
   }
   .frequency {
-    background: $c-grey-mid;
+    background: $c-grey-light;
     padding: 8px 16px 6px;
     border-radius: 16px;
     display: inline-block;

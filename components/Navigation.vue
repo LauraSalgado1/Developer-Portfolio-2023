@@ -13,11 +13,11 @@
         </li>
         <li>
           <a href="mailto:culham.laura@gmail.com">
-            <Icon
-              name="mdi-email"
-              width="30"
-              height="20"
-            />culham.laura@gmail.com
+            <Icon name="mdi-email" width="30" height="20" /><span
+              class="address"
+              >culham.laura@gmail.com</span
+            >
+            <span class="email">Email</span>
           </a>
         </li>
       </ul>
@@ -29,11 +29,17 @@
 
 <style lang="scss" scoped>
 .site-header {
-  padding: 20px 64px;
+  padding: 32px 64px 0;
+  @media (max-width: 750px) {
+    padding: 16px 32px 0;
+  }
 }
 
 a {
   text-decoration: none;
+  @media (max-width: 750px) {
+    // font-size: 1rem;
+  }
   &:hover {
     text-decoration: underline;
   }
@@ -51,8 +57,37 @@ nav ul {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  li:first-child {
+    position: relative;
+    left: -15px;
+    @media (max-width: 750px) {
+      width: 180px;
+      left: -8px;
+    }
+  }
+
   li:last-child {
     margin-top: 16px;
+    @media (max-width: 750px) {
+      margin-top: 4px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.email {
+  display: none;
+  @media (max-width: 750px) {
+    display: inline-block;
+  }
+}
+.address {
+  @media (max-width: 750px) {
+    display: none;
   }
 }
 </style>

@@ -2,8 +2,6 @@
   <div class="group">
     <h3 class="year" v-html="group.year"></h3>
 
-    <!-- <div class="line"></div> -->
-
     <div class="course-wrapper">
       <CardEducation
         v-for="course in group.courses"
@@ -33,16 +31,9 @@ const { group } = defineProps(["group"]);
   width: 150px;
 }
 
-.line {
-  width: 4px;
-  height: 32px;
-  background: $c-yellow-light-extra;
-  margin: 0 auto;
-}
-
 .course-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 418px);
+  grid-template-columns: repeat(2, 402px);
   gap: 32px;
   padding: 0 32px 0;
   transform: translate(-64px, -60px);
