@@ -21,43 +21,15 @@
           </a>
         </li>
       </ul>
-
-      <!-- <button
-          class="hamburger"
-          :class="{ open: opened }"
-          @click="toggleMenu()"
-        >
-          hamburger
-        </button> -->
-
-      <!-- <div class="mobile" :class="{ open: opened }">
-          <div class="main">
-            <div class="menuouter" :class="{ open: opened }">
-              <div class="menu" :class="{ open: opened }">
-                <NuxtLink @click.native="closeMenu()">page name</NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div> -->
     </nav>
   </header>
 </template>
 
-<script setup>
-const opened = ref(false);
-
-const toggleMenu = function () {
-  opened.value = !opened.value;
-};
-
-const closeMenu = function () {
-  opened.value = false;
-};
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .site-header {
-  padding: 20px 32px;
+  padding: 20px 64px;
 }
 
 a {
@@ -77,7 +49,10 @@ a {
 nav ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  li:last-child {
+    margin-top: 16px;
+  }
 }
 </style>

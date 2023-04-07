@@ -72,7 +72,9 @@
         </div>
         <p class="footer-text-line">
           <span class="copyright">&copy; Laura Salgado {{ year }}</span>
+          <span>&#8226;</span>
           <nuxt-link class="about-me" to="/about">About Me</nuxt-link>
+          <span>&#8226;</span>
           <span class="built-nuxt">
             I built this site in
             <nuxt-img src="/LogosNuxt.svg" alt="Nuxt" width="55" height="13" />
@@ -116,7 +118,7 @@ const year = new Date().getFullYear();
 
 <style lang="scss" scoped>
 .site-footer {
-  padding: 64px 32px 0;
+  padding: 64px 64px 0;
   background: $c-black;
   color: $c-white;
   margin-top: 64px;
@@ -152,7 +154,7 @@ const year = new Date().getFullYear();
 .footer-text-line {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 16px;
   img {
@@ -172,7 +174,12 @@ const year = new Date().getFullYear();
 
 .copyright,
 .about-me {
-  margin-right: 48px;
+  margin-right: 24px;
+}
+
+.built-nuxt,
+.about-me {
+  margin-left: 24px;
 }
 
 .copyright,

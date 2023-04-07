@@ -329,7 +329,7 @@ const educationCards = [
         school: "FITC",
         frequency: "1 day workshop",
         courseName:
-          "(Upcoming) <br/>DDC Super Workshop: Graphic Design and Logo Design",
+          "-Upcoming- <br/>DDC Super Workshop: Graphic Design and Logo Design",
         instructors: ["Aaron Draplin"],
       },
     ],
@@ -467,7 +467,7 @@ section.agency-skills {
     max-width: 100%;
   }
   .text-row {
-    width: 600px;
+    width: 560px;
     max-width: 100%;
     margin-bottom: 64px;
   }
