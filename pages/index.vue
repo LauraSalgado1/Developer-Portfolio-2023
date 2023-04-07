@@ -39,7 +39,7 @@
       <div class="inner-narrow">
         <h2>Tech Skills & Tools</h2>
 
-        <div class="background">
+        <div class="background yellow">
           <div class="skills-lists">
             <ul class="no-format skills-list">
               <li v-for="(item, index) in skillCardsLeft" :key="index">
@@ -58,14 +58,16 @@
     </section>
 
     <section class="education">
-      <div class="inner">
+      <div class="inner-narrow">
         <h2>In-person Education</h2>
 
-        <Timeline
-          v-for="group in educationCards"
-          :key="group.year"
-          :group="group"
-        />
+        <div class="background grey">
+          <Timeline
+            v-for="group in educationCards"
+            :key="group.year"
+            :group="group"
+          />
+        </div>
       </div>
     </section>
 
@@ -204,7 +206,7 @@ const skillCardsLeft = [
     heading: "Headless CMS",
     paragraph: "",
     paragraph2: "",
-    icon: "game-icons:guillotine",
+    icon: "game-icons:pumpkin-lantern",
     list: ["Strapi", "WordPress REST API", "WPGraphQL"],
   },
   {
@@ -222,14 +224,11 @@ const skillCardsLeft = [
     paragraph: "",
     paragraph2: "",
     icon: "ph:code-bold",
-    list: ["HTML5", "CSS3 with Sass", "JS including recent ES features"],
-  },
-  {
-    heading: "Design Tools",
-    paragraph: "",
-    paragraph2: "",
-    icon: "iconoir:design-nib",
-    list: ["Figma", "Adobe", "Sketch"],
+    list: [
+      "HTML5",
+      "CSS3 with Sass",
+      "Vanilla JS including recent ES features",
+    ],
   },
 ];
 
@@ -245,22 +244,30 @@ const skillCardsRight = [
       "SSH to deploy code from GitHub",
       "MYCLI for MySQL for copying databases",
       "SCP to move databases",
-      "Managing and configuring Node.js servers",
+      "Configure and manage Node.js servers",
       "PM2 to control app processes",
       "NGINX error logs to troubleshoot WordPress",
     ],
   },
   {
     heading: "Accessibility",
-    paragraph:
-      "I'm an advocate of correct semantic HTML and building with inclusivity in mind.",
+    paragraph: ".",
     paragraph2:
       "I love getting to share with my teammates how easy it is to achieve big accessibility wins by making small changes.",
-    icon: "ion:accessibility",
+    icon: "ion:accessibility-outline",
     list: [
-      "My work is built to meet WCAG 2.1 AA level accessibility requirements.",
-      "I’ve completed many accessibility improvement projects on existing sites, mostly using WAVE by WebAIM and Google Lighthouse as guidance.",
+      "Advocate of correct semantic HTML and building with inclusivity in mind",
+      "My work is built to WCAG 2.1 AA level accessibility requirements",
+      "Completed many accessibility improvement projects on existing sites",
+      "I love getting to share with my teammates how easy it is to achieve huge accessibility wins with small changes",
     ],
+  },
+  {
+    heading: "Design Tools",
+    paragraph: "",
+    paragraph2: "",
+    icon: "iconoir:design-nib",
+    list: ["Figma", "Adobe", "Sketch"],
   },
 ];
 
@@ -316,12 +323,13 @@ const educationCards = [
     ],
   },
   {
-    year: "2023<br/>Upcoming",
+    year: "2023",
     courses: [
       {
         school: "FITC",
         frequency: "1 day workshop",
-        courseName: "DDC Super Workshop: Graphic Design and Logo Design",
+        courseName:
+          "(Upcoming) <br/>DDC Super Workshop: Graphic Design and Logo Design",
         instructors: ["Aaron Draplin"],
       },
     ],
@@ -439,11 +447,18 @@ section.education {
 }
 
 .background {
-  background-color: $c-yellow-light-extra;
   width: 800px;
   margin: 0 auto;
   border-radius: 32px;
   padding: 32px 0 0;
+  &.yellow {
+    background-color: $c-yellow-light-extra;
+  }
+  &.grey {
+    background-color: $c-grey-mid;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 section.agency-skills {

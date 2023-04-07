@@ -14,8 +14,8 @@
 
       <h3 v-html="skillItem.heading"></h3>
     </div>
-    <p class="p1" v-if="skillItem.paragraph" v-html="skillItem.paragraph"></p>
-    <p class="p1" v-if="skillItem.paragraph2" v-html="skillItem.paragraph2"></p>
+    <!-- <p class="p1" v-if="skillItem.paragraph" v-html="skillItem.paragraph"></p>
+    <p class="p1" v-if="skillItem.paragraph2" v-html="skillItem.paragraph2"></p> -->
 
     <ul>
       <li v-for="(listItem, index) in skillItem.list" :key="index">
@@ -57,7 +57,7 @@ li {
 .header {
   display: grid;
   grid-template-columns: 64px 1fr;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 32px;
   align-items: center;
 }

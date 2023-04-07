@@ -1,8 +1,10 @@
 <template>
-  <div class="education">
-    <div class="course">
+  <div class="course">
+    <div>
       <h4 v-html="courseItem.courseName"></h4>
       <p class="frequency" v-html="courseItem.frequency"></p>
+    </div>
+    <div>
       <p class="school" v-html="courseItem.school"></p>
       <p class="instructors">
         Instructed by:
@@ -15,8 +17,8 @@
         </span>
       </p>
     </div>
-    <div class="line"></div>
   </div>
+  <!-- <div class="line"></div> -->
 </template>
 
 <script setup>
@@ -52,12 +54,15 @@ const { courseItem } = defineProps(["courseItem"]);
 }
 
 .course {
-  width: 360px;
   padding: 32px;
   margin: 0 auto;
   text-align: center;
   background: $c-white;
-  border-radius: 32px;
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h4 {
     margin: 0 0 10px;

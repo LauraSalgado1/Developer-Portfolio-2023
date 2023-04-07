@@ -2,13 +2,15 @@
   <div class="group">
     <h3 class="year" v-html="group.year"></h3>
 
-    <div class="line"></div>
+    <!-- <div class="line"></div> -->
 
-    <CardEducation
-      v-for="course in group.courses"
-      :key="course.courseName"
-      :courseItem="course"
-    />
+    <div class="course-wrapper">
+      <CardEducation
+        v-for="course in group.courses"
+        :key="course.courseName"
+        :courseItem="course"
+      />
+    </div>
   </div>
 </template>
 
@@ -18,12 +20,17 @@ const { group } = defineProps(["group"]);
 
 <style scoped lang="scss">
 .year {
-  text-align: center;
+  text-align: left;
   background: $c-yellow-light-extra;
   display: inline-block;
   margin: 0 auto;
-  padding: 16px;
-  border-radius: 16px;
+  padding: 16px 16px 16px 32px;
+  border-radius: 16px 0px 0px 16px;
+  position: sticky;
+  top: 0px;
+  transform: translateX(-100%);
+  z-index: 0;
+  width: 150px;
 }
 
 .line {
@@ -33,11 +40,16 @@ const { group } = defineProps(["group"]);
   margin: 0 auto;
 }
 
-.group {
-  text-align: center;
+.course-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 418px);
+  gap: 32px;
+  padding: 0 32px 0;
+  transform: translate(-64px, -60px);
+  margin-bottom: -64px;
 }
 
-.group:last-child :deep(.education .line) {
-  display: none;
+.group {
+  padding-bottom: 32px;
 }
 </style>
