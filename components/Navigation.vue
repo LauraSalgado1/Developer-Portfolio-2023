@@ -33,13 +33,13 @@
   @media (max-width: 750px) {
     padding: 16px 32px 0;
   }
+  @media (max-width: 370px) {
+    padding: 16px 16px 0;
+  }
 }
 
 a {
   text-decoration: none;
-  @media (max-width: 750px) {
-    // font-size: 1rem;
-  }
   &:hover {
     text-decoration: underline;
   }

@@ -344,13 +344,32 @@ const skillCardsRight = [
 
 const educationCards = [
   {
-    year: "2015",
+    year: "2023",
     courses: [
       {
-        school: "HackerYou (now Juno College)",
-        frequency: "Part-time",
-        courseName: "Intro to Web Development",
-        instructors: ["Haris Mahmood"],
+        school: "FITC",
+        frequency: "1 day workshop",
+        courseName:
+          "-Upcoming- <br/>DDC Super Workshop: Graphic Design and Logo Design",
+        instructors: ["Aaron Draplin"],
+      },
+    ],
+  },
+  {
+    year: "2017",
+    courses: [
+      {
+        school: "HackerYou (now Juno College) Accessibility Club",
+        frequency: "Evening workshop",
+        courseName: "Meet Your Screen Reader",
+        instructors: ["Terry Brey"],
+      },
+      {
+        school: "Web Animation Workshops",
+        frequency: "2 day workshop",
+        courseName:
+          "Web Animation 0 to 60: CSS, JavaScript, and SVG Essentials",
+        instructors: ["Sarah Drasner", "Val&nbsp;Head"],
       },
     ],
   },
@@ -376,32 +395,13 @@ const educationCards = [
     ],
   },
   {
-    year: "2017",
+    year: "2015",
     courses: [
       {
-        school: "HackerYou (now Juno College) Accessibility Club",
-        frequency: "Evening workshop",
-        courseName: "Meet Your Screen Reader",
-        instructors: ["Terry Brey"],
-      },
-      {
-        school: "Web Animation Workshops",
-        frequency: "2 day workshop",
-        courseName:
-          "Web Animation 0 to 60: CSS, JavaScript, and SVG Essentials",
-        instructors: ["Sarah Drasner", "Val&nbsp;Head"],
-      },
-    ],
-  },
-  {
-    year: "2023",
-    courses: [
-      {
-        school: "FITC",
-        frequency: "1 day workshop",
-        courseName:
-          "-Upcoming- <br/>DDC Super Workshop: Graphic Design and Logo Design",
-        instructors: ["Aaron Draplin"],
+        school: "HackerYou (now Juno College)",
+        frequency: "Part-time",
+        courseName: "Intro to Web Development",
+        instructors: ["Haris Mahmood"],
       },
     ],
   },
@@ -537,25 +537,43 @@ section.education {
       transform: translateX(-64px);
     }
   }
+  @media (max-width: 370px) {
+    max-width: calc(100% + 32px);
+    li:nth-child(even) {
+      transform: translateX(-32px);
+    }
+  }
 }
 
 .background {
-  width: 800px;
   max-width: 100%;
   margin: 0 auto;
   border-radius: 32px;
   padding: 32px 0 0;
+  position: relative;
+  z-index: 1;
   @media (max-width: 750px) {
     padding: 32px 32px 0;
     border-radius: 16px;
   }
+  @media (max-width: 370px) {
+    padding: 32px 16px 0;
+  }
+
   &.yellow {
     background-color: $c-yellow-light-extra;
   }
   &.grey {
     background-color: $c-grey-mid;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    @media (max-width: 970px) {
+      width: calc(100% - 49px);
+      margin: 0 0 0 auto;
+    }
+    @media (max-width: 750px) {
+      width: 100%;
+    }
   }
 }
 
@@ -575,9 +593,15 @@ section.agency-skills {
     background: $c-grey-light-extra;
     padding: 64px;
     border-radius: 32px;
-    gap: 32px;
-    > div {
+    gap: 64px;
+    @media (max-width: 992px) {
+      padding: 64px 32px;
+      gap: 48px;
+    }
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
       padding: 32px;
+      border-radius: 16px;
     }
     li {
       margin-bottom: 32px;
@@ -601,12 +625,18 @@ section.media {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .art-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 section.has-swiper {
@@ -625,6 +655,10 @@ section.has-swiper {
   @media (max-width: 500px) {
     padding-left: 32px;
     padding-right: 32px;
+  }
+  @media (max-width: 370px) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
   :deep(.swiper, .swiper-container) {
     overflow: visible;
