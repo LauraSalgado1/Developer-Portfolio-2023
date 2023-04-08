@@ -13,51 +13,29 @@
         </li>
         <li>
           <a href="mailto:culham.laura@gmail.com">
-            <Icon
-              name="mdi-email"
-              width="30"
-              height="20"
-            />culham.laura@gmail.com
+            <Icon name="mdi-email" width="30" height="20" /><span
+              class="address"
+              >culham.laura@gmail.com</span
+            >
+            <span class="email">Email</span>
           </a>
         </li>
       </ul>
-
-      <!-- <button
-          class="hamburger"
-          :class="{ open: opened }"
-          @click="toggleMenu()"
-        >
-          hamburger
-        </button> -->
-
-      <!-- <div class="mobile" :class="{ open: opened }">
-          <div class="main">
-            <div class="menuouter" :class="{ open: opened }">
-              <div class="menu" :class="{ open: opened }">
-                <NuxtLink @click.native="closeMenu()">page name</NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div> -->
     </nav>
   </header>
 </template>
 
-<script setup>
-const opened = ref(false);
-
-const toggleMenu = function () {
-  opened.value = !opened.value;
-};
-
-const closeMenu = function () {
-  opened.value = false;
-};
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .site-header {
-  padding: 20px 32px;
+  padding: 32px 64px 0;
+  @media (max-width: 750px) {
+    padding: 16px 32px 0;
+  }
+  @media (max-width: 370px) {
+    padding: 16px 16px 0;
+  }
 }
 
 a {
@@ -77,7 +55,39 @@ a {
 nav ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  li:first-child {
+    position: relative;
+    left: -15px;
+    @media (max-width: 750px) {
+      width: 180px;
+      left: -8px;
+    }
+  }
+
+  li:last-child {
+    margin-top: 16px;
+    @media (max-width: 750px) {
+      margin-top: 4px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.email {
+  display: none;
+  @media (max-width: 750px) {
+    display: inline-block;
+  }
+}
+.address {
+  @media (max-width: 750px) {
+    display: none;
+  }
 }
 </style>

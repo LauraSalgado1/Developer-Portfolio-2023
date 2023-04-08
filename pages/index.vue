@@ -25,8 +25,10 @@
       <div class="swiper-outer">
         <Swiper
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
-          :slides-per-view="1.3"
+          :slides-per-view="1.4"
           :navigation="true"
+          :space-between="32"
+          :grab-cursor="true"
         >
           <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
             <CardPortfolio :portfolioItem="item" />
@@ -39,7 +41,7 @@
       <div class="inner-narrow">
         <h2>Tech Skills & Tools</h2>
 
-        <div class="background">
+        <div class="background yellow">
           <div class="skills-lists">
             <ul class="no-format skills-list">
               <li v-for="(item, index) in skillCardsLeft" :key="index">
@@ -57,79 +59,198 @@
       </div>
     </section>
 
-    <section class="education">
+    <section class="art has-swiper">
       <div class="inner">
+        <h2>
+          CSS Art<span class="mobile-break"><br /></span> & Animation
+        </h2>
+      </div>
+
+      <div class="swiper-outer">
+        <Swiper
+          class="art-desktop"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="3.2"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+
+        <Swiper
+          class="art-tablet"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="2.5"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+
+        <Swiper
+          class="art-mobile"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="1.5"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+
+    <section class="education">
+      <div class="inner-narrow">
         <h2>In-person Education</h2>
 
-        <Timeline
-          v-for="group in educationCards"
-          :key="group.year"
-          :group="group"
-        />
+        <div class="background grey">
+          <Timeline
+            v-for="group in educationCards"
+            :key="group.year"
+            :group="group"
+          />
+        </div>
       </div>
     </section>
 
     <section class="agency-skills">
       <div class="inner">
-        <p class="eyebrow">On-the-job education</p>
+        <p class="eyebrow">On-the-job learning</p>
         <h2>7 Years of Figuring It Out</h2>
 
         <div class="text-row">
           <h3>UX Gains</h3>
 
           <p class="p1">
-            To improve the UX of a multi-stage form I built, I learned about JS
-            localStorage and sessionStorage. I included persistent data between
-            page navigation, browser refreshing, and multiple site visits to
-            complete stages of a form.
+            For a multi-stage form I built, I wanted to improve the user's
+            experience by adding persistent data between page navigation,
+            browser refreshing, and multiple site visits. I learned all about JS
+            localStorage and sessionStorage to elevate the project to a
+            user-friendly and predictable composite process.
           </p>
           <p class="p1">
-            Learning this piqued my curiousity about firebase or other options
-            for backend infrastructure, instead of less secure browser storage.
+            Learning this stuff got me curious about other applications for
+            backend infrastructure (e.g. Firebase) instead of insecure browser
+            storage.
           </p>
         </div>
 
         <div class="lists-row">
           <div>
             <h3>New(ish) Skills</h3>
-            <ul>
-              <li>Content creation</li>
-              <li>UX/UI design and development</li>
-              <li>Logo and identity fundamentals</li>
+            <ul class="no-format">
               <li>
-                Regular practice at building forms, handling form data in Nuxt,
-                and connecting submissions to a WordPress admin using the
-                Gravity Forms API
+                <Icon
+                  name="ic:outline-mode-edit-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Content creation
               </li>
-              <li>Real comfortable working with ISO date formatting</li>
+              <li>
+                <Icon
+                  name="majesticons:ux-circle-line"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                UX/UI design and development
+              </li>
+              <li>
+                <Icon
+                  name="material-symbols:grid-on-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Logo and identity fundamentals
+              </li>
+              <li>
+                <Icon
+                  name="mdi:form-textbox"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Practiced at handling form data in Nuxt, connecting submissions
+                to a WordPress admin using the Gravity Forms API
+              </li>
+              <li>
+                <Icon
+                  name="material-symbols:calendar-month"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Real comfortable working with ISO date formatting
+              </li>
             </ul>
           </div>
 
           <div>
             <h3>Good At</h3>
-            <ul>
+            <ul class="no-format">
               <li>
-                Rolling with ongoing changes to The Plan, agile methodologies,
+                <Icon
+                  name="material-symbols:change-circle-outline"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Rolling with ongoing changes to the plan, agile methodologies,
                 iterative development
               </li>
-              <li>Fidelity to design specifics</li>
               <li>
+                <Icon
+                  name="tabler:ruler"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Fidelity to design specifics
+              </li>
+              <li>
+                <Icon
+                  name="ic:sharp-access-time"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
                 Tracking my time between projects and sharing daily updates on
                 my work
               </li>
               <li>
+                <Icon
+                  name="bi:chat-right-heart"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
                 Talking about technical details directly with clients in ways
                 that non-technical people can understand
               </li>
               <li>
-                Using the devs around me to talk out my problems, asking
-                questions when I get stuck
-              </li>
-              <li>
-                Encouraging other devs to talk to me when they get stuck, and
-                figuring out what I would do in their shoes (especially good for
-                me if the thing they're stuck on is ACF in WordPress or PHP
-                customization of themes and plugins)
+                <Icon
+                  name="icon-park-outline:duck"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+                Both sides of rubber ducking with teammates
               </li>
             </ul>
           </div>
@@ -150,18 +271,6 @@
         </div>
       </div>
     </section>
-
-    <section class="art">
-      <div class="inner">
-        <h2>CSS Art & Animation</h2>
-
-        <ul class="art-list no-format">
-          <li v-for="artItem in artCards" :key="artItem.title">
-            <CardArt :artItem="artItem" />
-          </li>
-        </ul>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -169,13 +278,13 @@
 const portfolioCards = [
   {
     title: "Céline Dion",
-    image: "",
+    image: "/celine-dion-home.jpg",
     tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
     slug: "celine-dion",
   },
   {
     title: "Mark Knopfler (Dire Straits)",
-    image: "",
+    image: "/mark-knopfler-home.jpg",
     tags: [
       "Agency project",
       "Custom WordPress theme",
@@ -186,7 +295,7 @@ const portfolioCards = [
   },
   {
     title: "Animal Movie Generator",
-    image: "",
+    image: "/animal-movie-generator-home.jpg",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
     slug: "animal-movie-generator",
   },
@@ -204,7 +313,7 @@ const skillCardsLeft = [
     heading: "Headless CMS",
     paragraph: "",
     paragraph2: "",
-    icon: "game-icons:guillotine",
+    icon: "game-icons:pumpkin-lantern",
     list: ["Strapi", "WordPress REST API", "WPGraphQL"],
   },
   {
@@ -222,14 +331,11 @@ const skillCardsLeft = [
     paragraph: "",
     paragraph2: "",
     icon: "ph:code-bold",
-    list: ["HTML5", "CSS3 with Sass", "JS including recent ES features"],
-  },
-  {
-    heading: "Design Tools",
-    paragraph: "",
-    paragraph2: "",
-    icon: "iconoir:design-nib",
-    list: ["Figma", "Adobe", "Sketch"],
+    list: [
+      "HTML5",
+      "CSS3 with Sass",
+      "Vanilla JS including recent ES features",
+    ],
   },
 ];
 
@@ -245,34 +351,61 @@ const skillCardsRight = [
       "SSH to deploy code from GitHub",
       "MYCLI for MySQL for copying databases",
       "SCP to move databases",
-      "Managing and configuring Node.js servers",
+      "Configure and manage Node.js servers",
       "PM2 to control app processes",
       "NGINX error logs to troubleshoot WordPress",
     ],
   },
   {
     heading: "Accessibility",
-    paragraph:
-      "I'm an advocate of correct semantic HTML and building with inclusivity in mind.",
+    paragraph: ".",
     paragraph2:
       "I love getting to share with my teammates how easy it is to achieve big accessibility wins by making small changes.",
-    icon: "ion:accessibility",
+    icon: "ion:accessibility-outline",
     list: [
-      "My work is built to meet WCAG 2.1 AA level accessibility requirements.",
-      "I’ve completed many accessibility improvement projects on existing sites, mostly using WAVE by WebAIM and Google Lighthouse as guidance.",
+      "Advocate of correct semantic HTML and building with inclusivity in mind",
+      "My work is built to WCAG 2.1 AA level accessibility requirements",
+      "Completed many accessibility improvement projects on existing sites",
+      "I love getting to share with my teammates how easy it is to achieve huge accessibility wins with small changes",
     ],
+  },
+  {
+    heading: "Design Tools",
+    paragraph: "",
+    paragraph2: "",
+    icon: "iconoir:design-nib",
+    list: ["Figma", "Adobe", "Sketch"],
   },
 ];
 
 const educationCards = [
   {
-    year: "2015",
+    year: "2023",
     courses: [
       {
-        school: "HackerYou (now Juno College)",
-        frequency: "Part-time",
-        courseName: "Intro to Web Development",
-        instructors: ["Haris Mahmood"],
+        school: "FITC",
+        frequency: "1 day workshop",
+        courseName:
+          "-Upcoming- <br/>DDC Super Workshop: Graphic Design and Logo Design",
+        instructors: ["Aaron Draplin"],
+      },
+    ],
+  },
+  {
+    year: "2017",
+    courses: [
+      {
+        school: "HackerYou (now Juno College) Accessibility Club",
+        frequency: "Evening workshop",
+        courseName: "Meet Your Screen Reader",
+        instructors: ["Terry Brey"],
+      },
+      {
+        school: "Web Animation Workshops",
+        frequency: "2 day workshop",
+        courseName:
+          "Web Animation 0 to 60: CSS, JavaScript, and SVG Essentials",
+        instructors: ["Sarah Drasner", "Val&nbsp;Head"],
       },
     ],
   },
@@ -298,31 +431,13 @@ const educationCards = [
     ],
   },
   {
-    year: "2017",
+    year: "2015",
     courses: [
       {
-        school: "HackerYou (now Juno College) Accessibility Club",
-        frequency: "Evening workshop",
-        courseName: "Meet Your Screen Reader",
-        instructors: ["Terry Brey"],
-      },
-      {
-        school: "Web Animation Workshops",
-        frequency: "2 day workshop",
-        courseName:
-          "Web Animation 0 to 60: CSS, JavaScript, and SVG Essentials",
-        instructors: ["Sarah Drasner", "Val&nbsp;Head"],
-      },
-    ],
-  },
-  {
-    year: "2023<br/>Upcoming",
-    courses: [
-      {
-        school: "FITC",
-        frequency: "1 day workshop",
-        courseName: "DDC Super Workshop: Graphic Design and Logo Design",
-        instructors: ["Aaron Draplin"],
+        school: "HackerYou (now Juno College)",
+        frequency: "Part-time",
+        courseName: "Intro to Web Development",
+        instructors: ["Haris Mahmood"],
       },
     ],
   },
@@ -336,7 +451,7 @@ const mediaCards = [
       "From Coding Newbie to Coding Celine Dion's Website: Laura Salgado's Journey into Tech",
     paragraph:
       'As part of Juno College\'s "Student Stories", I talked about my experience of making a career transition and shared support for tech newcomers.',
-    image: "",
+    image: "/juno-college-student-stories-laura-salgado.png",
     link: "https://junocollege.com/blog/web-development-bootcamp-alumni-laura-salgado/",
     moreText: "Read",
     icon: "ph:book-fill",
@@ -357,7 +472,7 @@ const mediaCards = [
 const artCards = [
   {
     title: "Calla Lillies",
-    image: "",
+    image: "/calla-lillies-462.jpg",
     link: "",
     tags: [
       "Pure CSS illustration",
@@ -369,43 +484,49 @@ const artCards = [
   },
   {
     title: "Aggretsuko Morph Rage",
-    image: "",
+    image: "/aggretsuko.jpg",
     link: "",
     tags: ["Created SVG assets in Sketch", "GSAP"],
   },
   {
     title: "Charlotte's Web animated book page",
-    image: "",
+    image: "/charlottes-web-dev.jpg",
     link: "",
     tags: ["Created SVG assets in Sketch", "Manual SVG animation"],
   },
   {
     title: "Chat Loader Morph",
-    image: "",
+    image: "/chat-loader.jpg",
     link: "",
     tags: ["SVG animation", "GSAP", "Timelines"],
   },
   {
     title: "MC Escher Woodblock Cat",
-    image: "",
+    image: "/MC-Escher-cat.jpg",
     link: "",
     tags: ["Pure CSS illustration"],
   },
   {
+    title: "Spinning Bowtie Cat",
+    image: "/spinning-bowtie-cat.jpg",
+    link: "",
+    tags: ["SVG Animation", "GSAP", "TweenMax"],
+  },
+  {
     title: "Rain Machine",
-    image: "",
+    image: "/rain-machine.jpg",
     link: "",
     tags: ["Manual SVG animation", "Interactive"],
   },
   {
     title: "Purring Cat",
-    image: "",
+    image: "/purring-cat.jpg",
     link: "",
     tags: ["Manual SVG animation"],
   },
   {
     title: "Self Portrait",
-    image: "",
+    image: "/self-portrait.jpg",
     link: "",
     tags: ["Manually animated", "Pure CSS illustration"],
   },
@@ -414,15 +535,49 @@ const artCards = [
 
 <style lang="scss" scoped>
 section {
-  padding: 96px 0 64px;
+  padding: 128px 0;
+  @media (max-width: 750px) {
+    padding: 64px 0;
+  }
 }
 .intro-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 30px;
+  grid-gap: 64px;
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column-reverse;
+    img {
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
 }
 
+// section.skills {
+//   padding-bottom: 0;
+// }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section.portfolio {
+  .swiper-outer {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+}
 section.skills,
 section.education {
   background: $c-grey-light-extra;
@@ -434,16 +589,55 @@ section.education {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  width: 868px;
+  width: 836px;
+  max-width: calc(100% + 64px);
   transform: translateX(-32px);
+  @media (max-width: 750px) {
+    transform: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+    li:nth-child(even) {
+      transform: translateX(-64px);
+    }
+  }
+  @media (max-width: 370px) {
+    max-width: calc(100% + 32px);
+    li:nth-child(even) {
+      transform: translateX(-32px);
+    }
+  }
 }
 
 .background {
-  background-color: $c-yellow-light-extra;
-  width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 32px;
   padding: 32px 0 0;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 750px) {
+    padding: 32px 32px 0;
+    border-radius: 16px;
+  }
+  @media (max-width: 370px) {
+    padding: 32px 16px 0;
+  }
+
+  &.yellow {
+    background-color: $c-yellow-light-extra;
+  }
+  &.grey {
+    background-color: $c-grey-mid;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 970px) {
+      width: calc(100% - 49px);
+      margin: 0 0 0 auto;
+    }
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+  }
 }
 
 section.agency-skills {
@@ -452,7 +646,7 @@ section.agency-skills {
     max-width: 100%;
   }
   .text-row {
-    width: 600px;
+    width: 560px;
     max-width: 100%;
     margin-bottom: 64px;
   }
@@ -460,18 +654,25 @@ section.agency-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background: $c-grey-light-extra;
-    padding: 32px;
+    padding: 64px;
     border-radius: 32px;
     gap: 64px;
-    > div {
+    @media (max-width: 992px) {
+      padding: 64px 32px;
+      gap: 48px;
+    }
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
       padding: 32px;
+      border-radius: 16px;
     }
-    ul {
-      padding-left: 20px;
+    li {
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+    }
+    li:last-child {
       margin-bottom: 0;
-    }
-    li:not(:last-child) {
-      margin-bottom: 10px;
     }
     h3 {
       margin: 0 0 32px;
@@ -487,12 +688,38 @@ section.media {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.art-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+section.art {
+  .art-desktop {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .art-tablet {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+  .art-mobile {
+    display: none;
+    @media (max-width: 750px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+    }
+  }
 }
 
 section.has-swiper {
@@ -500,38 +727,76 @@ section.has-swiper {
 }
 
 .swiper-outer {
-  width: calc(1100px + ((100vw - 1100px) / 2));
+  width: calc(1072px + ((100vw - 1072px) / 2));
   margin: 0 0 0 auto;
+  padding-right: calc((100vw - 1072px) / 2);
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  @media (max-width: 500px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (max-width: 370px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   :deep(.swiper, .swiper-container) {
     overflow: visible;
   }
   :deep(.swiper-button-prev:after) {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    @media (max-width: 750px) {
+      font-size: 1.4rem;
+    }
   }
   :deep(.swiper-button-next:after) {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    @media (max-width: 750px) {
+      font-size: 1.4rem;
+    }
   }
   :deep(.swiper-button-prev) {
-    right: calc((100vw - 950px) / 2);
+    right: 64px;
     color: $c-black;
     left: auto;
-    top: -69px;
-    width: 48px;
-    height: 48px;
+    top: -80px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
-    padding-right: 4px;
+    padding-right: 3px;
+    @media (max-width: 750px) {
+      width: 32px;
+      height: 32px;
+      top: -72px;
+    }
+    &:hover {
+      background: $c-black;
+      color: $c-white;
+    }
   }
   :deep(.swiper-button-next) {
-    right: calc((100vw - 1100px) / 2);
+    right: 0;
     color: $c-black;
     left: auto;
-    top: -69px;
-    width: 48px;
-    height: 48px;
+    top: -80px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
-    padding-left: 4px;
+    padding-left: 3px;
+    @media (max-width: 750px) {
+      width: 32px;
+      height: 32px;
+      top: -72px;
+    }
+    &:hover {
+      background: $c-black;
+      color: $c-white;
+    }
   }
 }
 </style>

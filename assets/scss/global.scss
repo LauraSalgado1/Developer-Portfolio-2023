@@ -4,24 +4,36 @@ body {
 }
 
 img,
-svg,
-iframe {
+svg {
   max-width: 100%;
   display: block;
+  height: auto !important;
 }
 
 .inner {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 64px;
+  @media (max-width: 500px) {
+    padding: 0 32px;
+  }
+  @media (max-width: 370px) {
+    padding: 0 16px;
+  }
 }
 
 .inner-narrow {
   width: 900px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 64px;
+  // @media (max-width: 500px) {
+  //   padding: 0 32px;
+  // }
+  @media (max-width: 370px) {
+    padding: 0 32px;
+  }
 }
 
 .no-format {
@@ -35,13 +47,24 @@ iframe {
   background: $c-black;
   color: $c-white;
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 8px 24px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 32px;
   font-size: 1.8rem;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $c-white;
     text-decoration: underline;
+  }
+  &:focus {
+    outline-offset: 4px;
+  }
+  &:active,
+  &:visited {
+    color: $c-white;
+  }
+  @media (max-width: 750px) {
+    font-size: 1.4rem;
   }
 }
 
@@ -56,4 +79,11 @@ iframe {
   position: absolute;
   width: 1px;
   word-wrap: normal !important;
+}
+
+.mobile-break {
+  display: none;
+  @media (max-width: 500px) {
+    display: initial;
+  }
 }
