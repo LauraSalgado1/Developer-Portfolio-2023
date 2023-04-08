@@ -4,10 +4,10 @@ body {
 }
 
 img,
-svg,
-iframe {
+svg {
   max-width: 100%;
   display: block;
+  height: auto !important;
 }
 
 .inner {
@@ -62,6 +62,9 @@ iframe {
   &:active,
   &:visited {
     color: $c-white;
+  }
+  @media (max-width: 750px) {
+    font-size: 1.4rem;
   }
 }
 

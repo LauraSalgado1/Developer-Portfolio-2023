@@ -1,6 +1,11 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-img v-if="portfolioItem.image" :src="portfolioItem.image" />
+    <nuxt-img
+      width="757"
+      height="426"
+      v-if="portfolioItem.image"
+      :src="portfolioItem.image"
+    />
 
     <h3>{{ portfolioItem.title }}</h3>
 
@@ -30,6 +35,7 @@ img {
   object-fit: cover;
   object-position: top center;
   border-radius: 8px;
+  width: 100%;
 }
 
 h3 {

@@ -128,14 +128,16 @@
           <h3>UX Gains</h3>
 
           <p class="p1">
-            To improve the UX of a multi-stage form I built, I learned about JS
-            localStorage and sessionStorage. I included persistent data between
-            page navigation, browser refreshing, and multiple site visits to
-            complete stages of a form.
+            For a multi-stage form I built, I wanted to improve the user's
+            experience by adding persistent data between page navigation,
+            browser refreshing, and multiple site visits. I learned all about JS
+            localStorage and sessionStorage to elevate the project to a
+            user-friendly and predictable composite process.
           </p>
           <p class="p1">
-            Learning this piqued my curiousity about firebase or other options
-            for backend infrastructure, instead of less secure browser storage.
+            Learning this stuff got me curious about other applications for
+            backend infrastructure (e.g. Firebase) instead of insecure browser
+            storage.
           </p>
         </div>
 
@@ -449,7 +451,7 @@ const mediaCards = [
       "From Coding Newbie to Coding Celine Dion's Website: Laura Salgado's Journey into Tech",
     paragraph:
       'As part of Juno College\'s "Student Stories", I talked about my experience of making a career transition and shared support for tech newcomers.',
-    image: "",
+    image: "/juno-college-student-stories-laura-salgado.png",
     link: "https://junocollege.com/blog/web-development-bootcamp-alumni-laura-salgado/",
     moreText: "Read",
     icon: "ph:book-fill",
@@ -557,6 +559,25 @@ section {
 //   padding-bottom: 0;
 // }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section.portfolio {
+  .swiper-outer {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+}
 section.skills,
 section.education {
   background: $c-grey-light-extra;
