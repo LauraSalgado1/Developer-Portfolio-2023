@@ -25,10 +25,6 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 </script>
 
 <style scoped lang="scss">
-.portfolio-card {
-  padding-bottom: 64px;
-}
-
 img {
   aspect-ratio: 16/9;
   object-fit: cover;

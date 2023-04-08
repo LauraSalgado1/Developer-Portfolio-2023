@@ -59,6 +59,52 @@
       </div>
     </section>
 
+    <section class="art has-swiper">
+      <div class="inner">
+        <h2>
+          CSS Art<span class="mobile-break"><br /></span> & Animation
+        </h2>
+      </div>
+
+      <div class="swiper-outer">
+        <Swiper
+          class="art-desktop"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="3.2"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+
+        <Swiper
+          class="art-tablet"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="2.5"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+
+        <Swiper
+          class="art-mobile"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :navigation="true"
+          :space-between="32"
+          :slides-per-view="1.5"
+        >
+          <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
+            <CardArt :artItem="artItem" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+
     <section class="education">
       <div class="inner-narrow">
         <h2>In-person Education</h2>
@@ -221,18 +267,6 @@
             :mediaItem="article"
           />
         </div>
-      </div>
-    </section>
-
-    <section class="art">
-      <div class="inner">
-        <h2>CSS Art & Animation</h2>
-
-        <ul class="art-list no-format">
-          <li v-for="artItem in artCards" :key="artItem.title">
-            <CardArt :artItem="artItem" />
-          </li>
-        </ul>
       </div>
     </section>
   </main>
@@ -436,7 +470,7 @@ const mediaCards = [
 const artCards = [
   {
     title: "Calla Lillies",
-    image: "",
+    image: "/calla-lillies-462.jpg",
     link: "",
     tags: [
       "Pure CSS illustration",
@@ -448,43 +482,49 @@ const artCards = [
   },
   {
     title: "Aggretsuko Morph Rage",
-    image: "",
+    image: "/aggretsuko.jpg",
     link: "",
     tags: ["Created SVG assets in Sketch", "GSAP"],
   },
   {
     title: "Charlotte's Web animated book page",
-    image: "",
+    image: "/charlottes-web-dev.jpg",
     link: "",
     tags: ["Created SVG assets in Sketch", "Manual SVG animation"],
   },
   {
     title: "Chat Loader Morph",
-    image: "",
+    image: "/chat-loader.jpg",
     link: "",
     tags: ["SVG animation", "GSAP", "Timelines"],
   },
   {
     title: "MC Escher Woodblock Cat",
-    image: "",
+    image: "/MC-Escher-cat.jpg",
     link: "",
     tags: ["Pure CSS illustration"],
   },
   {
+    title: "Spinning Bowtie Cat",
+    image: "/spinning-bowtie-cat.jpg",
+    link: "",
+    tags: ["SVG Animation", "GSAP", "TweenMax"],
+  },
+  {
     title: "Rain Machine",
-    image: "",
+    image: "/rain-machine.jpg",
     link: "",
     tags: ["Manual SVG animation", "Interactive"],
   },
   {
     title: "Purring Cat",
-    image: "",
+    image: "/purring-cat.jpg",
     link: "",
     tags: ["Manual SVG animation"],
   },
   {
     title: "Self Portrait",
-    image: "",
+    image: "/self-portrait.jpg",
     link: "",
     tags: ["Manually animated", "Pure CSS illustration"],
   },
@@ -493,16 +533,16 @@ const artCards = [
 
 <style lang="scss" scoped>
 section {
-  padding: 96px 0 64px;
+  padding: 128px 0;
   @media (max-width: 750px) {
-    padding: 64px 0 48px;
+    padding: 64px 0;
   }
 }
 .intro-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 30px;
+  grid-gap: 64px;
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column-reverse;
@@ -513,11 +553,13 @@ section {
   }
 }
 
+// section.skills {
+//   padding-bottom: 0;
+// }
+
 section.skills,
 section.education {
-  background: $c-grey-mid;
-  background: $c-yellow-light-extra;
-  background: $c-grey-background;
+  background: $c-grey-light-extra;
   h2 {
     text-align: center;
   }
@@ -630,12 +672,32 @@ section.media {
   }
 }
 
-.art-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  @media (max-width: 750px) {
-    grid-template-columns: repeat(2, 1fr);
+section.art {
+  .art-desktop {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .art-tablet {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+  .art-mobile {
+    display: none;
+    @media (max-width: 750px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+    }
   }
 }
 
@@ -665,9 +727,15 @@ section.has-swiper {
   }
   :deep(.swiper-button-prev:after) {
     font-size: 2rem;
+    @media (max-width: 750px) {
+      font-size: 1.4rem;
+    }
   }
   :deep(.swiper-button-next:after) {
     font-size: 2rem;
+    @media (max-width: 750px) {
+      font-size: 1.4rem;
+    }
   }
   :deep(.swiper-button-prev) {
     right: 64px;

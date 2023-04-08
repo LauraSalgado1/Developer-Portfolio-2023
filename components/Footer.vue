@@ -121,7 +121,6 @@ const year = new Date().getFullYear();
   padding: 64px 64px 0;
   background: $c-black;
   color: $c-white;
-  margin-top: 64px;
   @media (max-width: 700px) {
     padding: 32px 32px 0;
   }
