@@ -1,29 +1,25 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-link class="image-link" :to="`/portfolio/${portfolioItem.slug}`">
-      <nuxt-img
-        width="757"
-        height="426"
-        v-if="portfolioItem.image"
-        :src="portfolioItem.image"
-      />
+    <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
+      <div class="image-link">
+        <nuxt-img
+          width="757"
+          height="426"
+          v-if="portfolioItem.image"
+          :src="portfolioItem.image"
+        />
+      </div>
+
+      <div class="bottom">
+        <h3>{{ portfolioItem.title }}</h3>
+
+        <ul class="tags no-format">
+          <li v-for="(tag, index) in portfolioItem.tags" :key="index">
+            {{ tag }}<span>&#8226;</span>
+          </li>
+        </ul>
+      </div>
     </nuxt-link>
-
-    <h3>{{ portfolioItem.title }}</h3>
-
-    <ul class="tags no-format">
-      <li v-for="(tag, index) in portfolioItem.tags" :key="index">
-        {{ tag }}<span>&#8226;</span>
-      </li>
-    </ul>
-
-    <nuxt-link :to="`/portfolio/${portfolioItem.slug}`" class="button"
-      >Project Details
-
-      <span class="screen-reader-text"
-        >for {{ portfolioItem.title }}</span
-      ></nuxt-link
-    >
   </div>
 </template>
 
@@ -32,26 +28,43 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 </script>
 
 <style scoped lang="scss">
+a {
+  text-decoration: none;
+  background: $c-white;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  &:hover,
+  &:focus {
+    .image-link:after {
+      opacity: 1;
+    }
+    h3 {
+      text-decoration: underline;
+    }
+  }
+  .bottom {
+    padding: 32px;
+  }
+}
+
 .image-link {
+  text-decoration: none;
   &:after {
     display: block;
     content: "";
     position: absolute;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     top: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     aspect-ratio: 16/9;
-    border-radius: 8px;
+
     opacity: 0;
     transition: opacity 0.1s ease;
     z-index: 2;
-  }
-  &:hover,
-  &:focus {
-    &:after {
-      opacity: 1;
-    }
   }
 }
 
@@ -59,16 +72,14 @@ img {
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: top center;
-  border-radius: 8px;
+
   width: 100%;
-  :hover {
-  }
 }
 
 h3 {
-  margin: 32px 0 8px;
+  margin: 0 0 8px;
   @media (max-width: 750px) {
-    margin: 24px 0 8px;
+    margin: 0 0 8px;
   }
 }
 .tags {
@@ -77,7 +88,7 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  //margin-bottom: 32px;
   @media (max-width: 750px) {
     display: block;
     margin-bottom: 16px;

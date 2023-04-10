@@ -76,10 +76,13 @@ const { mediaItem } = defineProps(["mediaItem"]);
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
-    margin-bottom: 0;
+    margin: 0;
     position: relative;
     transition: top 0.1s ease;
     top: 8px;
+  }
+  .excerpt {
+    margin-bottom: 5px;
   }
 }
 

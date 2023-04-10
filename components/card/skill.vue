@@ -4,8 +4,8 @@
       <Icon
         v-if="skillItem.icon"
         :name="skillItem.icon"
-        width="48"
-        height="48"
+        :width="skillItem.width"
+        :height="skillItem.height"
         color="#272727"
         class="icon"
       />

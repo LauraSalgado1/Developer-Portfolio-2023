@@ -28,7 +28,6 @@
           :slides-per-view="1.4"
           :navigation="true"
           :space-between="32"
-          :grab-cursor="true"
         >
           <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
             <CardPortfolio :portfolioItem="item" />
@@ -128,9 +127,9 @@
           <h3>UX Gains</h3>
 
           <p class="p1">
-            For a multi-stage form I built, I wanted to improve the user's
-            experience by adding persistent data between page navigation,
-            browser refreshing, and multiple site visits. I learned all about JS
+            For a multi-stage form I built, I wanted to improve the experience
+            by adding persistent data between page navigation, browser
+            refreshing, and multiple site visits. I learned all about JS
             localStorage and sessionStorage to elevate the project to a
             user-friendly and predictable composite process.
           </p>
@@ -307,6 +306,8 @@ const skillCardsLeft = [
     heading: "JavaScript Frameworks",
     paragraph: "",
     paragraph2: "",
+    width: "42",
+    height: "42",
     icon: "fluent-emoji-high-contrast:framed-picture",
     list: ["Vue", "Nuxt 2", "Nuxt 3"],
   },
@@ -314,14 +315,18 @@ const skillCardsLeft = [
     heading: "Headless CMS",
     paragraph: "",
     paragraph2: "",
-    icon: "game-icons:pumpkin-lantern",
+    icon: "mdi:head-remove-outline",
+    width: "48",
+    height: "48",
     list: ["Strapi", "WordPress REST API", "WPGraphQL"],
   },
   {
     heading: "WordPress PHP",
     paragraph: "",
     paragraph2: "",
-    icon: "ic:baseline-wordpress",
+    icon: "ion:logo-wordpress",
+    width: "48",
+    height: "48",
     list: [
       "Custom theming and child theming",
       "Customization of widely used plugins, e.g. WooCommerce",
@@ -331,7 +336,9 @@ const skillCardsLeft = [
     heading: "Code Basics",
     paragraph: "",
     paragraph2: "",
-    icon: "ph:code-bold",
+    icon: "ic:baseline-code",
+    width: "48",
+    height: "48",
     list: [
       "HTML5",
       "CSS3 with Sass",
@@ -347,6 +354,8 @@ const skillCardsRight = [
       "Over 2021 and 2022, I moved out of my old comfort zone of fully managed local server environments and WordPress services (MAMP and WP Engine) into more of a command-line life.",
     paragraph2: "",
     icon: "ri:terminal-fill",
+    width: "48",
+    height: "48",
     list: [
       "I run my own local AMP stack dev environment with Apache, MySQL, PHP and phpMyAdmin",
       "SSH to deploy code from GitHub",
@@ -362,7 +371,9 @@ const skillCardsRight = [
     paragraph: ".",
     paragraph2:
       "I love getting to share with my teammates how easy it is to achieve big accessibility wins by making small changes.",
-    icon: "ion:accessibility-outline",
+    icon: "ic:baseline-accessibility-new",
+    width: "48",
+    height: "48",
     list: [
       "Advocate of correct semantic HTML and building with inclusivity in mind",
       "My work is built to WCAG 2.1 AA level accessibility requirements",
@@ -374,7 +385,10 @@ const skillCardsRight = [
     heading: "Design Tools",
     paragraph: "",
     paragraph2: "",
-    icon: "iconoir:design-nib",
+    icon: "ic:outline-design-services",
+    width: "38",
+    height: "38",
+    iconSmall: true,
     list: ["Figma", "Adobe", "Sketch"],
   },
 ];
@@ -451,7 +465,7 @@ const mediaCards = [
     title:
       "From Coding Newbie to Coding Celine Dion's Website: Laura Salgado's Journey into Tech",
     paragraph:
-      'As part of Juno College\'s "Student Stories", I talked about my experience of making a career transition and shared support for tech newcomers.',
+      'As part of Juno College\'s "Student Stories", I talk about my career transition and share support for tech newcomers.',
     image: "/juno-college-student-stories-laura-salgado.png",
     link: "https://junocollege.com/blog/web-development-bootcamp-alumni-laura-salgado/",
     moreText: "Read",
@@ -462,7 +476,7 @@ const mediaCards = [
     author: "Chris Coyier & Marie Mosley",
     title: "Episode 134",
     paragraph:
-      'In conversation about the Creative Coding Club, they discussed one of my first pure CSS art projects, and how we can go deeper into fun using our "normal" code skills.',
+      "The group discusses the Creative Coding Club and dissects one of my first CSS art projects.",
     image: "",
     link: "https://blog.codepen.io/2017/06/13/134-nat-cooper/",
     moreText: "Listen",
@@ -574,6 +588,7 @@ section {
 }
 
 section.portfolio {
+  background: $c-grey-light-extra;
   .swiper-outer {
     opacity: 0;
     animation-name: fadeIn;
