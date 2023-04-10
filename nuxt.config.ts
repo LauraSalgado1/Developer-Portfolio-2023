@@ -52,8 +52,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: "https://laurasalgado.com",
-      siteName: "Laura Salgado | Developer",
-      siteDescription: "add site desc here",
+      siteName: "Laura Salgado | Developer Since 2016",
+      siteDescription:
+        "Check out the portfolio of Toronto-based web developer Laura Salgado. Specialized in WCAG 2.1 AA accessible front-end coding of WordPress, Vue, Nuxt and API projects.",
       language: "en-CA",
     },
   },

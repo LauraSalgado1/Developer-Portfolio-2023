@@ -72,9 +72,7 @@
         </div>
         <p class="footer-text-line">
           <span class="copyright">&copy; Laura Salgado {{ year }}</span>
-          <span>&#8226;</span>
-          <nuxt-link class="about-me" to="/about">About Me</nuxt-link>
-          <span>&#8226;</span>
+          <span class="dot">&#8226;</span>
           <span class="built-nuxt">
             I built this site in
             <nuxt-img src="/LogosNuxt.svg" alt="Nuxt" width="55" height="13" />
@@ -121,8 +119,11 @@ const year = new Date().getFullYear();
   padding: 64px 64px 0;
   background: $c-black;
   color: $c-white;
+  @media (max-width: 1400px) {
+    padding: 64px 0 0;
+  }
   @media (max-width: 700px) {
-    padding: 32px 32px 0;
+    padding: 32px 0 0;
   }
 }
 
@@ -130,13 +131,26 @@ const year = new Date().getFullYear();
   display: grid;
   grid-template-columns: 1fr 400px;
   grid-gap: 96px;
+  @media (max-width: 1400px) {
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 64px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 300px;
+  }
   @media (max-width: 992px) {
     grid-template-columns: 1fr 250px;
     grid-gap: 64px;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     grid-template-columns: 1fr;
     grid-gap: 32px;
+  }
+  @media (max-width: 500px) {
+    padding: 0 32px;
+  }
+  @media (max-width: 370px) {
+    padding: 0 16px;
   }
 }
 
@@ -162,6 +176,12 @@ const year = new Date().getFullYear();
   svg {
     margin-right: -4px;
   }
+  @media (max-width: 1120px) {
+    flex-direction: column-reverse;
+    .dot {
+      display: none;
+    }
+  }
 }
 
 .built-nuxt {
@@ -179,6 +199,9 @@ const year = new Date().getFullYear();
 .built-nuxt,
 .about-me {
   margin-left: 24px;
+  @media (max-width: 1120px) {
+    margin-left: 0;
+  }
 }
 
 .copyright,
@@ -198,8 +221,15 @@ const year = new Date().getFullYear();
   li:first-child {
     margin-left: 0;
   }
+  svg {
+    transition: opacity 0.1s ease;
+  }
   a {
     display: block;
+
+    &:hover svg {
+      opacity: 0.5;
+    }
   }
   a:not(:first-child) {
     padding: 5px;

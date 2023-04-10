@@ -143,7 +143,7 @@
 
         <div class="lists-row">
           <div>
-            <h3>New(ish) Skills</h3>
+            <h3>Agency Acquirements</h3>
             <ul class="no-format">
               <li>
                 <Icon
@@ -193,13 +193,13 @@
                   height="30"
                   color="#272727"
                 />
-                Real comfortable working with ISO date formatting
+                Experience programming with ISO date formatting
               </li>
             </ul>
           </div>
 
           <div>
-            <h3>Good At</h3>
+            <h3>Team Skills</h3>
             <ul class="no-format">
               <li>
                 <Icon
@@ -219,7 +219,8 @@
                   height="30"
                   color="#272727"
                 />
-                Fidelity to design specifics
+                Fidelity to design specifics, feature planning, asking design
+                questions
               </li>
               <li>
                 <Icon
@@ -250,7 +251,7 @@
                   height="30"
                   color="#272727"
                 />
-                Both sides of rubber ducking with teammates
+                Both sides of rubber ducking with dev teammates
               </li>
             </ul>
           </div>
@@ -283,13 +284,13 @@ const portfolioCards = [
     slug: "celine-dion",
   },
   {
-    title: "Mark Knopfler (Dire Straits)",
+    title: "Mark Knopfler - Dire Straits",
     image: "/mark-knopfler-home.jpg",
     tags: [
       "Agency project",
       "Custom WordPress theme",
       "PHP",
-      "Full website design (prior version)",
+      "Full website design (previous 2018 version)",
     ],
     slug: "mark-knopfler",
   },
@@ -473,7 +474,7 @@ const artCards = [
   {
     title: "Calla Lillies",
     image: "/calla-lillies-462.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/bWKNLm",
     tags: [
       "Pure CSS illustration",
       "Painted from photo reference",
@@ -485,52 +486,56 @@ const artCards = [
   {
     title: "Aggretsuko Morph Rage",
     image: "/aggretsuko.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/VxWvZG",
     tags: ["Created SVG assets in Sketch", "GSAP"],
   },
   {
     title: "Charlotte's Web animated book page",
     image: "/charlottes-web-dev.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/GyNVWQ",
     tags: ["Created SVG assets in Sketch", "Manual SVG animation"],
   },
   {
     title: "Chat Loader Morph",
     image: "/chat-loader.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/KqMJBw",
     tags: ["SVG animation", "GSAP", "Timelines"],
   },
   {
     title: "MC Escher Woodblock Cat",
     image: "/MC-Escher-cat.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/aVXyrz",
     tags: ["Pure CSS illustration"],
   },
   {
     title: "Spinning Bowtie Cat",
     image: "/spinning-bowtie-cat.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/dRZQNw",
     tags: ["SVG Animation", "GSAP", "TweenMax"],
   },
   {
     title: "Rain Machine",
     image: "/rain-machine.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/peZzOG",
     tags: ["Manual SVG animation", "Interactive"],
   },
   {
     title: "Purring Cat",
     image: "/purring-cat.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/EWrZer",
     tags: ["Manual SVG animation"],
   },
   {
     title: "Self Portrait",
     image: "/self-portrait.jpg",
-    link: "",
+    link: "https://codepen.io/Laura_Salgado/pen/RZKQGy",
     tags: ["Manually animated", "Pure CSS illustration"],
   },
 ];
+
+definePageMeta({
+  image: "/Laura-Salgado.jpg",
+});
 </script>
 
 <style lang="scss" scoped>
@@ -646,7 +651,7 @@ section.agency-skills {
     max-width: 100%;
   }
   .text-row {
-    width: 560px;
+    width: 640px;
     max-width: 100%;
     margin-bottom: 64px;
   }
