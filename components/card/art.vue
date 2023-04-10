@@ -1,5 +1,5 @@
 <template>
-  <a class="art-card" target="_blank">
+  <a class="art-card" :href="artItem.link" target="_blank">
     <nuxt-img :src="artItem.image" />
     <div class="overlay">
       <ul class="tags">

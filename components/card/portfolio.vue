@@ -1,11 +1,13 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-img
-      width="757"
-      height="426"
-      v-if="portfolioItem.image"
-      :src="portfolioItem.image"
-    />
+    <nuxt-link class="image-link" :to="`/portfolio/${portfolioItem.slug}`">
+      <nuxt-img
+        width="757"
+        height="426"
+        v-if="portfolioItem.image"
+        :src="portfolioItem.image"
+      />
+    </nuxt-link>
 
     <h3>{{ portfolioItem.title }}</h3>
 
@@ -30,12 +32,37 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 </script>
 
 <style scoped lang="scss">
+.image-link {
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    z-index: 2;
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
 img {
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: top center;
   border-radius: 8px;
   width: 100%;
+  :hover {
+  }
 }
 
 h3 {

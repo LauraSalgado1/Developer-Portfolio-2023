@@ -100,7 +100,20 @@ const { mediaItem } = defineProps(["mediaItem"]);
   width: 100%;
   aspect-ratio: 16/9;
   background-color: $c-black;
-  background-image: radial-gradient(circle, #4d4d4d, #404040, #333333, #272727);
+  background-image: linear-gradient(
+    to bottom,
+
+    #2e2e2e,
+    #353535,
+    #3c3c3c,
+    #434343,
+    #434343,
+    #434343,
+    #434343,
+    #3c3c3c,
+    #353535,
+    #2e2e2e
+  );
   img {
     display: block;
     width: 100%;
