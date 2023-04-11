@@ -51,7 +51,7 @@
 <script setup>
 const portfolioItem = {
   title: "Animal Movie Generator",
-  image: "/animal-movie-generator-home.jpg",
+  image: "/animal-movie-generator.webp",
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
   slug: "animal-movie-generator",
   content:
