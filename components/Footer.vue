@@ -103,7 +103,7 @@
       <div class="right">
         <iframe
           style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/3woPqZeMzNK241HNAri7xV?utm_source=generator&theme=0"
+          src="https://open.spotify.com/embed/playlist/245D5Epfj6fJ8p81uGq2rR?utm_source=generator&theme=0"
           width="100%"
           height="352"
           frameBorder="0"
