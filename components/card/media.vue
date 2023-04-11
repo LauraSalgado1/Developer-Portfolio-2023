@@ -1,16 +1,7 @@
 <template>
   <a class="media-card" :href="mediaItem.link" target="_blank">
     <div class="image">
-      <!-- <nuxt-img
-        v-if="mediaItem.image"
-        :src="mediaItem.image"
-        :alt="mediaItem.imageAlt"
-        width="520"
-        height="293"
-        loading="lazy"
-      /> -->
-
-      <nuxt-picture
+      <img
         v-if="mediaItem.image"
         :src="mediaItem.image"
         :alt="mediaItem.imageAlt"

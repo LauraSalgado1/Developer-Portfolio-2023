@@ -3,7 +3,7 @@
     <div class="footer-wrapper">
       <div class="left">
         <div>
-          <nuxt-img
+          <img
             class="footer-logo"
             src="/Laura-Salgado-Developer-Since-2016-light.svg"
             alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
@@ -75,7 +75,13 @@
           <span class="dot">&#8226;</span>
           <span class="built-nuxt">
             I built this site in
-            <nuxt-img src="/LogosNuxt.svg" alt="Nuxt" width="55" height="13" />
+            <img
+              src="/LogosNuxt.svg"
+              alt="Nuxt"
+              width="55"
+              height="13"
+              loading="lazy"
+            />
             . &#8197;
             <a
               href="https://github.com/LauraSalgado1/Developer-Portfolio-2023"

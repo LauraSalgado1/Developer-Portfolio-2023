@@ -11,7 +11,7 @@
             >
           </div>
           <div class="half">
-            <nuxt-picture
+            <img
               src="/Laura-Salgado.webp"
               alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
               width="504"

@@ -10,7 +10,7 @@
           :alt="portfolioItem.imageAlt"
         /> -->
 
-        <nuxt-picture
+        <img
           :src="portfolioItem.image"
           :alt="portfolioItem.imageAlt"
           width="757"

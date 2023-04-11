@@ -1,13 +1,6 @@
 <template>
   <a class="art-card" :href="artItem.link" target="_blank">
-    <!-- <nuxt-img
-      :src="artItem.image"
-      :alt="artItem.imageAlt"
-      width="313"
-      height="313"
-      loading="lazy"
-    /> -->
-    <nuxt-picture
+    <img
       :src="artItem.image"
       :alt="artItem.imageAlt"
       width="313"
