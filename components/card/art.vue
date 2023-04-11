@@ -1,6 +1,18 @@
 <template>
   <a class="art-card" :href="artItem.link" target="_blank">
-    <nuxt-img :src="artItem.image" />
+    <!-- <nuxt-img
+      :src="artItem.image"
+      :alt="artItem.imageAlt"
+      width="313"
+      height="313"
+      loading="lazy"
+    /> -->
+    <nuxt-picture
+      :src="artItem.image"
+      :alt="artItem.imageAlt"
+      width="313"
+      height="313"
+    />
     <div class="overlay">
       <ul class="tags">
         <li v-for="tag in artItem.tags" :key="tag">
@@ -33,14 +45,19 @@ const { artItem } = defineProps(["artItem"]);
 </script>
 
 <style scoped lang="scss">
-img {
+.art-card:deep(img) {
   display: block;
   width: 100%;
-  border-radius: 16px;
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
-  border-radius: 8px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  @media (max-width: 992px) {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
 }
 
 .dark {
@@ -70,10 +87,10 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   color: $c-white;
-  border-radius: 16px;
   opacity: 0;
   transition: opacity 0.1s ease;
   overflow: scroll;
+  border-radius: 16px;
   @media (max-width: 1120px) {
     padding: 16px;
   }
@@ -89,7 +106,8 @@ img {
 a {
   text-decoration: none;
   position: relative;
-  overflow: hidden;
+  border-radius: 16px;
+  display: block;
   &:hover {
     cursor: pointer;
   }
@@ -100,6 +118,9 @@ a {
     }
     .codepen {
       top: 0px;
+    }
+    :deep(img) {
+      box-shadow: none;
     }
   }
   //used on 992px and down hover
@@ -112,11 +133,12 @@ a {
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     aspect-ratio: 1/1;
-    border-radius: 8px;
+    border-radius: 16px;
     opacity: 0;
     transition: opacity 0.1s ease;
   }
   @media (max-width: 992px) {
+    box-shadow: none;
     &:hover,
     &:focus {
       &:after {

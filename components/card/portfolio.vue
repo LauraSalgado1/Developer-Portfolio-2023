@@ -1,29 +1,33 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-link class="image-link" :to="`/portfolio/${portfolioItem.slug}`">
-      <nuxt-img
-        width="757"
-        height="426"
-        v-if="portfolioItem.image"
-        :src="portfolioItem.image"
-      />
+    <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
+      <div class="image-link">
+        <!-- <nuxt-img
+          width="757"
+          height="426"
+          v-if="portfolioItem.image"
+          :src="portfolioItem.image"
+          :alt="portfolioItem.imageAlt"
+        /> -->
+
+        <nuxt-picture
+          :src="portfolioItem.image"
+          :alt="portfolioItem.imageAlt"
+          width="757"
+          height="426"
+        />
+      </div>
+
+      <div class="bottom">
+        <h3>{{ portfolioItem.title }}</h3>
+
+        <ul class="tags no-format">
+          <li v-for="(tag, index) in portfolioItem.tags" :key="index">
+            {{ tag }}<span>&#8226;</span>
+          </li>
+        </ul>
+      </div>
     </nuxt-link>
-
-    <h3>{{ portfolioItem.title }}</h3>
-
-    <ul class="tags no-format">
-      <li v-for="(tag, index) in portfolioItem.tags" :key="index">
-        {{ tag }}<span>&#8226;</span>
-      </li>
-    </ul>
-
-    <nuxt-link :to="`/portfolio/${portfolioItem.slug}`" class="button"
-      >Project Details
-
-      <span class="screen-reader-text"
-        >for {{ portfolioItem.title }}</span
-      ></nuxt-link
-    >
   </div>
 </template>
 
@@ -32,7 +36,28 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 </script>
 
 <style scoped lang="scss">
+a {
+  text-decoration: none;
+  display: block;
+  &:hover,
+  &:focus {
+    .image-link {
+      box-shadow: none;
+    }
+    .image-link:after {
+      opacity: 1;
+    }
+    h3 {
+      text-decoration: underline;
+    }
+  }
+}
+
 .image-link {
+  text-decoration: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
   &:after {
     display: block;
     content: "";
@@ -42,33 +67,23 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     aspect-ratio: 16/9;
-    border-radius: 8px;
     opacity: 0;
     transition: opacity 0.1s ease;
     z-index: 2;
+    border-radius: 8px;
   }
-  &:hover,
-  &:focus {
-    &:after {
-      opacity: 1;
-    }
-  }
-}
-
-img {
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 8px;
-  width: 100%;
-  :hover {
+  :deep(img) {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
   }
 }
 
 h3 {
   margin: 32px 0 8px;
   @media (max-width: 750px) {
-    margin: 24px 0 8px;
+    margin: 16px 0 8px;
   }
 }
 .tags {
@@ -83,7 +98,7 @@ h3 {
     margin-bottom: 16px;
   }
   li {
-    margin: 0 16px 8px 0;
+    margin: 0 16px 4px 0;
     @media (max-width: 750px) {
       margin: 0 0 2px 0;
     }

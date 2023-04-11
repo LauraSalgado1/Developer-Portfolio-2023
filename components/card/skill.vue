@@ -4,8 +4,8 @@
       <Icon
         v-if="skillItem.icon"
         :name="skillItem.icon"
-        width="48"
-        height="48"
+        :width="skillItem.width"
+        :height="skillItem.height"
         color="#272727"
         class="icon"
       />
@@ -31,6 +31,7 @@ const { skillItem } = defineProps(["skillItem"]);
   padding: 32px;
   border-radius: 32px;
   margin-bottom: 32px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   @media (max-width: 750px) {
     border-radius: 16px;
   }

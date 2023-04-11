@@ -11,7 +11,12 @@
             >
           </div>
           <div class="half">
-            <nuxt-img src="/Laura-Salgado.webp" />
+            <nuxt-picture
+              src="/Laura-Salgado.webp"
+              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+              width="504"
+              height="567"
+            />
           </div>
         </div>
       </div>
@@ -19,7 +24,8 @@
 
     <section class="portfolio has-swiper">
       <div class="inner">
-        <h2>Portfolio</h2>
+        <p class="eyebrow">Previous Work</p>
+        <h2>Development Portfolio</h2>
       </div>
 
       <div class="swiper-outer">
@@ -28,7 +34,6 @@
           :slides-per-view="1.4"
           :navigation="true"
           :space-between="32"
-          :grab-cursor="true"
         >
           <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
             <CardPortfolio :portfolioItem="item" />
@@ -39,6 +44,7 @@
 
     <section class="skills">
       <div class="inner-narrow">
+        <p class="eyebrow">I like stickers</p>
         <h2>Tech Skills & Tools</h2>
 
         <div class="background yellow">
@@ -61,6 +67,7 @@
 
     <section class="art has-swiper">
       <div class="inner">
+        <p class="eyebrow">Getting weird</p>
         <h2>
           CSS Art<span class="mobile-break"><br /></span> & Animation
         </h2>
@@ -107,6 +114,7 @@
 
     <section class="education">
       <div class="inner-narrow">
+        <p class="eyebrow">School is cool</p>
         <h2>In-person Education</h2>
 
         <div class="background grey">
@@ -128,7 +136,7 @@
           <h3>UX Gains</h3>
 
           <p class="p1">
-            For a multi-stage form I built, I wanted to improve the user's
+            While building a multi-stage form, I wanted to improve the
             experience by adding persistent data between page navigation,
             browser refreshing, and multiple site visits. I learned all about JS
             localStorage and sessionStorage to elevate the project to a
@@ -145,6 +153,17 @@
           <div>
             <h3>Agency Acquirements</h3>
             <ul class="no-format">
+              <li>
+                <Icon
+                  name="mdi:form-textbox"
+                  width="30"
+                  height="30"
+                  color="#272727"
+                />
+
+                Practiced at handling form data in Nuxt, connecting submissions
+                to WordPress via the Gravity Forms API
+              </li>
               <li>
                 <Icon
                   name="ic:outline-mode-edit-outline"
@@ -175,17 +194,7 @@
 
                 Logo and identity fundamentals
               </li>
-              <li>
-                <Icon
-                  name="mdi:form-textbox"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
 
-                Practiced at handling form data in Nuxt, connecting submissions
-                to a WordPress admin using the Gravity Forms API
-              </li>
               <li>
                 <Icon
                   name="material-symbols:calendar-month"
@@ -261,7 +270,8 @@
 
     <section class="media">
       <div class="inner">
-        <h2>Media</h2>
+        <p class="eyebrow">Posts and things</p>
+        <h2>In The Media</h2>
 
         <div class="media-row">
           <CardMedia
@@ -279,24 +289,29 @@
 const portfolioCards = [
   {
     title: "Céline Dion",
-    image: "/celine-dion-home.jpg",
+    image: "/celine-dion-home.webp",
+    imageAlt:
+      "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
     tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
     slug: "celine-dion",
   },
   {
     title: "Mark Knopfler - Dire Straits",
-    image: "/mark-knopfler-home.jpg",
+    image: "/mark-knopfler-home.webp",
+    imageAlt:
+      "Screenshot of Mark Knopfler's 2019 website with a light blue colour theme. Photo of an empty road leading to the far-off horizon. Text reads Down the Road Wherever the new album from Mark Knopfler out now.",
     tags: [
       "Agency project",
       "Custom WordPress theme",
       "PHP",
-      "Full website design (previous 2018 version)",
+      "Website design (previous 2019 version)",
     ],
     slug: "mark-knopfler",
   },
   {
     title: "Animal Movie Generator",
-    image: "/animal-movie-generator-home.jpg",
+    image: "/animal-movie-generator-home.webp",
+    imageAlt: "",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
     slug: "animal-movie-generator",
   },
@@ -307,6 +322,8 @@ const skillCardsLeft = [
     heading: "JavaScript Frameworks",
     paragraph: "",
     paragraph2: "",
+    width: "42",
+    height: "42",
     icon: "fluent-emoji-high-contrast:framed-picture",
     list: ["Vue", "Nuxt 2", "Nuxt 3"],
   },
@@ -314,14 +331,18 @@ const skillCardsLeft = [
     heading: "Headless CMS",
     paragraph: "",
     paragraph2: "",
-    icon: "game-icons:pumpkin-lantern",
+    icon: "mdi:head-remove-outline",
+    width: "46",
+    height: "46",
     list: ["Strapi", "WordPress REST API", "WPGraphQL"],
   },
   {
     heading: "WordPress PHP",
     paragraph: "",
     paragraph2: "",
-    icon: "ic:baseline-wordpress",
+    icon: "ion:logo-wordpress",
+    width: "48",
+    height: "48",
     list: [
       "Custom theming and child theming",
       "Customization of widely used plugins, e.g. WooCommerce",
@@ -331,7 +352,9 @@ const skillCardsLeft = [
     heading: "Code Basics",
     paragraph: "",
     paragraph2: "",
-    icon: "ph:code-bold",
+    icon: "ic:baseline-code",
+    width: "48",
+    height: "48",
     list: [
       "HTML5",
       "CSS3 with Sass",
@@ -347,6 +370,8 @@ const skillCardsRight = [
       "Over 2021 and 2022, I moved out of my old comfort zone of fully managed local server environments and WordPress services (MAMP and WP Engine) into more of a command-line life.",
     paragraph2: "",
     icon: "ri:terminal-fill",
+    width: "48",
+    height: "48",
     list: [
       "I run my own local AMP stack dev environment with Apache, MySQL, PHP and phpMyAdmin",
       "SSH to deploy code from GitHub",
@@ -362,7 +387,9 @@ const skillCardsRight = [
     paragraph: ".",
     paragraph2:
       "I love getting to share with my teammates how easy it is to achieve big accessibility wins by making small changes.",
-    icon: "ion:accessibility-outline",
+    icon: "ic:baseline-accessibility-new",
+    width: "48",
+    height: "48",
     list: [
       "Advocate of correct semantic HTML and building with inclusivity in mind",
       "My work is built to WCAG 2.1 AA level accessibility requirements",
@@ -374,7 +401,10 @@ const skillCardsRight = [
     heading: "Design Tools",
     paragraph: "",
     paragraph2: "",
-    icon: "iconoir:design-nib",
+    icon: "ic:outline-design-services",
+    width: "40",
+    height: "40",
+    iconSmall: true,
     list: ["Figma", "Adobe", "Sketch"],
   },
 ];
@@ -451,8 +481,10 @@ const mediaCards = [
     title:
       "From Coding Newbie to Coding Celine Dion's Website: Laura Salgado's Journey into Tech",
     paragraph:
-      'As part of Juno College\'s "Student Stories", I talked about my experience of making a career transition and shared support for tech newcomers.',
-    image: "/juno-college-student-stories-laura-salgado.png",
+      'As part of Juno College\'s "Student Stories", I talk about my career transition and share support for tech newcomers.',
+    image: "/juno-college-student-stories-laura-salgado.webp",
+    imageAlt:
+      "Three photos: a screenshot of Celine Dion's website, a selfie of Laura and a cute white cat, and Laura's CSS art of orange lillies.",
     link: "https://junocollege.com/blog/web-development-bootcamp-alumni-laura-salgado/",
     moreText: "Read",
     icon: "ph:book-fill",
@@ -462,8 +494,9 @@ const mediaCards = [
     author: "Chris Coyier & Marie Mosley",
     title: "Episode 134",
     paragraph:
-      'In conversation about the Creative Coding Club, they discussed one of my first pure CSS art projects, and how we can go deeper into fun using our "normal" code skills.',
+      "The group discusses the Creative Coding Club and dissects one of my first CSS art projects.",
     image: "",
+    imageAlt: "CodePen text logo. The letter O is a line drawing of a cube.",
     link: "https://blog.codepen.io/2017/06/13/134-nat-cooper/",
     moreText: "Listen",
     icon: "material-symbols:podcasts",
@@ -473,63 +506,80 @@ const mediaCards = [
 const artCards = [
   {
     title: "Calla Lillies",
-    image: "/calla-lillies-462.jpg",
+    image: "/calla-lillies-462.webp",
+    imageAlt:
+      "Illustration of 3 mango calla lily flowers in blended shades of red, orange and yellow on a dark background.",
     link: "https://codepen.io/Laura_Salgado/pen/bWKNLm",
     tags: [
       "Pure CSS illustration",
       "Painted from photo reference",
-      "Layering",
-      "Transparency",
+      "Layering and transparency",
       "CSS gradients",
     ],
   },
   {
     title: "Aggretsuko Morph Rage",
-    image: "/aggretsuko.jpg",
+    image: "/aggretsuko.webp",
+    imageAlt:
+      "Cartoon style illustration of a cute red panda with a large face wearing a blue business suit on a light blue background",
     link: "https://codepen.io/Laura_Salgado/pen/VxWvZG",
     tags: ["Created SVG assets in Sketch", "GSAP"],
   },
   {
     title: "Charlotte's Web animated book page",
-    image: "/charlottes-web-dev.jpg",
+    image: "/charlottes-web-dev.webp",
+    imageAlt:
+      "Illustration of a circular spider web. The word terrfic is formed by web lines in the center. A small black spider hangs from a web line in the top left of the web.",
     link: "https://codepen.io/Laura_Salgado/pen/GyNVWQ",
     tags: ["Created SVG assets in Sketch", "Manual SVG animation"],
   },
   {
-    title: "Chat Loader Morph",
-    image: "/chat-loader.jpg",
-    link: "https://codepen.io/Laura_Salgado/pen/KqMJBw",
-    tags: ["SVG animation", "GSAP", "Timelines"],
-  },
-  {
     title: "MC Escher Woodblock Cat",
-    image: "/MC-Escher-cat.jpg",
+    image: "/MC-Escher-cat.webp",
+    imageAlt:
+      "Black and white illustratioon of a white cat sitting on a table. The table has a long tablecloth with thick black and white stripes. The initials M.C.E. are in the top left.",
     link: "https://codepen.io/Laura_Salgado/pen/aVXyrz",
     tags: ["Pure CSS illustration"],
   },
   {
+    title: "Chat Loader Morph",
+    image: "/morph-chat.webp",
+    imageAlt:
+      "Icon of two overlapping chat bubbles on a circular teal background. The chat bubble in front shows simplified lines of text. ",
+    link: "https://codepen.io/Laura_Salgado/pen/KqMJBw",
+    tags: ["SVG animation", "GSAP", "Timelines"],
+  },
+
+  {
     title: "Spinning Bowtie Cat",
-    image: "/spinning-bowtie-cat.jpg",
+    image: "/spinning-bowtie-cat.webp",
+    imageAlt: "Line drawing of a striped cat wearing a bowtie.",
     link: "https://codepen.io/Laura_Salgado/pen/dRZQNw",
     tags: ["SVG Animation", "GSAP", "TweenMax"],
   },
+
   {
-    title: "Rain Machine",
-    image: "/rain-machine.jpg",
-    link: "https://codepen.io/Laura_Salgado/pen/peZzOG",
-    tags: ["Manual SVG animation", "Interactive"],
+    title: "Self Portrait",
+    image: "/self-portrait.webp",
+    imageAlt:
+      "Illustration of Laura Salgado's head and shoulders on a light blue background. She has brown hair and is wearing a black t shirt. Text reads hover on laura.",
+    link: "https://codepen.io/Laura_Salgado/pen/RZKQGy",
+    tags: ["Manually animated", "Pure CSS illustration"],
   },
   {
     title: "Purring Cat",
-    image: "/purring-cat.jpg",
+    image: "/purring-cat.webp",
+    imageAlt: "Line drawing of a smiling cat's face.",
     link: "https://codepen.io/Laura_Salgado/pen/EWrZer",
     tags: ["Manual SVG animation"],
   },
   {
-    title: "Self Portrait",
-    image: "/self-portrait.jpg",
-    link: "https://codepen.io/Laura_Salgado/pen/RZKQGy",
-    tags: ["Manually animated", "Pure CSS illustration"],
+    title: "Rain Machine",
+    image: "/rain-machine.webp",
+    imageAlt:
+      "Screenshot of group of UI buttons that read No Rain, Light Rain, Heavy Rain, Night Mode, Dusk Mode and Lightning. The background shows an image of rain and lightning in dusk colours.",
+    link: "https://codepen.io/Laura_Salgado/pen/peZzOG",
+    tags: ["Manual SVG animation", "Interactive"],
   },
 ];
 
@@ -560,10 +610,6 @@ section {
   }
 }
 
-// section.skills {
-//   padding-bottom: 0;
-// }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -586,7 +632,8 @@ section.portfolio {
 section.skills,
 section.education {
   background: $c-grey-light-extra;
-  h2 {
+  h2,
+  .eyebrow {
     text-align: center;
   }
 }
@@ -620,6 +667,8 @@ section.education {
   padding: 32px 0 0;
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
   @media (max-width: 750px) {
     padding: 32px 32px 0;
     border-radius: 16px;
@@ -635,6 +684,7 @@ section.education {
     background-color: $c-grey-mid;
     position: relative;
     z-index: 2;
+
     @media (max-width: 970px) {
       width: calc(100% - 49px);
       margin: 0 0 0 auto;
@@ -659,6 +709,7 @@ section.agency-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background: $c-grey-light-extra;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     padding: 64px;
     border-radius: 32px;
     gap: 64px;
@@ -675,6 +726,13 @@ section.agency-skills {
       margin-bottom: 32px;
       display: grid;
       grid-template-columns: 50px 1fr;
+      align-items: center;
+      @media (max-width: 992px) {
+        align-items: start;
+      }
+      // @media (max-width: 750px) {
+      //   align-items: center;
+      // }
     }
     li:last-child {
       margin-bottom: 0;
@@ -718,11 +776,6 @@ section.art {
     display: none;
     @media (max-width: 750px) {
       display: block;
-    }
-  }
-
-  @media (max-width: 500px) {
-    h2 {
     }
   }
 }

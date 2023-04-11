@@ -20,6 +20,7 @@ const { group } = defineProps(["group"]);
 .year {
   text-align: left;
   background: $c-yellow-light-extra;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   display: inline-block;
   margin: 0 auto;
   padding: 16px 16px 16px 32px;
