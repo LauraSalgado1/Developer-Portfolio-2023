@@ -37,7 +37,7 @@
 
             <nuxt-img
               src="/404.jpg"
-              alt="Fluffy white cat laying on the floor"
+              alt="Fluffy white cat laying on the floor."
             ></nuxt-img>
           </div>
         </section>

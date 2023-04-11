@@ -667,6 +667,7 @@ section.education {
   padding: 32px 0 0;
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 750px) {
     padding: 32px 32px 0;
@@ -678,12 +679,12 @@ section.education {
 
   &.yellow {
     background-color: $c-yellow-light-extra;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   }
   &.grey {
     background-color: $c-grey-mid;
     position: relative;
     z-index: 2;
+
     @media (max-width: 970px) {
       width: calc(100% - 49px);
       margin: 0 0 0 auto;

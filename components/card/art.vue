@@ -12,7 +12,6 @@
       :alt="artItem.imageAlt"
       width="313"
       height="313"
-      loading="lazy"
     />
     <div class="overlay">
       <ul class="tags">
