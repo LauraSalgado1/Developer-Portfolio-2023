@@ -8,7 +8,7 @@
       <ul class="no-format f-ui">
         <li>
           <NuxtLink class="home" to="/">
-            <nuxt-img
+            <img
               src="/Laura-Salgado-Developer-Since-2016.svg"
               alt="Home page of Laura Salgado Developer Since 2016"
               width="256"
