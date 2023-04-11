@@ -35,10 +35,12 @@
               <li>Not again</li>
             </ul>
 
-            <nuxt-img
+            <img
               src="/404.jpg"
               alt="Fluffy white cat laying on the floor."
-            ></nuxt-img>
+              width="757"
+              height="426"
+            />
           </div>
         </section>
         <section class="lower">
