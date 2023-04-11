@@ -20,7 +20,7 @@
           </li>
         </ul>
 
-        <nuxt-img
+        <img
           width="757"
           height="426"
           v-if="portfolioItem.image"
