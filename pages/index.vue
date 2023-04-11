@@ -25,7 +25,9 @@
     <section class="portfolio has-swiper">
       <div class="inner">
         <p class="eyebrow">Previous Work</p>
-        <h2>Development Portfolio</h2>
+        <h2>
+          Development<span class="mobile-break"><br /></span> Portfolio
+        </h2>
       </div>
 
       <div class="swiper-outer">
@@ -310,8 +312,9 @@ const portfolioCards = [
   },
   {
     title: "Animal Movie Generator",
-    image: "/animal-movie-generator-home.webp",
-    imageAlt: "",
+    image: "/animal-movie-generator.webp",
+    imageAlt:
+      "Screenshot of the Animal Movie Generator app. Text reads select a move star.",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
     slug: "animal-movie-generator",
   },
