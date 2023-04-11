@@ -55,7 +55,7 @@ const portfolioItem = {
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
   slug: "animal-movie-generator",
   content:
-    "<p>Using 'The Movie Database' API, I wrote this app to inspire a new way of finding your next must-watch.</p><p>Now you can find movies starring your favourite animal!</p><p>I enjoyed adding fun surprises on the dynamic film perforations using SVG&nbsp;shapes.</p>",
+    "<p>Using 'The Movie Database' API, I wrote this JavaScript app to inspire a new way of finding your next must-watch.</p><p>Now you can find movies starring your favourite animal!</p><p>I enjoyed adding fun surprises on the dynamic film perforations using SVG&nbsp;shapes.</p>",
 };
 
 useSeoMeta({

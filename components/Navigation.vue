@@ -11,7 +11,8 @@
             <nuxt-img
               src="/Laura-Salgado-Developer-Since-2016.svg"
               alt="Home page of Laura Salgado Developer Since 2016"
-              width="300"
+              width="256"
+              height="85"
             />
           </NuxtLink>
         </li>

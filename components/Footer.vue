@@ -6,7 +6,7 @@
           <nuxt-img
             class="footer-logo"
             src="/Laura-Salgado-Developer-Since-2016-light.svg"
-            alt="Home page of Laura Salgado Developer Since 2016"
+            alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
             width="400"
             height="134"
           />

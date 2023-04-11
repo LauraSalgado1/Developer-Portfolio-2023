@@ -2,11 +2,19 @@
   <div class="portfolio-card">
     <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
       <div class="image-link">
-        <nuxt-img
+        <!-- <nuxt-img
           width="757"
           height="426"
           v-if="portfolioItem.image"
           :src="portfolioItem.image"
+          :alt="portfolioItem.imageAlt"
+        /> -->
+
+        <nuxt-picture
+          :src="portfolioItem.image"
+          :alt="portfolioItem.imageAlt"
+          width="757"
+          height="426"
         />
       </div>
 
@@ -30,12 +38,12 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 <style scoped lang="scss">
 a {
   text-decoration: none;
-  background: $c-white;
   display: block;
-  border-radius: 8px;
-  overflow: hidden;
   &:hover,
   &:focus {
+    .image-link {
+      box-shadow: none;
+    }
     .image-link:after {
       opacity: 1;
     }
@@ -43,43 +51,39 @@ a {
       text-decoration: underline;
     }
   }
-  .bottom {
-    padding: 32px;
-  }
 }
 
 .image-link {
   text-decoration: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
   &:after {
     display: block;
     content: "";
     position: absolute;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     top: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     aspect-ratio: 16/9;
-
     opacity: 0;
     transition: opacity 0.1s ease;
     z-index: 2;
+    border-radius: 8px;
+  }
+  :deep(img) {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
   }
 }
 
-img {
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  object-position: top center;
-
-  width: 100%;
-}
-
 h3 {
-  margin: 0 0 8px;
+  margin: 32px 0 8px;
   @media (max-width: 750px) {
-    margin: 0 0 8px;
+    margin: 16px 0 8px;
   }
 }
 .tags {
@@ -88,13 +92,13 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  //margin-bottom: 32px;
+  margin-bottom: 32px;
   @media (max-width: 750px) {
     display: block;
     margin-bottom: 16px;
   }
   li {
-    margin: 0 16px 8px 0;
+    margin: 0 16px 4px 0;
     @media (max-width: 750px) {
       margin: 0 0 2px 0;
     }

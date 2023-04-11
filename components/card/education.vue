@@ -50,6 +50,7 @@ const { courseItem } = defineProps(["courseItem"]);
   margin: 0 auto;
   text-align: center;
   background: $c-white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   width: 100%;
   display: flex;

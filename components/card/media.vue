@@ -1,10 +1,29 @@
 <template>
   <a class="media-card" :href="mediaItem.link" target="_blank">
     <div class="image">
-      <nuxt-img v-if="mediaItem.image" :src="mediaItem.image" />
+      <!-- <nuxt-img
+        v-if="mediaItem.image"
+        :src="mediaItem.image"
+        :alt="mediaItem.imageAlt"
+        width="520"
+        height="293"
+        loading="lazy"
+      /> -->
+
+      <nuxt-picture
+        v-if="mediaItem.image"
+        :src="mediaItem.image"
+        :alt="mediaItem.imageAlt"
+        width="520"
+        height="293"
+        loading="lazy"
+      />
+
       <svg
         v-else
         width="256"
+        height="48"
+        loading="lazy"
         viewBox="0 0 138 26"
         fill="none"
         stroke="#fff"
@@ -46,6 +65,7 @@ const { mediaItem } = defineProps(["mediaItem"]);
 <style scoped lang="scss">
 .media-card {
   background: $c-white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   text-decoration: none;
   overflow: hidden;
@@ -54,9 +74,11 @@ const { mediaItem } = defineProps(["mediaItem"]);
   justify-content: stretch;
   align-items: flex-start;
   &:hover {
-    h3,
-    .more {
+    box-shadow: none;
+    h3 {
       text-decoration: underline;
+    }
+    .more {
       top: 0;
     }
     .image:after {
