@@ -11,18 +11,15 @@
             <img
               src="/Laura-Salgado-Developer-Since-2016.svg"
               alt="Home page of Laura Salgado Developer Since 2016"
-              width="256"
-              height="85"
+              width="300"
+              height="100"
             />
           </NuxtLink>
         </li>
         <li>
-          <a href="mailto:culham.laura@gmail.com">
-            <Icon name="mdi-email" width="30" height="20" /><span
-              class="address"
-              >culham.laura@gmail.com</span
-            >
-            <span class="email">Email</span>
+          <a href="mailto:culham.laura@gmail.com" title="email me">
+            <Icon name="mdi-email" width="32" height="32" />
+            <span class="address">culham.laura@gmail.com </span>
           </a>
         </li>
       </ul>
@@ -69,7 +66,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .site-header {
-  margin-top: 20px;
   padding: 0px 64px;
   position: sticky;
   z-index: 5;
@@ -80,22 +76,14 @@ onMounted(() => {
 
   &.scrolled {
     opacity: 0;
-    transform: translateY(-100%);
     &.up {
       opacity: 1;
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
-      transform: translateY(0%);
     }
   }
   @media (max-width: 1400px) {
-    padding: 0px;
+    padding: 0;
   }
-  // @media (max-width: 750px) {
-  //   padding: 16px 32px 0;
-  // }
-  // @media (max-width: 370px) {
-  //   padding: 16px 16px 0;
-  // }
 }
 
 a {
@@ -110,12 +98,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
 }
 
 nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   width: 100%;
   @media (max-width: 1400px) {
     width: 1200px;
@@ -130,12 +120,12 @@ nav ul {
     padding: 0 16px;
   }
 
-  li:first-child {
+  li:first-child a {
     position: relative;
     left: -12px;
-    width: 256px;
+    width: 300px;
     @media (max-width: 750px) {
-      width: 180px;
+      width: 256px;
       left: -8px;
     }
   }
@@ -145,19 +135,29 @@ nav ul {
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 8px;
+      @media (max-width: 750px) {
+        svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
     }
   }
 }
 
-.email {
-  display: none;
-  @media (max-width: 750px) {
-    display: inline-block;
-  }
-}
 .address {
   @media (max-width: 750px) {
-    display: none;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
   }
 }
 </style>

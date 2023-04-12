@@ -2,14 +2,6 @@
   <div class="portfolio-card">
     <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
       <div class="image-link">
-        <!-- <nuxt-img
-          width="757"
-          height="426"
-          v-if="portfolioItem.image"
-          :src="portfolioItem.image"
-          :alt="portfolioItem.imageAlt"
-        /> -->
-
         <img
           :src="portfolioItem.image"
           :alt="portfolioItem.imageAlt"

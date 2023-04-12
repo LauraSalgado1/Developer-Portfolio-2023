@@ -30,8 +30,8 @@
     </div>
     <div class="media-bottom">
       <div>
-        <p class="eyebrow" v-html="mediaItem.source"></p>
-        <h3 v-html="mediaItem.title"></h3>
+        <p class="source" v-html="mediaItem.source"></p>
+        <h3 class="h4" v-html="mediaItem.title"></h3>
         <p class="author" v-html="mediaItem.author"></p>
         <p class="excerpt" v-html="mediaItem.paragraph"></p>
       </div>
@@ -76,8 +76,13 @@ const { mediaItem } = defineProps(["mediaItem"]);
       opacity: 1;
     }
   }
+  .source {
+    color: $c-black-light;
+    text-transform: uppercase;
+    margin: 0;
+  }
   h3 {
-    margin: 5px 0;
+    margin: 8px 0;
   }
   .author {
     color: $c-black-light;
@@ -95,7 +100,7 @@ const { mediaItem } = defineProps(["mediaItem"]);
     top: 8px;
   }
   .excerpt {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
