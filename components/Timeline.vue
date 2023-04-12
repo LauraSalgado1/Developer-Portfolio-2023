@@ -39,13 +39,13 @@ const { group } = defineProps(["group"]);
     writing-mode: vertical-lr;
   }
   @media (max-width: 750px) {
-    width: 39px;
-    transform: rotate(180deg) translateX(71px);
-    padding: 16px 0px 16px 8px;
-  }
-  @media (max-width: 370px) {
-    transform: rotate(180deg) translateX(55px);
-    padding: 16px 0px 16px 6px;
+    writing-mode: inherit;
+    width: auto;
+    position: static;
+    transform: none;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 16px;
+    text-align: center;
   }
 }
 
@@ -63,16 +63,22 @@ const { group } = defineProps(["group"]);
   }
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
-    transform: translate(0, -80px);
-    margin-bottom: -80px;
+    transform: none;
+    margin-bottom: 0;
   }
 }
 
 .group {
   padding-bottom: 32px;
   width: calc(100% + 64px);
+  @media (max-width: 750px) {
+    width: calc(100% + 128px);
+    transform: translate(-64px);
+    text-align: center;
+  }
   @media (max-width: 370px) {
-    width: calc(100% + 32px);
+    width: calc(100% + 64px);
+    transform: translate(-32px);
   }
 }
 </style>

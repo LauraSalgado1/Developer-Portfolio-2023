@@ -58,7 +58,7 @@ const { courseItem } = defineProps(["courseItem"]);
   justify-content: space-between;
 
   h4 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
   }
   .frequency {
     background: $c-grey-light;

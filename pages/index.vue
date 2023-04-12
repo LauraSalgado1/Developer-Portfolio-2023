@@ -25,15 +25,26 @@
     <section class="portfolio has-swiper">
       <div class="inner">
         <p class="eyebrow">Previous Work</p>
-        <h2>
-          Development<span class="mobile-break"><br /></span> Portfolio
-        </h2>
+        <h2>Development Portfolio</h2>
       </div>
 
       <div class="swiper-outer">
         <Swiper
+          class="portfolio-desktop"
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
           :slides-per-view="1.4"
+          :navigation="true"
+          :space-between="32"
+        >
+          <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
+            <CardPortfolio :portfolioItem="item" />
+          </SwiperSlide>
+        </Swiper>
+
+        <Swiper
+          class="portfolio-mobile"
+          :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
+          :slides-per-view="1.1"
           :navigation="true"
           :space-between="32"
         >
@@ -45,10 +56,11 @@
     </section>
 
     <section class="skills">
-      <div class="inner-narrow">
+      <div class="inner">
         <p class="eyebrow">I like stickers</p>
         <h2>Tech Skills & Tools</h2>
-
+      </div>
+      <div class="inner-narrow">
         <div class="background yellow">
           <div class="skills-lists">
             <ul class="no-format skills-list">
@@ -70,9 +82,7 @@
     <section class="art has-swiper">
       <div class="inner">
         <p class="eyebrow">Getting weird</p>
-        <h2>
-          CSS Art<span class="mobile-break"><br /></span> & Animation
-        </h2>
+        <h2>CSS Art & Animation</h2>
       </div>
 
       <div class="swiper-outer">
@@ -105,7 +115,7 @@
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
           :navigation="true"
           :space-between="32"
-          :slides-per-view="1.5"
+          :slides-per-view="1.1"
         >
           <SwiperSlide v-for="artItem in artCards" :key="artItem.title">
             <CardArt :artItem="artItem" />
@@ -115,10 +125,12 @@
     </section>
 
     <section class="education">
-      <div class="inner-narrow">
+      <div class="inner">
         <p class="eyebrow">School is cool</p>
         <h2>In-person Education</h2>
+      </div>
 
+      <div class="inner-narrow">
         <div class="background grey">
           <Timeline
             v-for="group in educationCards"
@@ -131,8 +143,8 @@
 
     <section class="agency-skills">
       <div class="inner">
-        <p class="eyebrow">On-the-job learning</p>
-        <h2>7 Years of Figuring It Out</h2>
+        <p class="eyebrow">7 Years of picking things up</p>
+        <h2>At-work Education</h2>
 
         <div class="text-row">
           <h3>UX Gains</h3>
@@ -153,118 +165,132 @@
 
         <div class="lists-row">
           <div>
-            <h3>Agency Acquirements</h3>
-            <ul class="no-format">
-              <li>
-                <Icon
-                  name="mdi:form-textbox"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+            <div>
+              <h3>Agency Know-How</h3>
+              <ul class="no-format">
+                <li>
+                  <Icon
+                    name="material-symbols:edit-note"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                Practiced at handling form data in Nuxt, connecting submissions
-                to WordPress via the Gravity Forms API
-              </li>
-              <li>
-                <Icon
-                  name="ic:outline-mode-edit-outline"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+                  Content creation
+                </li>
+                <li>
+                  <Icon
+                    name="majesticons:ux-circle-line"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                Content creation
-              </li>
-              <li>
-                <Icon
-                  name="majesticons:ux-circle-line"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+                  UX/UI design and development
+                </li>
+                <li>
+                  <Icon
+                    name="material-symbols:grid-on-outline"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                UX/UI design and development
-              </li>
-              <li>
-                <Icon
-                  name="material-symbols:grid-on-outline"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+                  Logo and identity fundamentals
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Practiced at</h3>
+              <ul class="no-format">
+                <li>
+                  <img src="acf-logo-1.png" width="30" height="14" />
 
-                Logo and identity fundamentals
-              </li>
+                  All things Advanced Custom Fields
+                </li>
+                <li>
+                  <Icon
+                    name="material-symbols:calendar-month"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
+                  Programming with ISO date formatting
+                </li>
 
-              <li>
-                <Icon
-                  name="material-symbols:calendar-month"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
-                Experience programming with ISO date formatting
-              </li>
-            </ul>
+                <li>
+                  <Icon
+                    name="mdi:form-textbox"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
+
+                  Handling form data, hooking submissions to WordPress via
+                  Gravity Forms API
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>
-            <h3>Team Skills</h3>
-            <ul class="no-format">
-              <li>
-                <Icon
-                  name="material-symbols:change-circle-outline"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+            <div>
+              <h3>Team Skills</h3>
+              <ul class="no-format">
+                <li>
+                  <Icon
+                    name="material-symbols:change-circle-outline"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                Rolling with ongoing changes to the plan, agile methodologies,
-                iterative development
-              </li>
-              <li>
-                <Icon
-                  name="tabler:ruler"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
-                Fidelity to design specifics, feature planning, asking design
-                questions
-              </li>
-              <li>
-                <Icon
-                  name="ic:sharp-access-time"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+                  Rolling with ongoing changes to the plan, agile methodologies,
+                  iterative development
+                </li>
+                <li>
+                  <Icon
+                    name="tabler:ruler"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
+                  Fidelity to design specifics, feature planning, asking design
+                  questions
+                </li>
+                <li>
+                  <Icon
+                    name="ic:sharp-access-time"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                Tracking my time between projects and sharing daily updates on
-                my work
-              </li>
-              <li>
-                <Icon
-                  name="bi:chat-right-heart"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
+                  Tracking my time between projects and sharing daily updates on
+                  my work
+                </li>
+                <li>
+                  <Icon
+                    name="bi:chat-right-heart"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
 
-                Talking about technical details directly with clients in ways
-                that non-technical people can understand
-              </li>
-              <li>
-                <Icon
-                  name="icon-park-outline:duck"
-                  width="30"
-                  height="30"
-                  color="#272727"
-                />
-                Both sides of rubber ducking with dev teammates
-              </li>
-            </ul>
+                  Talking about technical details with clients in ways that
+                  non-technical people can understand
+                </li>
+                <li>
+                  <Icon
+                    name="icon-park-outline:duck"
+                    width="30"
+                    height="30"
+                    color="#272727"
+                  />
+                  Both sides of rubber ducking with teammates
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +338,7 @@ const portfolioCards = [
   },
   {
     title: "Animal Movie Generator",
-    image: "/animal-movie-generator.webp",
+    image: "/animal-movie-generator-app.webp",
     imageAlt:
       "Screenshot of the Animal Movie Generator app. Text reads select a move star.",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
@@ -323,29 +349,17 @@ const portfolioCards = [
 const skillCardsLeft = [
   {
     heading: "JavaScript Frameworks",
-    paragraph: "",
-    paragraph2: "",
-    width: "42",
-    height: "42",
-    icon: "fluent-emoji-high-contrast:framed-picture",
+    icon: "mdi:language-javascript",
     list: ["Vue", "Nuxt 2", "Nuxt 3"],
   },
   {
     heading: "Headless CMS",
-    paragraph: "",
-    paragraph2: "",
     icon: "mdi:head-remove-outline",
-    width: "46",
-    height: "46",
     list: ["Strapi", "WordPress REST API", "WPGraphQL"],
   },
   {
     heading: "WordPress PHP",
-    paragraph: "",
-    paragraph2: "",
     icon: "ion:logo-wordpress",
-    width: "48",
-    height: "48",
     list: [
       "Custom theming and child theming",
       "Customization of widely used plugins, e.g. WooCommerce",
@@ -353,11 +367,7 @@ const skillCardsLeft = [
   },
   {
     heading: "Code Basics",
-    paragraph: "",
-    paragraph2: "",
     icon: "ic:baseline-code",
-    width: "48",
-    height: "48",
     list: [
       "HTML5",
       "CSS3 with Sass",
@@ -369,14 +379,9 @@ const skillCardsLeft = [
 const skillCardsRight = [
   {
     heading: "Dev Environment & Server Management",
-    paragraph:
-      "Over 2021 and 2022, I moved out of my old comfort zone of fully managed local server environments and WordPress services (MAMP and WP Engine) into more of a command-line life.",
-    paragraph2: "",
     icon: "ri:terminal-fill",
-    width: "48",
-    height: "48",
     list: [
-      "I run my own local AMP stack dev environment with Apache, MySQL, PHP and phpMyAdmin",
+      "Run my own AMP stack dev environment with Apache, MySQL, PHP and phpMyAdmin",
       "SSH to deploy code from GitHub",
       "MYCLI for MySQL for copying databases",
       "SCP to move databases",
@@ -387,26 +392,17 @@ const skillCardsRight = [
   },
   {
     heading: "Accessibility",
-    paragraph: ".",
-    paragraph2:
-      "I love getting to share with my teammates how easy it is to achieve big accessibility wins by making small changes.",
     icon: "ic:baseline-accessibility-new",
-    width: "48",
-    height: "48",
     list: [
-      "Advocate of correct semantic HTML and building with inclusivity in mind",
-      "My work is built to WCAG 2.1 AA level accessibility requirements",
-      "Completed many accessibility improvement projects on existing sites",
-      "I love getting to share with my teammates how easy it is to achieve huge accessibility wins with small changes",
+      "Advocate of correct semantic HTML and building with inclusivity",
+      "Work is built to WCAG 2.1 AA level requirements",
+      "Many improvement projects done on existing sites",
+      "Love helping devs learn how to get big wins with small changes",
     ],
   },
   {
     heading: "Design Tools",
-    paragraph: "",
-    paragraph2: "",
-    icon: "ic:outline-design-services",
-    width: "40",
-    height: "40",
+    icon: "ic:sharp-select-all",
     iconSmall: true,
     list: ["Figma", "Adobe", "Sketch"],
   },
@@ -597,6 +593,11 @@ section {
   @media (max-width: 750px) {
     padding: 64px 0;
   }
+  &.intro {
+    @media (max-width: 750px) {
+      padding-top: 32px;
+    }
+  }
 }
 .intro-wrapper {
   display: grid;
@@ -623,6 +624,17 @@ section {
 }
 
 section.portfolio {
+  .portfolio-mobile {
+    display: none;
+    @media (max-width: 750px) {
+      display: block;
+    }
+  }
+  .portfolio-desktop {
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
   .swiper-outer {
     opacity: 0;
     animation-name: fadeIn;
@@ -638,6 +650,15 @@ section.education {
   h2,
   .eyebrow {
     text-align: center;
+    @media (max-width: 750px) {
+      text-align: left;
+    }
+  }
+  .eyebrow {
+    margin-bottom: 4px;
+    @media (max-width: 750px) {
+      margin-bottom: 0;
+    }
   }
 }
 .skills-lists {
@@ -648,18 +669,14 @@ section.education {
   max-width: calc(100% + 64px);
   transform: translateX(-32px);
   @media (max-width: 750px) {
-    transform: none;
+    transform: translateX(-64px);
+    max-width: calc(100% + 128px);
     grid-template-columns: 1fr;
     gap: 0;
-    li:nth-child(even) {
-      transform: translateX(-64px);
-    }
   }
   @media (max-width: 370px) {
-    max-width: calc(100% + 32px);
-    li:nth-child(even) {
-      transform: translateX(-32px);
-    }
+    transform: translateX(-32px);
+    max-width: calc(100% + 64px);
   }
 }
 
@@ -699,10 +716,6 @@ section.education {
 }
 
 section.agency-skills {
-  h2 {
-    width: 470px;
-    max-width: 100%;
-  }
   .text-row {
     width: 640px;
     max-width: 100%;
@@ -716,6 +729,11 @@ section.agency-skills {
     padding: 64px;
     border-radius: 32px;
     gap: 64px;
+    > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+    }
     @media (max-width: 992px) {
       padding: 64px 32px;
       gap: 48px;
@@ -733,9 +751,6 @@ section.agency-skills {
       @media (max-width: 992px) {
         align-items: start;
       }
-      // @media (max-width: 750px) {
-      //   align-items: center;
-      // }
     }
     li:last-child {
       margin-bottom: 0;
@@ -785,6 +800,9 @@ section.art {
 
 section.has-swiper {
   overflow: hidden;
+  @media (max-width: 750px) {
+    padding-bottom: 128px;
+  }
 }
 
 .swiper-outer {
@@ -809,30 +827,25 @@ section.has-swiper {
   }
   :deep(.swiper-button-prev:after) {
     font-size: 2rem;
-    @media (max-width: 750px) {
-      font-size: 1.4rem;
-    }
   }
   :deep(.swiper-button-next:after) {
     font-size: 2rem;
-    @media (max-width: 750px) {
-      font-size: 1.4rem;
-    }
   }
   :deep(.swiper-button-prev) {
     right: 64px;
     color: $c-black;
     left: auto;
-    top: -80px;
+    top: -92px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
     padding-right: 3px;
     @media (max-width: 750px) {
-      width: 32px;
-      height: 32px;
-      top: -72px;
+      top: auto;
+      bottom: -64px;
+      right: auto;
+      left: 0;
     }
     &:hover {
       background: $c-black;
@@ -843,16 +856,15 @@ section.has-swiper {
     right: 0;
     color: $c-black;
     left: auto;
-    top: -80px;
+    top: -92px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: $c-grey-mid;
     padding-left: 3px;
     @media (max-width: 750px) {
-      width: 32px;
-      height: 32px;
-      top: -72px;
+      top: auto;
+      bottom: -64px;
     }
     &:hover {
       background: $c-black;

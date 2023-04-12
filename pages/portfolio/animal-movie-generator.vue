@@ -38,8 +38,8 @@
           >Use the live app
           <Icon
             name="uil:external-link-alt"
-            width="16"
-            height="16"
+            width="20"
+            height="20"
             color="#fff"
           />
         </a>
@@ -51,7 +51,7 @@
 <script setup>
 const portfolioItem = {
   title: "Animal Movie Generator",
-  image: "/animal-movie-generator.webp",
+  image: "/animal-movie-generator-app.webp",
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
   slug: "animal-movie-generator",
   content:
@@ -73,6 +73,9 @@ section.header {
     display: block;
     border-radius: 8px;
     width: 512px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top center;
   }
   h1 {
     margin: 32px 0 8px;
@@ -110,6 +113,7 @@ section {
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  font-weight: 400;
   @media (max-width: 750px) {
     display: block;
   }
@@ -149,7 +153,7 @@ section {
 }
 
 .back {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   opacity: 0.7;
   text-decoration: none;
   &:hover {

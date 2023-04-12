@@ -176,6 +176,7 @@ const year = new Date().getFullYear();
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 16px;
+  font-size: 1.6rem;
   img {
     margin: 0 2px 2px 5px;
   }
@@ -267,5 +268,9 @@ a:visited {
 
 .right {
   margin-bottom: 32px;
+  @media (max-width: 500px) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 }
 </style>
