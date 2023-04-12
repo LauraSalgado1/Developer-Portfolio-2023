@@ -204,7 +204,7 @@
               <h3>Practiced at</h3>
               <ul class="no-format">
                 <li>
-                  <img src="acf-logo-1.png" width="30" height="14" />
+                  <img src="/acf-logo-1.png" width="30" height="14" />
 
                   All things Advanced Custom Fields
                 </li>
