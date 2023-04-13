@@ -827,6 +827,19 @@ section.has-swiper {
   width: calc(1072px + ((100vw - 1072px) / 2));
   margin: 0 0 0 auto;
   padding-right: calc((100vw - 1072px) / 2);
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  @media (max-width: 500px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (max-width: 370px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   :deep(.swiper-slide) {
     padding-bottom: 48px;
   }
@@ -844,19 +857,7 @@ section.has-swiper {
     background-size: 32px;
     background-repeat: no-repeat;
   }
-  @media (max-width: 1200px) {
-    width: 100%;
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-  @media (max-width: 500px) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @media (max-width: 370px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+
   :deep(.swiper, .swiper-container) {
     overflow: visible;
   }
@@ -867,14 +868,22 @@ section.has-swiper {
     font-size: 2rem;
   }
   :deep(.swiper-button-prev) {
-    right: 64px;
-    color: $c-black;
-    left: auto;
-    top: -92px;
+    background: $c-black;
+    color: $c-white;
+    background-image: linear-gradient(
+      to bottom,
+      #272727,
+      #303030,
+      #393939,
+      #434343,
+      #4d4d4d,
+      #4d4d4d
+    );
+    top: auto;
+    bottom: 0px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: $c-grey-mid;
     padding-right: 3px;
     @media (max-width: 750px) {
       top: auto;
@@ -883,27 +892,39 @@ section.has-swiper {
       left: 0;
     }
     &:hover {
-      background: $c-black;
       color: $c-white;
+      text-decoration: none;
+      background-color: $c-black;
+      background-image: none;
     }
   }
   :deep(.swiper-button-next) {
-    right: 0;
-    color: $c-black;
-    left: auto;
-    top: -92px;
+    background: $c-black;
+    color: $c-white;
+    background-image: linear-gradient(
+      to bottom,
+      #272727,
+      #303030,
+      #393939,
+      #434343,
+      #4d4d4d,
+      #4d4d4d
+    );
+    top: auto;
+    bottom: 0px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: $c-grey-mid;
     padding-left: 3px;
     @media (max-width: 750px) {
       top: auto;
       bottom: -5px;
     }
     &:hover {
-      background: $c-black;
       color: $c-white;
+      text-decoration: none;
+      background-color: $c-black;
+      background-image: none;
     }
   }
 }

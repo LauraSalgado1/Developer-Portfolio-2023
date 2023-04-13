@@ -53,6 +53,8 @@
 const portfolioItem = {
   title: "Animal Movie Generator",
   image: "/animal-movie-generator-app.webp",
+  imageAlt:
+    "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
   slug: "animal-movie-generator",
   content:

@@ -81,7 +81,7 @@ onMounted(() => {
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
     }
   }
-  @media (max-width: 1400px) {
+  @media (max-width: 1500px) {
     padding: 0;
   }
 }
@@ -107,7 +107,7 @@ nav ul {
   align-items: center;
   gap: 16px;
   width: 100%;
-  @media (max-width: 1400px) {
+  @media (max-width: 1500px) {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
