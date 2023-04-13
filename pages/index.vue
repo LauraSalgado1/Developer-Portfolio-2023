@@ -875,7 +875,7 @@ section.has-swiper {
     padding-right: 3px;
     @media (max-width: 750px) {
       top: auto;
-      bottom: -64px;
+      bottom: -5px;
       right: auto;
       left: 0;
     }
@@ -896,7 +896,7 @@ section.has-swiper {
     padding-left: 3px;
     @media (max-width: 750px) {
       top: auto;
-      bottom: -64px;
+      bottom: -5px;
     }
     &:hover {
       background: $c-black;

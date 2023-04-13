@@ -128,6 +128,10 @@ nav ul {
       width: 256px;
       left: -8px;
     }
+    @media (max-width: 370px) {
+      width: 200px;
+      left: -8px;
+    }
   }
 
   li:last-child {
