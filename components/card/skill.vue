@@ -38,6 +38,9 @@ const { skillItem } = defineProps(["skillItem"]);
   @media (max-width: 750px) {
     border-radius: 16px;
   }
+  @media (max-width: 370px) {
+    grid-template-columns: 48px 1fr;
+  }
 }
 h3 {
   margin: 0 0 24px;
