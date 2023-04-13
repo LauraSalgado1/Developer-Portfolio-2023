@@ -1,5 +1,5 @@
 <template>
-  <footer id="siteFooter" class="site-footer">
+  <footer id="siteFooter" class="site-footer f-ui">
     <div class="footer-wrapper">
       <div class="left">
         <div>
@@ -177,7 +177,6 @@ const year = new Date().getFullYear();
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 16px;
-  font-size: 1.6rem;
   img {
     margin: 0 2px 2px 5px;
   }
