@@ -204,7 +204,12 @@
               <h3>Practiced at</h3>
               <ul class="no-format">
                 <li>
-                  <img src="/acf-logo-1.png" width="30" height="14" />
+                  <img
+                    src="/acf-logo-1.png"
+                    alt="ACF logo"
+                    width="30"
+                    height="14"
+                  />
 
                   All things Advanced Custom Fields
                 </li>
@@ -594,6 +599,10 @@ section {
     padding: 64px 0;
   }
   &.intro {
+    padding: 128px 0 64px;
+    @media (max-width: 1300px) {
+      padding: 64px 0;
+    }
     @media (max-width: 750px) {
       padding-top: 32px;
     }
@@ -604,6 +613,9 @@ section {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-gap: 64px;
+  @media (max-width: 992px) {
+    grid-gap: 32px;
+  }
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column-reverse;
@@ -763,6 +775,9 @@ section.agency-skills {
 
 section.media {
   background: $c-yellow-light-extra;
+  .eyebrow {
+    color: $c-black;
+  }
 }
 
 .media-row {
@@ -809,6 +824,23 @@ section.has-swiper {
   width: calc(1072px + ((100vw - 1072px) / 2));
   margin: 0 0 0 auto;
   padding-right: calc((100vw - 1072px) / 2);
+  :deep(.swiper-slide) {
+    padding-bottom: 48px;
+  }
+  :deep(.swiper:after) {
+    width: 32px;
+    height: 32px;
+    display: block;
+    content: "";
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    position: absolute;
+    background-image: url("/swipe.svg");
+    background-position: bottom center;
+    background-size: 32px;
+    background-repeat: no-repeat;
+  }
   @media (max-width: 1200px) {
     width: 100%;
     padding-left: 64px;

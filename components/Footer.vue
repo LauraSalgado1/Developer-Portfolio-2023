@@ -110,6 +110,7 @@
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          title="Spotify playlist: songs that inspire me"
         ></iframe>
       </div>
     </div>
