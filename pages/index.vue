@@ -345,7 +345,7 @@ const portfolioCards = [
     title: "Animal Movie Generator",
     image: "/animal-movie-generator-app.webp",
     imageAlt:
-      "Screenshot of the Animal Movie Generator app. Text reads select a move star.",
+      "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
     slug: "animal-movie-generator",
   },
@@ -810,6 +810,9 @@ section.art {
     @media (max-width: 750px) {
       display: block;
     }
+  }
+  .swiper-outer :deep(.swiper-slide) {
+    padding-bottom: 64px;
   }
 }
 

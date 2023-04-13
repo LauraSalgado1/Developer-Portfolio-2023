@@ -25,6 +25,7 @@
           height="426"
           v-if="portfolioItem.image"
           :src="portfolioItem.image"
+          :alt="portfolioItem.imageAlt"
         />
       </div>
     </section>
