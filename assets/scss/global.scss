@@ -71,9 +71,6 @@ svg {
   &:visited {
     color: $c-white;
   }
-  @media (max-width: 750px) {
-    //font-size: 1.4rem;
-  }
 }
 
 .screen-reader-text {
