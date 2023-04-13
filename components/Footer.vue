@@ -1,118 +1,94 @@
 <template>
   <footer id="siteFooter" class="site-footer f-ui">
     <div class="footer-wrapper">
-      <div class="left">
-        <div>
-          <img
-            class="footer-logo"
-            src="/Laura-Salgado-Developer-Since-2016-light.svg"
-            alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
-            width="400"
-            height="134"
-          />
+      <img
+        class="footer-logo"
+        src="/Laura-Salgado-Developer-Since-2016-light.svg"
+        alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
+        width="400"
+        height="134"
+      />
 
-          <ul class="socials no-format">
-            <li>
-              <a
-                href="mailto:culham.laura@gmail.com"
-                target="_blank"
-                title="Email"
-              >
-                <Icon name="mdi-email" width="40" height="40" color="#fff" />
-                <span class="screen-reader-text"
-                  >Email culham.laura@gmail.com</span
-                >
-              </a>
-            </li>
+      <ul class="socials no-format">
+        <li>
+          <a href="mailto:culham.laura@gmail.com" target="_blank" title="Email">
+            <Icon name="mdi-email" width="40" height="40" color="#fff" />
+            <span class="screen-reader-text">Email culham.laura@gmail.com</span>
+          </a>
+        </li>
 
-            <li>
-              <a
-                href="https://github.com/LauraSalgado1"
-                target="_blank"
-                title="GitHub"
-              >
-                <Icon name="mdi-github" width="40" height="40" color="#fff" />
-                <span class="screen-reader-text">Github</span>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://codepen.io/Laura_Salgado"
-                target="_blank"
-                title="CodePen"
-              >
-                <Icon name="mdi-codepen" width="40" height="40" color="#fff" />
-                <span class="screen-reader-text">CodePen</span>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.linkedin.com/in/laura-salgado-developer/"
-                target="_blank"
-                title="LinkedIn"
-              >
-                <Icon name="mdi-linkedin" width="40" height="40" color="#fff" />
-                <span class="screen-reader-text">Linked In</span>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.etsy.com/shop/laurasalgadoart"
-                target="_blank"
-                title="Etsy"
-              >
-                <Icon name="bxl:etsy" width="50" height="40" color="#fff" />
-                <span class="screen-reader-text">Etsy</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <p class="footer-text-line">
-          <span class="copyright">&copy; Laura Salgado {{ year }}</span>
-          <span class="dot">&#8226;</span>
-          <span class="built-nuxt">
-            I built this site in
-            <img
-              src="/LogosNuxt.svg"
-              alt="Nuxt"
-              width="55"
-              height="13"
-              loading="lazy"
-            />
-            . &#8197;
-            <a
-              href="https://github.com/LauraSalgado1/Developer-Portfolio-2023"
-              target="_blank"
-              >Pop the hood</a
-            >
-            &#8197;on
-            <Icon
-              name="octicon:logo-github-16"
-              alt="github"
-              color="#fff"
-              width="55"
-            />
-            .</span
+        <li>
+          <a
+            href="https://github.com/LauraSalgado1"
+            target="_blank"
+            title="GitHub"
           >
-        </p>
-      </div>
+            <Icon name="mdi-github" width="40" height="40" color="#fff" />
+            <span class="screen-reader-text">Github</span>
+          </a>
+        </li>
 
-      <div class="right">
-        <iframe
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/245D5Epfj6fJ8p81uGq2rR?utm_source=generator&theme=0"
-          width="100%"
-          height="352"
-          frameBorder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        <li>
+          <a
+            href="https://codepen.io/Laura_Salgado"
+            target="_blank"
+            title="CodePen"
+          >
+            <Icon name="mdi-codepen" width="40" height="40" color="#fff" />
+            <span class="screen-reader-text">CodePen</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/laura-salgado-developer/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <Icon name="mdi-linkedin" width="40" height="40" color="#fff" />
+            <span class="screen-reader-text">Linked In</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.etsy.com/shop/laurasalgadoart"
+            target="_blank"
+            title="Etsy"
+          >
+            <Icon name="bxl:etsy" width="50" height="40" color="#fff" />
+            <span class="screen-reader-text">Etsy</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="copyright">&copy; Laura Salgado {{ year }}</p>
+
+      <p class="built-nuxt">
+        I built this site in
+        <img
+          src="/LogosNuxt.svg"
+          alt="Nuxt"
+          width="55"
+          height="13"
           loading="lazy"
-          title="Spotify playlist: songs that inspire me"
-        ></iframe>
-      </div>
+        />
+        . &#8197;
+        <a
+          href="https://github.com/LauraSalgado1/Developer-Portfolio-2023"
+          target="_blank"
+          >Pop the hood
+        </a>
+        &#8197;on
+
+        <Icon
+          name="octicon:logo-github-16"
+          alt="github"
+          color="#fff"
+          width="55"
+        />
+        .
+      </p>
     </div>
   </footer>
 </template>
@@ -123,37 +99,35 @@ const year = new Date().getFullYear();
 
 <style lang="scss" scoped>
 .site-footer {
-  padding: 64px 64px 0;
+  padding: 32px 64px 16px;
   background: $c-black;
   color: $c-white;
-  @media (max-width: 1400px) {
-    padding: 64px 0 0;
+  @media (max-width: 1500px) {
+    padding: 32px 0 16px;
   }
-  @media (max-width: 700px) {
-    padding: 32px 0 0;
+  p {
+    margin-top: 0;
   }
 }
 
 .footer-wrapper {
   display: grid;
-  grid-template-columns: 1fr 400px;
-  grid-gap: 96px;
-  @media (max-width: 1400px) {
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 96px;
+  grid-row-gap: 32px;
+  @media (max-width: 1500px) {
     width: 1200px;
     max-width: 100%;
     padding: 0 64px;
     margin: 0 auto;
-    grid-template-columns: 1fr 300px;
   }
   @media (max-width: 992px) {
-    grid-template-columns: 1fr 250px;
-    grid-gap: 64px;
+    grid-column-gap: 32px;
+    grid-template-columns: 1fr 405px;
   }
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-gap: 32px;
-  }
-  @media (max-width: 500px) {
+    grid-gap: 0;
     padding: 0 32px;
   }
   @media (max-width: 370px) {
@@ -163,7 +137,6 @@ const year = new Date().getFullYear();
 
 .footer-logo {
   display: block;
-  margin-bottom: 48px;
   position: relative;
   left: -18px;
   @media (max-width: 450px) {
@@ -171,78 +144,41 @@ const year = new Date().getFullYear();
   }
 }
 
-.footer-text-line {
+.built-nuxt {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  @media (max-width: 750px) {
+    justify-content: flex-start;
+  }
   img {
-    margin: 0 2px 2px 5px;
+    margin: 0 2px 0 5px;
   }
   svg {
     margin-right: -4px;
   }
-  @media (max-width: 1120px) {
-    flex-direction: column-reverse;
-    .dot {
-      display: none;
-    }
-  }
-}
-
-.built-nuxt {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.copyright,
-.about-me {
-  margin-right: 24px;
-}
-
-.built-nuxt,
-.about-me {
-  margin-left: 24px;
-  @media (max-width: 1120px) {
-    margin-left: 0;
-  }
-}
-
-.copyright,
-.about-me,
-.built-nuxt {
-  margin-bottom: 16px;
 }
 
 .socials {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 0 30px;
-  li {
-    margin: 0 8px;
-  }
-  li:first-child {
-    margin-left: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  @media (max-width: 750px) {
+    justify-content: flex-start;
+    margin: 16px 0 32px;
   }
   svg {
     transition: opacity 0.1s ease;
   }
   a {
     display: block;
+    padding: 5px;
 
     &:hover svg {
       opacity: 0.5;
     }
-  }
-  a:not(:first-child) {
-    padding: 5px;
-  }
-  a:first-child {
-    padding: 5px 5px 5px 0;
   }
 }
 
@@ -257,20 +193,5 @@ a:focus,
 a:hover,
 a:visited {
   color: $c-white;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.right {
-  margin-bottom: 32px;
-  @media (max-width: 500px) {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
 }
 </style>

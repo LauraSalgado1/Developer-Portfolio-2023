@@ -23,7 +23,6 @@
         <img
           width="757"
           height="426"
-          v-if="portfolioItem.image"
           :src="portfolioItem.image"
           :alt="portfolioItem.imageAlt"
         />
@@ -50,6 +49,8 @@
 const portfolioItem = {
   title: "Céline Dion",
   image: "/celine-dion-home.jpg",
+  imageAlt:
+    "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
   tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
   slug: "celine-dion",
   content:

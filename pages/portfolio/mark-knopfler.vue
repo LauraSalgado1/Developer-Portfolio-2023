@@ -53,6 +53,8 @@
 const portfolioItem = {
   title: "Mark Knopfler",
   image: "/mark-knopfler-home.jpg",
+  imageAlt:
+    "Screenshot of Mark Knopfler's 2019 website with a light blue colour theme. Photo of an empty road leading to the far-off horizon. Text reads Down the Road Wherever the new album from Mark Knopfler out now.",
   tags: [
     "Agency project",
     "Custom WordPress theme",
