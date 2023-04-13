@@ -28,6 +28,10 @@ const { portfolioItem } = defineProps(["portfolioItem"]);
 </script>
 
 <style scoped lang="scss">
+.portfolio-card {
+  aspect-ratio: 1 / 0.8;
+}
+
 a {
   text-decoration: none;
   display: block;
