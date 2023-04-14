@@ -605,7 +605,7 @@ const artCards = [
 ];
 
 definePageMeta({
-  image: "/Laura-Salgado.jpg",
+  image: "/Laura-Salgado-wide.jpg",
 });
 </script>
 

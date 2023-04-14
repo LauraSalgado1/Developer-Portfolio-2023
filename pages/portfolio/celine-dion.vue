@@ -62,10 +62,13 @@ const portfolioItem = {
     "<p>At officialCOMMUNITY, we had the privilege of working with Sony Music Canada to bring their opulent designs to life for Céline Dion.</p><p>To fulfill their specific design vision, I coded parallax images that animate from blur to sharp focus, parallax scollling text areas, and navigation menu transitions.</p><p>Check out the <a href='https://codepen.io/Laura_Salgado/pen/wOYWEV/5584324389d4380d4e4ef3a0274eed85' target='_blank'>CodePen</a> I used to workshop my scrolling animations.</p><p>I coded most of the custom WordPress theme, which also includes some contributions from officialCOMMUNITY's other (awesome!) front-end team members.</p>",
 };
 
+definePageMeta({
+  image: "/celine-dion-home.jpg",
+});
+
 useSeoMeta({
   title: "Celine Dion - Portfolio",
   description: "Read about how I built the website for Céline Dion.",
-  ogImage: "/celine-dion-home.jpg",
 });
 </script>
 

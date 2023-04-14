@@ -73,7 +73,10 @@ const portfolioItem = {
 useSeoMeta({
   title: "Mark Knopfler - Portfolio",
   description: "Read about how I built the website for Mark Knopfler.",
-  ogImage: "/mark-knopfler-home.jpg",
+});
+
+definePageMeta({
+  image: "/mark-knopfler-home.jpg",
 });
 </script>
 
