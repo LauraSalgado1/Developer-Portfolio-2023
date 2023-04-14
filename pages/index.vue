@@ -849,7 +849,7 @@ section.has-swiper {
     padding-left: 64px;
     padding-right: 64px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     padding-left: 32px;
     padding-right: 32px;
   }
