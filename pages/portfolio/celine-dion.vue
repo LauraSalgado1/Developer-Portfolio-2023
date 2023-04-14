@@ -20,12 +20,16 @@
           </li>
         </ul>
 
-        <img
-          width="757"
-          height="426"
-          :src="portfolioItem.image"
-          :alt="portfolioItem.imageAlt"
-        />
+        <picture>
+          <source :srcset="portfolioItem.image" type="image/webp" />
+          <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
+          <img
+            :src="portfolioItem.imageFallback"
+            :alt="portfolioItem.imageAlt"
+            width="512"
+            height="288"
+          />
+        </picture>
       </div>
     </section>
     <section class="lower">
@@ -48,7 +52,8 @@
 <script setup>
 const portfolioItem = {
   title: "Céline Dion",
-  image: "/celine-dion-home.jpg",
+  image: "/celine-dion-home.webp",
+  imageFallback: "/celine-dion-home.jpg",
   imageAlt:
     "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
   tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],

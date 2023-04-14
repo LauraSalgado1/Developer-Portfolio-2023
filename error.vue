@@ -35,12 +35,16 @@
               <li>Not again</li>
             </ul>
 
-            <img
-              src="/404.jpg"
-              alt="Fluffy white cat laying on the floor."
-              width="757"
-              height="426"
-            />
+            <picture>
+              <source srcset="/404.webp" type="image/webp" />
+              <source srcset="/404.jpg" type="image/jpeg" />
+              <img
+                src="/404.jpg"
+                alt="Fluffy white cat laying on the floor."
+                width="512"
+                height="288"
+              />
+            </picture>
           </div>
         </section>
         <section class="lower">

@@ -20,13 +20,16 @@
           </li>
         </ul>
 
-        <img
-          width="757"
-          height="426"
-          v-if="portfolioItem.image"
-          :src="portfolioItem.image"
-          :alt="portfolioItem.imageAlt"
-        />
+        <picture>
+          <source :srcset="portfolioItem.image" type="image/webp" />
+          <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
+          <img
+            :src="portfolioItem.imageFallback"
+            :alt="portfolioItem.imageAlt"
+            width="512"
+            height="288"
+          />
+        </picture>
       </div>
     </section>
     <section class="lower">
@@ -53,6 +56,7 @@
 const portfolioItem = {
   title: "Animal Movie Generator",
   image: "/animal-movie-generator-app.webp",
+  imageFallback: "/animal-movie-generator-app.jpg",
   imageAlt:
     "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
