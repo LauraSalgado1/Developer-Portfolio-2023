@@ -861,17 +861,17 @@ section.has-swiper {
     padding-bottom: 48px;
   }
   :deep(.swiper:after) {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     display: block;
     content: "";
     left: 50%;
     transform: translate(-50%);
-    bottom: 0;
+    bottom: 6px;
     position: absolute;
     background-image: url("/swipe.svg");
     background-position: bottom center;
-    background-size: 32px;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -897,17 +897,12 @@ section.has-swiper {
       #4d4d4d
     );
     top: auto;
+    left: 0;
     bottom: 0px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     padding-right: 3px;
-    @media (max-width: 750px) {
-      top: auto;
-      bottom: -5px;
-      right: auto;
-      left: 0;
-    }
     &:hover {
       color: $c-white;
       text-decoration: none;
@@ -928,15 +923,12 @@ section.has-swiper {
       #4d4d4d
     );
     top: auto;
+    right: 0;
     bottom: 0px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     padding-left: 3px;
-    @media (max-width: 750px) {
-      top: auto;
-      bottom: -5px;
-    }
     &:hover {
       color: $c-white;
       text-decoration: none;
