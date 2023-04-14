@@ -68,7 +68,10 @@ const portfolioItem = {
 useSeoMeta({
   title: "Animal Movie Generator - Portfolio",
   description: "Read about how I built the Animal Movie Generator App.",
-  ogImage: "/animal-movie-generator-app.webp",
+});
+
+definePageMeta({
+  image: "/animal-movie-generator-app.jpg",
 });
 </script>
 
