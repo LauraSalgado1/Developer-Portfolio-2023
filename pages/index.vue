@@ -11,12 +11,16 @@
             >
           </div>
           <div class="half">
-            <img
-              src="/Laura-Salgado.webp"
-              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
-              width="504"
-              height="567"
-            />
+            <picture>
+              <source srcset="/Laura-Salgado.webp" type="image/webp" />
+              <source srcset="/Laura-Salgado.png" type="image/png" />
+              <img
+                src="/Laura-Salgado.png"
+                alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+                width="504"
+                height="567"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -323,6 +327,7 @@ const portfolioCards = [
   {
     title: "Céline Dion",
     image: "/celine-dion-home.webp",
+    imageFallback: "/celine-dion-home.jpg",
     imageAlt:
       "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
     tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
@@ -331,6 +336,7 @@ const portfolioCards = [
   {
     title: "Mark Knopfler - Dire Straits",
     image: "/mark-knopfler-home.webp",
+    imageFallback: "/mark-knopfler-home.jpg",
     imageAlt:
       "Screenshot of Mark Knopfler's 2019 website with a light blue colour theme. Photo of an empty road leading to the far-off horizon. Text reads Down the Road Wherever the new album from Mark Knopfler out now.",
     tags: [
@@ -344,6 +350,7 @@ const portfolioCards = [
   {
     title: "Animal Movie Generator",
     image: "/animal-movie-generator-app.webp",
+    imageFallback: "/animal-movie-generator-app.jpg",
     imageAlt:
       "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
     tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
@@ -487,6 +494,7 @@ const mediaCards = [
     paragraph:
       'As part of Juno College\'s "Student Stories", I talk about my career transition and share support for tech newcomers.',
     image: "/juno-college-student-stories-laura-salgado.webp",
+    imageFallback: "/juno-college-student-stories-laura-salgado.png",
     imageAlt:
       "Three photos: a screenshot of Celine Dion's website, a selfie of Laura and a cute white cat, and Laura's CSS art of orange lillies.",
     link: "https://junocollege.com/blog/web-development-bootcamp-alumni-laura-salgado/",
@@ -511,6 +519,7 @@ const artCards = [
   {
     title: "Calla Lillies",
     image: "/calla-lillies-462.webp",
+    imageFallback: "/calla-lillies-462.png",
     imageAlt:
       "Illustration of 3 mango calla lily flowers in blended shades of red, orange and yellow on a dark background.",
     link: "https://codepen.io/Laura_Salgado/pen/bWKNLm",
@@ -524,6 +533,7 @@ const artCards = [
   {
     title: "Aggretsuko Morph Rage",
     image: "/aggretsuko.webp",
+    imageFallback: "/aggretsuko.png",
     imageAlt:
       "Cartoon style illustration of a cute red panda with a large face wearing a blue business suit on a light blue background",
     link: "https://codepen.io/Laura_Salgado/pen/VxWvZG",
@@ -532,6 +542,7 @@ const artCards = [
   {
     title: "Charlotte's Web animated book page",
     image: "/charlottes-web-dev.webp",
+    imageFallback: "/charlottes-web-dev.png",
     imageAlt:
       "Illustration of a circular spider web. The word terrfic is formed by web lines in the center. A small black spider hangs from a web line in the top left of the web.",
     link: "https://codepen.io/Laura_Salgado/pen/GyNVWQ",
@@ -539,7 +550,8 @@ const artCards = [
   },
   {
     title: "MC Escher Woodblock Cat",
-    image: "/MC-Escher-cat.webp",
+    image: "/mc-Escher-cat.webp",
+    imageFallback: "/mc-Escher-cat.png",
     imageAlt:
       "Black and white illustratioon of a white cat sitting on a table. The table has a long tablecloth with thick black and white stripes. The initials M.C.E. are in the top left.",
     link: "https://codepen.io/Laura_Salgado/pen/aVXyrz",
@@ -548,6 +560,7 @@ const artCards = [
   {
     title: "Chat Loader Morph",
     image: "/morph-chat.webp",
+    imageFallback: "/morph-chat.png",
     imageAlt:
       "Icon of two overlapping chat bubbles on a circular teal background. The chat bubble in front shows simplified lines of text. ",
     link: "https://codepen.io/Laura_Salgado/pen/KqMJBw",
@@ -557,6 +570,7 @@ const artCards = [
   {
     title: "Spinning Bowtie Cat",
     image: "/spinning-bowtie-cat.webp",
+    imageFallback: "/spinning-bowtie-cat.png",
     imageAlt: "Line drawing of a striped cat wearing a bowtie.",
     link: "https://codepen.io/Laura_Salgado/pen/dRZQNw",
     tags: ["SVG Animation", "GSAP", "TweenMax"],
@@ -565,6 +579,7 @@ const artCards = [
   {
     title: "Self Portrait",
     image: "/self-portrait.webp",
+    imageFallback: "/self-portrait.png",
     imageAlt:
       "Illustration of Laura Salgado's head and shoulders on a light blue background. She has brown hair and is wearing a black t shirt. Text reads hover on laura.",
     link: "https://codepen.io/Laura_Salgado/pen/RZKQGy",
@@ -573,6 +588,7 @@ const artCards = [
   {
     title: "Purring Cat",
     image: "/purring-cat.webp",
+    imageFallback: "/purring-cat.png",
     imageAlt: "Line drawing of a smiling cat's face.",
     link: "https://codepen.io/Laura_Salgado/pen/EWrZer",
     tags: ["Manual SVG animation"],
@@ -580,6 +596,7 @@ const artCards = [
   {
     title: "Rain Machine",
     image: "/rain-machine.webp",
+    imageFallback: "/rain-machine.png",
     imageAlt:
       "Screenshot of group of UI buttons that read No Rain, Light Rain, Heavy Rain, Night Mode, Dusk Mode and Lightning. The background shows an image of rain and lightning in dusk colours.",
     link: "https://codepen.io/Laura_Salgado/pen/peZzOG",

@@ -1,14 +1,17 @@
 <template>
   <a class="media-card" :href="mediaItem.link" target="_blank">
     <div class="image">
-      <img
-        v-if="mediaItem.image"
-        :src="mediaItem.image"
-        :alt="mediaItem.imageAlt"
-        width="520"
-        height="293"
-        loading="lazy"
-      />
+      <picture v-if="mediaItem.image">
+        <source :srcset="mediaItem.image" type="image/webp" />
+        <source :srcset="mediaItem.imageFallback" type="image/png" />
+        <img
+          :src="mediaItem.imageFallback"
+          :alt="mediaItem.imageAlt"
+          width="520"
+          height="293"
+          loading="lazy"
+        />
+      </picture>
 
       <svg
         v-else

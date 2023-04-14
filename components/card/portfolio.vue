@@ -2,12 +2,16 @@
   <div class="portfolio-card">
     <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
       <div class="image-link">
-        <img
-          :src="portfolioItem.image"
-          :alt="portfolioItem.imageAlt"
-          width="757"
-          height="426"
-        />
+        <picture>
+          <source :srcset="portfolioItem.image" type="image/webp" />
+          <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
+          <img
+            :src="portfolioItem.imageFallback"
+            :alt="portfolioItem.imageAlt"
+            width="757"
+            height="426"
+          />
+        </picture>
       </div>
 
       <div class="bottom">

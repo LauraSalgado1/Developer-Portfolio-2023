@@ -20,13 +20,16 @@
           </li>
         </ul>
 
-        <img
-          width="757"
-          height="426"
-          v-if="portfolioItem.image"
-          :src="portfolioItem.image"
-          :alt="portfolioItem.imageAlt"
-        />
+        <picture>
+          <source :srcset="portfolioItem.image" type="image/webp" />
+          <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
+          <img
+            :src="portfolioItem.imageFallback"
+            :alt="portfolioItem.imageAlt"
+            width="512"
+            height="288"
+          />
+        </picture>
       </div>
     </section>
     <section class="lower">
@@ -52,7 +55,8 @@
 <script setup>
 const portfolioItem = {
   title: "Mark Knopfler",
-  image: "/mark-knopfler-home.jpg",
+  image: "/mark-knopfler-home.webp",
+  imageFallback: "/mark-knopfler-home.jpg",
   imageAlt:
     "Screenshot of Mark Knopfler's 2019 website with a light blue colour theme. Photo of an empty road leading to the far-off horizon. Text reads Down the Road Wherever the new album from Mark Knopfler out now.",
   tags: [
