@@ -60,7 +60,7 @@ const portfolioItem = {
 useSeoMeta({
   title: "Celine Dion - Portfolio",
   description: "Read about how I built the website for Céline Dion.",
-  ogImage: () => portfolioItem.image,
+  ogImage: "/celine-dion-home.jpg",
 });
 </script>
 
