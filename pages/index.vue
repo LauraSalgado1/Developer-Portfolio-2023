@@ -427,8 +427,7 @@ const educationCards = [
       {
         school: "FITC",
         frequency: "1 day workshop",
-        courseName:
-          "-Upcoming- <br/>DDC Super Workshop: Graphic Design and Logo Design",
+        courseName: "DDC Super Workshop: Graphic Design and Logo Design",
         instructors: ["Aaron Draplin"],
       },
     ],
