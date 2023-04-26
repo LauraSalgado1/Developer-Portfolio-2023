@@ -49,10 +49,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 https://nuxt.com/modules/swiper <br>
 https://nuxt.com/modules/seo-kit <br>
-https://nuxt.com/modules/vue-transitions#usage-with-nuxt <br>
-https://v1.image.nuxtjs.org/get-started <br>
 https://nuxt.com/modules/icon <br>
-
-## Plugins
-
-https://animejs.com/ <br>

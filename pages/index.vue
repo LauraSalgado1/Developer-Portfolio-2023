@@ -349,11 +349,11 @@ const portfolioCards = [
   },
   {
     title: "Animal Movie Generator",
-    image: "/animal-movie-generator-app.webp",
-    imageFallback: "/animal-movie-generator-app.jpg",
+    image: "/animal-movie-generator.webp",
+    imageFallback: "/animal-movie-generator.jpg",
     imageAlt:
-      "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
-    tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
+      "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Hobbit, Arachnophobia, and Charlotte's Web.",
+    tags: ["Personal project", "React", "API", "Axios", "JavaScript App"],
     slug: "animal-movie-generator",
   },
 ];

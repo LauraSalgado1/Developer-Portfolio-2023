@@ -55,14 +55,14 @@
 <script setup>
 const portfolioItem = {
   title: "Animal Movie Generator",
-  image: "/animal-movie-generator-app.webp",
-  imageFallback: "/animal-movie-generator-app.jpg",
+  image: "/animal-movie-generator.webp",
+  imageFallback: "/animal-movie-generator.jpg",
   imageAlt:
     "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
   tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
   slug: "animal-movie-generator",
   content:
-    "<p>Using 'The Movie Database' API, I wrote this JavaScript app to inspire a new way of finding your next must-watch.</p><p>Now you can find movies starring your favourite animal!</p><p>I enjoyed adding fun surprises on the dynamic film perforations using SVG&nbsp;shapes.</p>",
+    "<p>I built this React app to offer new way of finding your next must-watch.</p> It uses Axios to retrieve the data from the TMDB API.</p><p>I enjoyed adding fun surprises on the dynamic film perforations using SVG&nbsp;shapes.</p>",
 };
 
 useSeoMeta({
@@ -71,7 +71,7 @@ useSeoMeta({
 });
 
 definePageMeta({
-  image: "/animal-movie-generator-app.jpg",
+  image: "/animal-movie-generator.jpg",
 });
 </script>
 
