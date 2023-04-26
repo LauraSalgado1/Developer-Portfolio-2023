@@ -59,7 +59,7 @@ const portfolioItem = {
   imageFallback: "/animal-movie-generator.jpg",
   imageAlt:
     "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Great Beauty, Hatari, and Zarafa.",
-  tags: ["Personal project", "JS App", "API / Ajax", "UI Design"],
+  tags: ["Personal project", "React", "API", "Axios", "JavaScript App"],
   slug: "animal-movie-generator",
   content:
     "<p>I built this React app to offer new way of finding your next must-watch.</p> It uses Axios to retrieve the data from the TMDB API.</p><p>I enjoyed adding fun surprises on the dynamic film perforations using SVG&nbsp;shapes.</p>",
