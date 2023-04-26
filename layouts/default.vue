@@ -1,9 +1,7 @@
 <template>
   <div>
     <Navigation></Navigation>
-    <transition name="fade">
-      <NuxtPage keep-alive id="main" class="site-main" />
-    </transition>
+    <NuxtPage keep-alive id="main" class="site-main" />
     <Footer></Footer>
   </div>
 </template>

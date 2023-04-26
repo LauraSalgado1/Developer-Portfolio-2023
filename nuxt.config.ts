@@ -25,14 +25,8 @@ export default defineNuxtConfig({
         // Swiper options
       },
     ],
-    "@morev/vue-transitions/nuxt",
-    "@nuxt/image-edge",
     "nuxt-icon",
   ],
-  vueTransitions: {
-    // The same options as in the plugin itself.
-    // You will get an autocomplete using Nuxt 3.
-  },
   extends: ["nuxt-seo-kit"],
   runtimeConfig: {
     public: {
