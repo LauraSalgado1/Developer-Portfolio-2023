@@ -362,7 +362,7 @@ const skillCardsLeft = [
   {
     heading: "JavaScript Frameworks",
     icon: "mdi:language-javascript",
-    list: ["Vue", "Nuxt 2", "Nuxt 3"],
+    list: ["React", "Vue", "Nuxt 2", "Nuxt 3"],
   },
   {
     heading: "Headless CMS",
