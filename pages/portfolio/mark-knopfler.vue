@@ -35,18 +35,6 @@
     <section class="lower">
       <div class="inner">
         <div class="single-content p1" v-html="portfolioItem.content"></div>
-        <a
-          href="https://www.markknopfler.com/legendsseries/"
-          target="_blank"
-          class="button"
-          >Legends Series
-          <Icon
-            name="uil:external-link-alt"
-            width="20"
-            height="20"
-            color="#fff"
-          />
-        </a>
       </div>
     </section>
   </main>
@@ -67,7 +55,7 @@ const portfolioItem = {
   ],
   slug: "mark-knopfler",
   content:
-    "At officialCOMMUNITY, I designed all aspects of this website to complement the Dire Straits frontperson's 2018 album, ‘Down The Road Wherever’.</p><p>I built the custom WordPress theme to showcase his various content types, including a library of all past concerts with a linked retail offering of each date's authorized audio recording.</p><p>I also applied functionality customizations in PHP to his WooCommerce Store.</p><p>Check out the featured product page I developed to promote his scale replica 1958 Gibson Les Paul.</p>",
+    "At officialCOMMUNITY, I designed all aspects of this website to complement the Dire Straits frontperson's 2018 album, ‘Down The Road Wherever’.</p><p>I built the custom WordPress theme to showcase his various content types, including a library of all past concerts with a linked retail offering of each date's authorized audio recording.</p><p>I also applied functionality customizations in PHP to his WooCommerce Store.</p>",
 };
 
 useSeoMeta({
