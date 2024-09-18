@@ -150,23 +150,6 @@
         <p class="eyebrow">7 Years of picking things up</p>
         <h2>At-work Education</h2>
 
-        <div class="text-row">
-          <h3>UX Gains</h3>
-
-          <p class="p1">
-            While building a multi-stage form, I wanted to improve the
-            experience by adding persistent data between page navigation,
-            browser refreshing, and multiple site visits. I learned all about JS
-            localStorage and sessionStorage to elevate the project to a
-            user-friendly and predictable composite process.
-          </p>
-          <p class="p1">
-            Learning this stuff got me curious about other applications for
-            backend infrastructure (e.g. Firebase) instead of insecure browser
-            storage.
-          </p>
-        </div>
-
         <div class="lists-row">
           <div>
             <div>
@@ -367,14 +350,15 @@ const skillCardsLeft = [
   {
     heading: "Headless CMS",
     icon: "mdi:head-remove-outline",
-    list: ["Strapi", "WordPress REST API", "WPGraphQL"],
+    list: ["Strapi", "Prismic", "WordPress REST API", "WPGraphQL"],
   },
   {
-    heading: "WordPress PHP",
+    heading: "Theming CMS",
     icon: "ion:logo-wordpress",
     list: [
-      "Custom theming and child theming",
-      "Customization of widely used plugins, e.g. WooCommerce",
+      "Shopify Custom Themes",
+      "WP Custom themes and child themes",
+      "Customization of widely used WP plugins, e.g. WooCommerce",
     ],
   },
   {
@@ -382,8 +366,9 @@ const skillCardsLeft = [
     icon: "ic:baseline-code",
     list: [
       "HTML5",
-      "CSS3 with Sass",
-      "Vanilla JS including recent ES features",
+      "CSS3 with Sass, Tailwind",
+      "JavaScript, TypeScript",
+      "PHP",
     ],
   },
 ];
