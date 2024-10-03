@@ -147,7 +147,7 @@
 
     <section class="agency-skills">
       <div class="inner">
-        <p class="eyebrow">7 Years of picking things up</p>
+        <p class="eyebrow">{{ yearsExperience }} Years of picking things up</p>
         <h2>At-work Education</h2>
 
         <div class="lists-row">
@@ -587,6 +587,10 @@ const artCards = [
     tags: ["Manual SVG animation", "Interactive"],
   },
 ];
+
+const yearsExperience = computed(() => {
+  return new Date().getFullYear() - 2016;
+});
 
 definePageMeta({
   image: "/Laura-Salgado-wide.jpg",
