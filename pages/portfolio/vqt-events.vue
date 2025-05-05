@@ -35,11 +35,8 @@
     <section class="lower">
       <div class="inner">
         <div class="single-content p1" v-html="portfolioItem.content"></div>
-        <a
-          href="https://animal-movie-generator.netlify.app/"
-          target="_blank"
-          class="button"
-          >Use the live app
+        <a href="https://vqtevents.com/" target="_blank" class="button"
+          >VQTEvents.com
           <Icon
             name="uil:external-link-alt"
             width="20"
@@ -54,24 +51,23 @@
 
 <script setup>
 const portfolioItem = {
-  title: "Animal Movie Generator",
-  image: "/animal-movie-generator.webp",
-  imageFallback: "/animal-movie-generator.jpg",
-  imageAlt:
-    "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Hobbit, Arachnophobia, and Charlotte's Web.",
-  tags: ["Personal project", "React", "API", "Axios", "JavaScript App"],
-  slug: "animal-movie-generator",
+  title: "VQT Events",
+  image: "/vqt-portfolio-small.webp",
+  imageFallback: "/vqt-portfolio-small.jpg",
+  imageAlt: "",
+  tags: ["Personal project", "Custom WordPress theme", "PHP", "CSS Animation"],
+  slug: "vqt-events",
   content:
-    "<p>I built this React app to offer a new way of finding your next must-watch.</p><p>It uses Axios to retrieve the data from the TMDB API.</p><p>I enjoyed the dynamic film perforations using SVG&nbsp;shapes.</p>",
+    "<p>When the owner of Very Queer Toronto Events told me about the features she imagined for her WordPress website, I knew I would have some fun challenges to figure out.</p><p>To showcase her various service offerings, she envisioned a three column landing page with a <em><b>continuous vertical scrolling</b></em> ticker in the center to advertise queer community events.</p><p><b>Problem #1: How to build a section with vertical movement?</b></p><p>I thought about the CSS animations that might be involved in acheiving that motion, and what I could do to make it accessible to all users.</p><p>(Turns out <a href='https://splidejs.com/' target='_blank'>Splide.js</a> has options for that!)</p><p><b>Problem #2: How to programmatically create a new post in the WordPress admin from a form submission?</b></p><p>I thought I'd have to use an additional contact form plugin, figure out its hooks, and write something custom using the WordPress hooks to create a post using the form data.</p><p>(Turns out <a href='https://www.acf-extended.com/guides/using-actions-output-data' target='_blank'>ACF Extended</a> has customizable actions for posts, emails, and redirects!)</p><p><b>Problem #3: How to include a fun, interactive chatbot-like feature to highlight the value of her custom matchmaking services?</b></p><p>An animated multi-stage ACF form with cute <a href='https://codepen.io/argyleink/pen/zxYWPxr' target='_blank'>rainbow highlights</a>, of course!</p><p>I included entrance animations on each question for a smooth and predictable user experience.</p><p>Visit the site to check out my work, or maybe meet some new friends!</p>",
 };
 
-useSeoMeta({
-  title: "Animal Movie Generator - Portfolio",
-  description: "Read about how I built the Animal Movie Generator App.",
+definePageMeta({
+  image: "/vqt-portfolio-small.jpg",
 });
 
-definePageMeta({
-  image: "/animal-movie-generator.jpg",
+useSeoMeta({
+  title: "VQT Events - Portfolio",
+  description: "Read about how I built the website for VQT Events.",
 });
 </script>
 

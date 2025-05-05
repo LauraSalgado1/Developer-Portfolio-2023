@@ -2,7 +2,7 @@
   <main>
     <section class="header">
       <div class="inner">
-        <nuxt-link class="back" to="/">
+        <nuxt-link class="back" to="/#portfolio">
           <Icon
             name="ooui:arrow-previous-ltr"
             width="16"
