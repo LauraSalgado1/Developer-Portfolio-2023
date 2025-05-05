@@ -26,7 +26,7 @@
       </div>
     </section>
 
-    <section class="portfolio has-swiper">
+    <section class="portfolio has-swiper" id="portfolio">
       <div class="inner">
         <p class="eyebrow">Previous Work</p>
         <h2>Development Portfolio</h2>
@@ -315,6 +315,19 @@ const portfolioCards = [
       "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
     tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
     slug: "celine-dion",
+  },
+  {
+    title: "VQT Events",
+    image: "/vqt-portfolio.webp",
+    imageFallback: "/vqt-portfolio.jpg",
+    imageAlt: "A female bartender pours a cocktail",
+    tags: [
+      "Personal project",
+      "Custom WordPress theme",
+      "PHP",
+      "CSS Animation",
+    ],
+    slug: "vqt-events",
   },
   {
     title: "Mark Knopfler - Dire Straits",
