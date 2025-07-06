@@ -317,19 +317,6 @@ const portfolioCards = [
     slug: "celine-dion",
   },
   {
-    title: "VQT Events",
-    image: "/vqt-portfolio.webp",
-    imageFallback: "/vqt-portfolio.jpg",
-    imageAlt: "A female bartender pours a cocktail",
-    tags: [
-      "Personal project",
-      "Custom WordPress theme",
-      "PHP",
-      "CSS Animation",
-    ],
-    slug: "vqt-events",
-  },
-  {
     title: "Mark Knopfler - Dire Straits",
     image: "/mark-knopfler-home.webp",
     imageFallback: "/mark-knopfler-home.jpg",
