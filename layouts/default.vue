@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="top">
     <Navigation></Navigation>
     <NuxtPage keep-alive id="main" class="site-main" />
     <Footer></Footer>

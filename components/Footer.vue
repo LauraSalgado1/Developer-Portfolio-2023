@@ -1,7 +1,7 @@
 <template>
   <footer id="siteFooter" class="site-footer f-ui">
     <div class="footer-wrapper">
-      <NuxtLink class="home" to="/">
+      <NuxtLink class="home" to="/#top">
         <img
           class="footer-logo"
           src="/Laura-Salgado-Developer-Since-2016-light.svg"

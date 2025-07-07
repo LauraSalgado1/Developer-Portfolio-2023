@@ -52,7 +52,7 @@ svg {
   &:focus {
     color: $c-white;
     text-decoration: none;
-    background-color: $c-black;
+    background-color: $c-black-hover;
   }
   &:focus {
     outline-offset: 4px;
