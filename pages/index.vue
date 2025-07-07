@@ -6,9 +6,7 @@
           <div class="half">
             <p class="eyebrow">Howdy</p>
             <h1>I code websites and data-driven web apps</h1>
-            <a class="button" href="mailto:culham.laura@gmail.com"
-              >Get in touch</a
-            >
+            <a class="button" href="mailto:culham.laura@gmail.com">Email</a>
           </div>
           <div class="half">
             <picture>
@@ -40,7 +38,7 @@
           :navigation="true"
           :space-between="32"
         >
-          <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
+          <SwiperSlide v-for="(item, index) in portfolio" :key="index">
             <CardPortfolio :portfolioItem="item" />
           </SwiperSlide>
         </Swiper>
@@ -52,7 +50,7 @@
           :navigation="true"
           :space-between="32"
         >
-          <SwiperSlide v-for="(item, index) in portfolioCards" :key="index">
+          <SwiperSlide v-for="(item, index) in portfolio" :key="index">
             <CardPortfolio :portfolioItem="item" />
           </SwiperSlide>
         </Swiper>
@@ -306,56 +304,7 @@
 </template>
 
 <script setup>
-const portfolioCards = [
-  {
-    title: "Céline Dion",
-    image: "/celine-dion-home.webp",
-    imageFallback: "/celine-dion-home.jpg",
-    imageAlt:
-      "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
-    tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
-    slug: "celine-dion",
-  },
-  {
-    title: "Narratives Inc.",
-    image: "/Narratives.webp",
-    imageFallback: "/Narratives.png",
-    imageAlt:
-      "Screenshot of Narratives Inc Website. Interactive map showing serveral clustered locations and pins showing individual locations.",
-    tags: [
-      "Agency project",
-      "Prismic CMS",
-      "Headless",
-      "Vue / Nuxt",
-      "Interactive Map",
-      "MapBox API",
-    ],
-    slug: "narratives-inc",
-  },
-  {
-    title: "Mark Knopfler - Dire Straits",
-    image: "/mark-knopfler-home.webp",
-    imageFallback: "/mark-knopfler-home.jpg",
-    imageAlt:
-      "Screenshot of Mark Knopfler's 2019 website with a light blue colour theme. Photo of an empty road leading to the far-off horizon. Text reads Down the Road Wherever the new album from Mark Knopfler out now.",
-    tags: [
-      "Agency project",
-      "Custom WordPress theme",
-      "PHP",
-      "Website design (previous 2019 version)",
-    ],
-    slug: "mark-knopfler",
-  },
-  {
-    title: "Animal Movie Generator",
-    image: "/animal-movie-generator.webp",
-    imageFallback: "/animal-movie-generator.jpg",
-    imageAlt:
-      "Screenshot of the Animal Movie Generator app. Photos of three movie posters: The Hobbit, Arachnophobia, and Charlotte's Web.",
-    tags: ["Personal project", "React", "API", "Axios", "JavaScript App"],
-    slug: "animal-movie-generator",
-  },
-];
+import { portfolio } from "~/portfolioData.js";
 
 const skillCardsLeft = [
   {

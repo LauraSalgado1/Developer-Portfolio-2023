@@ -1,6 +1,9 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-link :to="`/portfolio/${portfolioItem.slug}`">
+    <nuxt-link
+      :portfolioData="portfolioItem"
+      :to="`/portfolio/${portfolioItem.slug}`"
+    >
       <div class="image-link">
         <picture>
           <source :srcset="portfolioItem.image" type="image/webp" />
