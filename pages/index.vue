@@ -887,7 +887,7 @@ section.has-swiper {
     &:hover {
       color: $c-white;
       text-decoration: none;
-      background-color: $c-black;
+      background-color: $c-black-hover;
     }
   }
   :deep(.swiper-button-next) {
@@ -903,7 +903,7 @@ section.has-swiper {
     &:hover {
       color: $c-white;
       text-decoration: none;
-      background-color: $c-black;
+      background-color: $c-black-hover;
     }
   }
 }
