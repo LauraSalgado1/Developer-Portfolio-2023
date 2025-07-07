@@ -317,6 +317,22 @@ const portfolioCards = [
     slug: "celine-dion",
   },
   {
+    title: "Narratives Inc.",
+    image: "/Narratives.webp",
+    imageFallback: "/Narratives.png",
+    imageAlt:
+      "Screenshot of Narratives Inc Website. Interactive map showing serveral clustered locations and pins showing individual locations.",
+    tags: [
+      "Agency project",
+      "Prismic CMS",
+      "Headless",
+      "Vue / Nuxt",
+      "Interactive Map",
+      "MapBox API",
+    ],
+    slug: "narratives-inc",
+  },
+  {
     title: "Mark Knopfler - Dire Straits",
     image: "/mark-knopfler-home.webp",
     imageFallback: "/mark-knopfler-home.jpg",
@@ -848,20 +864,6 @@ section.has-swiper {
   :deep(.swiper-slide) {
     padding-bottom: 48px;
   }
-  :deep(.swiper:after) {
-    width: 24px;
-    height: 24px;
-    display: block;
-    content: "";
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 6px;
-    position: absolute;
-    background-image: url("/swipe.svg");
-    background-position: bottom center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 
   :deep(.swiper, .swiper-container) {
     overflow: visible;
@@ -875,15 +877,6 @@ section.has-swiper {
   :deep(.swiper-button-prev) {
     background: $c-black;
     color: $c-white;
-    background-image: linear-gradient(
-      to bottom,
-      #272727,
-      #303030,
-      #393939,
-      #434343,
-      #4d4d4d,
-      #4d4d4d
-    );
     top: auto;
     left: 0;
     bottom: 0px;
@@ -895,21 +888,11 @@ section.has-swiper {
       color: $c-white;
       text-decoration: none;
       background-color: $c-black;
-      background-image: none;
     }
   }
   :deep(.swiper-button-next) {
     background: $c-black;
     color: $c-white;
-    background-image: linear-gradient(
-      to bottom,
-      #272727,
-      #303030,
-      #393939,
-      #434343,
-      #4d4d4d,
-      #4d4d4d
-    );
     top: auto;
     right: 0;
     bottom: 0px;
@@ -921,7 +904,6 @@ section.has-swiper {
       color: $c-white;
       text-decoration: none;
       background-color: $c-black;
-      background-image: none;
     }
   }
 }

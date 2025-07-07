@@ -1,13 +1,15 @@
 <template>
   <footer id="siteFooter" class="site-footer f-ui">
     <div class="footer-wrapper">
-      <img
-        class="footer-logo"
-        src="/Laura-Salgado-Developer-Since-2016-light.svg"
-        alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
-        width="400"
-        height="134"
-      />
+      <NuxtLink class="home" to="/">
+        <img
+          class="footer-logo"
+          src="/Laura-Salgado-Developer-Since-2016-light.svg"
+          alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
+          width="400"
+          height="134"
+        />
+      </NuxtLink>
 
       <ul class="socials no-format">
         <li>
@@ -52,17 +54,20 @@
 
         <li>
           <a
-            href="https://www.etsy.com/shop/laurasalgadoart"
+            href="https://www.instagram.com/laur_averse/"
             target="_blank"
-            title="Etsy"
+            title="Instagram"
           >
-            <Icon name="bxl:etsy" width="50" height="40" color="#fff" />
-            <span class="screen-reader-text">Etsy</span>
+            <Icon name="mdi:instagram" width="50" height="40" color="#fff" />
+            <span class="screen-reader-text">Insta</span>
           </a>
         </li>
       </ul>
 
-      <p class="copyright">&copy; Laura Salgado {{ year }}</p>
+      <p class="copyright">
+        &copy; Laura Salgado (The artist formerly known as Laura Culham)
+        {{ year }}
+      </p>
 
       <p class="built-nuxt">
         I built this site in
