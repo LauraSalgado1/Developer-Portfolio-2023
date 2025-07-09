@@ -50,8 +50,7 @@ const { courseItem } = defineProps(["courseItem"]);
   margin: 0 auto;
   text-align: center;
   background: $c-white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+  border-radius: 32px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -61,7 +60,7 @@ const { courseItem } = defineProps(["courseItem"]);
     margin: 0 0 8px;
   }
   .frequency {
-    background: $c-grey-light;
+    background: $c-yellow-light-extra;
     padding: 8px 16px 6px;
     border-radius: 16px;
     display: inline-block;

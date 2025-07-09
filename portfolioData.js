@@ -23,7 +23,6 @@ export const portfolio = [
       "Prismic CMS",
       "Headless",
       "Vue / Nuxt",
-      "Interactive Map",
       "MapBox API",
     ],
     slug: "narratives-inc",
@@ -46,9 +45,7 @@ export const portfolio = [
     ],
     slug: "mark-knopfler",
     content:
-      "At officialCOMMUNITY, I designed all aspects of this website to complement the Dire Straits frontperson's 2018 album, ‘Down The Road Wherever’.</p><p>I built the custom WordPress theme to showcase his various content types, including a library of all past concerts with a linked retail offering of each date's authorized audio recording.</p><p>I also applied functionality customizations in PHP to his WooCommerce Store.</p>",
-    link: "https://narrativesinc.com/",
-    buttonText: "NarrativesInc.com",
+      "At officialCOMMUNITY, I designed all aspects of this website (2019 version, no longer online) to complement the Dire Straits frontperson's album, ‘Down The Road Wherever’.</p><p>I built the custom WordPress theme to showcase his various content types, including a library of all past concerts with a linked retail offering of each date's authorized audio recording.</p><p>I also applied functionality customizations in PHP to his WooCommerce Store.</p>",
   },
   {
     title: "Animal Movie Generator",
@@ -59,7 +56,7 @@ export const portfolio = [
     tags: ["Personal project", "React", "API", "Axios", "JavaScript App"],
     slug: "animal-movie-generator",
     content:
-      "<p>I built this React app to offer a new way of finding your next must-watch.</p><p>It uses Axios to retrieve the data from the TMDB API.</p><p>I enjoyed the dynamic film perforations using SVG&nbsp;shapes.</p>",
+      "<p>I built this React app to offer animal lovers a new way of finding their next must-watch movie.</p><p>It uses Axios to retrieve data from the TMDB API.</p><p>I had a lot of fun creating the dynamic film perforations using SVG&nbsp;shapes.</p>",
     link: "https://animal-movie-generator.netlify.app/",
     buttonText: "Animal Movie Generator",
   },

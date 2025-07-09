@@ -6,7 +6,6 @@
           <div class="half">
             <p class="eyebrow">Howdy</p>
             <h1>I code websites and data-driven web apps</h1>
-            <a class="button" href="mailto:culham.laura@gmail.com">Email</a>
           </div>
           <div class="half">
             <picture>
@@ -15,8 +14,8 @@
               <img
                 src="/Laura-Salgado.png"
                 alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
-                width="504"
-                height="567"
+                width="360"
+                height="405"
               />
             </picture>
           </div>
@@ -569,10 +568,7 @@ section {
     padding: 64px 0;
   }
   &.intro {
-    padding: 128px 0 64px;
-    @media (max-width: 1300px) {
-      padding: 64px 0;
-    }
+    padding: 64px 0;
     @media (max-width: 750px) {
       padding-top: 32px;
     }
@@ -581,8 +577,13 @@ section {
 .intro-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   align-items: center;
   grid-gap: 64px;
+  img {
+    width: 360px;
+    margin: 0 0 0 auto;
+  }
   @media (max-width: 992px) {
     grid-gap: 32px;
   }
@@ -590,7 +591,7 @@ section {
     display: flex;
     flex-direction: column-reverse;
     img {
-      width: 320px;
+      width: 200px;
       margin: 0 auto;
     }
   }
@@ -606,6 +607,7 @@ section {
 }
 
 section.portfolio {
+  background: $c-grey-light-extra;
   .portfolio-mobile {
     display: none;
     @media (max-width: 750px) {
@@ -627,7 +629,8 @@ section.portfolio {
   }
 }
 section.skills,
-section.education {
+section.education,
+section.agency-skills {
   background: $c-grey-light-extra;
   h2,
   .eyebrow {
@@ -669,11 +672,9 @@ section.education {
   padding: 32px 0 0;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 750px) {
     padding: 32px 32px 0;
-    border-radius: 16px;
   }
   @media (max-width: 370px) {
     padding: 32px 16px 0;
@@ -706,8 +707,7 @@ section.agency-skills {
   .lists-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: $c-grey-light-extra;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    background: $c-white;
     padding: 64px;
     border-radius: 32px;
     gap: 64px;
@@ -723,7 +723,6 @@ section.agency-skills {
     @media (max-width: 750px) {
       grid-template-columns: 1fr;
       padding: 32px;
-      border-radius: 16px;
     }
     li {
       margin-bottom: 32px;
@@ -760,12 +759,16 @@ section.media {
 }
 
 section.art {
+  background: $c-white;
+  @media (max-width: 992px) {
+    background: $c-grey-light-extra;
+  }
+
   .art-desktop {
     @media (max-width: 992px) {
       display: none;
     }
   }
-
   .art-tablet {
     display: none;
     @media (max-width: 992px) {
@@ -828,7 +831,7 @@ section.has-swiper {
     color: $c-white;
     top: auto;
     left: 0;
-    bottom: 0px;
+    bottom: -16px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -844,7 +847,7 @@ section.has-swiper {
     color: $c-white;
     top: auto;
     right: 0;
-    bottom: 0px;
+    bottom: -16px;
     width: 40px;
     height: 40px;
     border-radius: 50%;

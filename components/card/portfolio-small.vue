@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-card">
+  <div class="portfolio-card small">
     <nuxt-link
       :portfolioData="portfolioItem"
       :to="`/portfolio/${portfolioItem.slug}`"
@@ -19,14 +19,8 @@
         </div>
       </div>
 
-      <div class="bottom">
-        <h3>{{ portfolioItem.title }}</h3>
-
-        <ul class="tags no-format">
-          <li v-for="(tag, index) in portfolioItem.tags" :key="index">
-            {{ tag }}<span>&#8226;</span>
-          </li>
-        </ul>
+      <div class="bottom h3">
+        {{ portfolioItem.title }}
       </div>
     </nuxt-link>
   </div>
@@ -44,23 +38,21 @@ a {
   overflow: hidden;
   text-decoration: none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  width: 260px;
+  max-width: calc(50vw - 24px);
+  @media (min-width: 370px) {
+    max-width: calc(50vw - 42px);
+  }
+  @media (min-width: 750px) {
+    max-width: calc(50vw - 74px);
+  }
   &:hover,
   &:focus {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    h3 {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
     .card-image :after {
       opacity: 1;
     }
-  }
-}
-
-h3 {
-  margin: 8px 0;
-  @media (min-width: 750px) {
-    margin: 0 0 8px;
   }
 }
 
@@ -97,34 +89,5 @@ img {
   z-index: 2;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-}
-
-.tags {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  @media (max-width: 750px) {
-    display: block;
-    margin-bottom: 16px;
-  }
-  li {
-    margin: 0 16px 4px 0;
-    @media (max-width: 750px) {
-      margin: 0 0 2px 0;
-    }
-
-    span {
-      display: inline-block;
-      padding-left: 16px;
-      @media (max-width: 750px) {
-        display: none;
-      }
-    }
-    &:last-child span {
-      display: none;
-    }
-  }
 }
 </style>
