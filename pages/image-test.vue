@@ -8,16 +8,27 @@
             <h1>I code websites and data-driven web apps</h1>
           </div>
           <div class="half">
-            <picture>
-              <source srcset="/Laura-Salgado-360-405.webp" type="image/webp" />
-              <source srcset="/Laura-Salgado-360-405.png" type="image/png" />
-              <img
-                src="/Laura-Salgado.png"
-                alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
-                width="360"
-                height="405"
-              />
-            </picture>
+            <!-- <NuxtImg
+              src="/Laura-Salgado.png"
+              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+              width="360"
+              height="405"
+            /> -->
+
+            <NuxtImg
+              src="/Laura-Salgado.png"
+              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+              width="360"
+              height="405"
+            />
+
+            <NuxtPicture
+              format="webp"
+              src="/Laura-Salgado.png"
+              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+              width="360"
+              height="405"
+            />
           </div>
         </div>
       </div>

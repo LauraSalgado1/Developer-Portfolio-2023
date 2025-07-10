@@ -15,6 +15,7 @@
     "sass-loader": "^13.2.0"
   },
   "dependencies": {
+    "@nuxt/image": "^1.10.0",
     "nuxt-icon": "^0.3.3",
     "nuxt-swiper": "^1.0.1"
   }

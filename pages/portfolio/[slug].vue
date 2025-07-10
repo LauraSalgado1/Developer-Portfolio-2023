@@ -4,7 +4,7 @@
       <div class="inner">
         <nuxt-link class="back" to="/">
           <Icon name="ooui:arrow-previous-ltr" width="16" height="16" />
-          Home
+          🏠 Home
         </nuxt-link>
 
         <picture>
