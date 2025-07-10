@@ -59,8 +59,8 @@ const { mediaItem } = defineProps(["mediaItem"]);
 <style scoped lang="scss">
 .media-card {
   background: $c-white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
   text-decoration: none;
   overflow: hidden;
   display: flex;
@@ -68,7 +68,7 @@ const { mediaItem } = defineProps(["mediaItem"]);
   justify-content: stretch;
   align-items: flex-start;
   &:hover {
-    box-shadow: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     h3 {
       text-decoration: underline;
     }

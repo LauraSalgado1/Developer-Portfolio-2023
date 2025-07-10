@@ -26,7 +26,11 @@ export default defineNuxtConfig({
       },
     ],
     "nuxt-icon",
+    "@nuxt/image",
   ],
+  image: {
+    format: ["webp"],
+  },
   extends: ["nuxt-seo-kit"],
   runtimeConfig: {
     public: {

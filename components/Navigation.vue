@@ -5,20 +5,20 @@
     :class="{ scrolled: scrolled, up: direction == 'SCROLL_UP' }"
   >
     <nav aria-label="main site navigation">
-      <ul class="no-format f-ui">
+      <ul class="no-format">
         <li>
           <NuxtLink class="home" to="/">
             <img
               src="/Laura-Salgado-Developer-Since-2016.svg"
               alt="Home page of Laura Salgado Developer Since 2016"
-              width="300"
-              height="100"
+              width="200"
+              height="67"
             />
           </NuxtLink>
         </li>
         <li>
           <a href="mailto:culham.laura@gmail.com" title="email me">
-            <Icon name="mdi-email" width="32" height="32" />
+            <Icon name="mdi-email" width="22" height="22" />
             <span class="address">culham.laura@gmail.com </span>
           </a>
         </li>
@@ -73,6 +73,7 @@ onMounted(() => {
   background: $c-white;
   opacity: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  font-size: 1.4rem;
 
   &.scrolled {
     opacity: 0;
@@ -120,16 +121,10 @@ nav ul {
     padding: 0 16px;
   }
 
-  li:first-child a {
+  li:first-child {
     position: relative;
     left: -12px;
-    width: 300px;
     @media (max-width: 750px) {
-      width: 256px;
-      left: -8px;
-    }
-    @media (max-width: 370px) {
-      width: 200px;
       left: -8px;
     }
   }
@@ -142,8 +137,8 @@ nav ul {
       gap: 8px;
       @media (max-width: 750px) {
         svg {
-          width: 48px;
-          height: 48px;
+          width: 32px;
+          height: 32px;
         }
       }
     }

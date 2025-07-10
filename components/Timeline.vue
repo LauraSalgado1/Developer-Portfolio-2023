@@ -20,11 +20,10 @@ const { group } = defineProps(["group"]);
 .year {
   text-align: left;
   background: $c-yellow-light-extra;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   display: inline-block;
   margin: 0 auto;
   padding: 16px 16px 16px 32px;
-  border-radius: 16px 0px 0px 16px;
+  border-radius: 32px 0px 0px 32px;
   position: sticky;
   top: 0px;
   transform: translateX(-100%);
@@ -35,7 +34,7 @@ const { group } = defineProps(["group"]);
     padding: 16px 0px 16px 39px;
     transform: rotate(180deg) translateX(100%);
     transform-origin: center;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0px 32px 32px 0px;
     writing-mode: vertical-lr;
   }
   @media (max-width: 750px) {
@@ -43,7 +42,7 @@ const { group } = defineProps(["group"]);
     width: auto;
     position: static;
     transform: none;
-    border-radius: 8px 8px 0 0;
+    border-radius: 32px 32px 0 0;
     padding: 8px 16px;
     text-align: center;
   }

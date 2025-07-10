@@ -14,7 +14,7 @@
                 height="16"
                 color="#fff"
               />
-              Home</nuxt-link
+              🏠 Home</nuxt-link
             >
 
             <h1>Whoops</h1>
@@ -49,7 +49,8 @@
         </section>
         <section class="lower">
           <div class="inner">
-            <p class="p1">Nothing here!</p>
+            <p class="p1">404 Page not found</p>
+            <nuxt-link class="button" to="/">Return Home</nuxt-link>
           </div>
         </section>
       </main>

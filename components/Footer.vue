@@ -6,15 +6,15 @@
           class="footer-logo"
           src="/Laura-Salgado-Developer-Since-2016-light.svg"
           alt="Illustration of a cute white cat. Text reads Laura Salgado Developer Since 2016"
-          width="400"
-          height="134"
+          width="300"
+          height="100"
         />
       </NuxtLink>
 
       <ul class="socials no-format">
         <li>
           <a href="mailto:culham.laura@gmail.com" target="_blank" title="Email">
-            <Icon name="mdi-email" width="40" height="40" color="#fff" />
+            <Icon name="mdi-email" width="30" height="30" color="#fff" />
             <span class="screen-reader-text">Email culham.laura@gmail.com</span>
           </a>
         </li>
@@ -25,7 +25,7 @@
             target="_blank"
             title="GitHub"
           >
-            <Icon name="mdi-github" width="40" height="40" color="#fff" />
+            <Icon name="mdi-github" width="30" height="30" color="#fff" />
             <span class="screen-reader-text">Github</span>
           </a>
         </li>
@@ -36,7 +36,7 @@
             target="_blank"
             title="CodePen"
           >
-            <Icon name="mdi-codepen" width="40" height="40" color="#fff" />
+            <Icon name="mdi-codepen" width="30" height="30" color="#fff" />
             <span class="screen-reader-text">CodePen</span>
           </a>
         </li>
@@ -47,7 +47,7 @@
             target="_blank"
             title="LinkedIn"
           >
-            <Icon name="mdi-linkedin" width="40" height="40" color="#fff" />
+            <Icon name="mdi-linkedin" width="30" height="30" color="#fff" />
             <span class="screen-reader-text">Linked In</span>
           </a>
         </li>
@@ -58,7 +58,7 @@
             target="_blank"
             title="Instagram"
           >
-            <Icon name="mdi:instagram" width="50" height="40" color="#fff" />
+            <Icon name="mdi:instagram" width="30" height="30" color="#fff" />
             <span class="screen-reader-text">Insta</span>
           </a>
         </li>
@@ -107,6 +107,7 @@ const year = new Date().getFullYear();
   padding: 32px 64px 16px;
   background: $c-black;
   color: $c-white;
+  font-size: 1.4rem;
   @media (max-width: 1500px) {
     padding: 32px 0 16px;
   }

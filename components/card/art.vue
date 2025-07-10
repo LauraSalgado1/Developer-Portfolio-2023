@@ -10,12 +10,7 @@
         height="313"
       />
     </picture>
-    <!-- <img
-      :src="artItem.image"
-      :alt="artItem.imageAlt"
-      width="313"
-      height="313"
-    /> -->
+
     <div class="overlay">
       <ul class="tags">
         <li v-for="tag in artItem.tags" :key="tag">
@@ -54,13 +49,7 @@ const { artItem } = defineProps(["artItem"]);
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
-  border-bottom-right-radius: 16px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
-  @media (max-width: 992px) {
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-  }
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 .dark {
@@ -76,7 +65,7 @@ const { artItem } = defineProps(["artItem"]);
   }
 }
 
-//used on desktop hover
+//used on desktop hover and shows as white card bottom on tablet and below
 .overlay {
   position: absolute;
   top: 0;
@@ -93,29 +82,31 @@ const { artItem } = defineProps(["artItem"]);
   opacity: 0;
   transition: opacity 0.1s ease;
   overflow: scroll;
-  border-radius: 16px;
   @media (max-width: 1120px) {
     padding: 16px;
   }
   @media (max-width: 992px) {
     position: static;
     opacity: 1;
-    background: transparent;
+    background: $c-white;
     color: $c-black;
-    padding: 16px 0;
+    padding: 16px 16px 24px;
   }
 }
 
 a {
   text-decoration: none;
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
+  overflow: hidden;
   display: block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   &:hover {
     cursor: pointer;
   }
   &:hover,
   &:focus {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     .overlay {
       opacity: 1;
     }
@@ -136,12 +127,10 @@ a {
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     aspect-ratio: 1/1;
-    border-radius: 16px;
     opacity: 0;
     transition: opacity 0.1s ease;
   }
   @media (max-width: 992px) {
-    box-shadow: none;
     &:hover,
     &:focus {
       &:after {
