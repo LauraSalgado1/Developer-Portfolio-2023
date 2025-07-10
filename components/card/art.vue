@@ -1,15 +1,13 @@
 <template>
   <a class="art-card" :href="artItem.link" target="_blank">
-    <picture>
-      <source :srcset="artItem.image" type="image/webp" />
-      <source :srcset="artItem.imageFallback" type="image/png" />
-      <img
-        :src="artItem.imageFallback"
-        :alt="artItem.imageAlt"
-        width="313"
-        height="313"
-      />
-    </picture>
+    <NuxtPicture
+      format="webp"
+      :src="artItem.imageFallback"
+      :alt="artItem.imageAlt"
+      width="313"
+      height="313"
+      sizes="100vw md:313px"
+    />
 
     <div class="overlay">
       <ul class="tags">

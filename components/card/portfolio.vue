@@ -6,16 +6,14 @@
     >
       <div class="card-image-wrapper">
         <div class="card-image">
-          <picture>
-            <source :srcset="portfolioItem.image" type="image/webp" />
-            <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
-            <img
-              :src="portfolioItem.imageFallback"
-              :alt="portfolioItem.imageAlt"
-              width="757"
-              height="426"
-            />
-          </picture>
+          <NuxtPicture
+            format="webp"
+            :src="portfolioItem.imageFallback"
+            :alt="portfolioItem.imageAlt"
+            width="757"
+            height="426"
+            sizes="100vw lg:757px"
+          />
         </div>
       </div>
 
