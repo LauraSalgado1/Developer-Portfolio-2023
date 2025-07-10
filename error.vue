@@ -17,7 +17,7 @@
               🏠 Home</nuxt-link
             >
 
-            <h1>Whoops</h1>
+            <h1>404 Page not found</h1>
 
             <ul class="tags no-format h4">
               <li>
@@ -35,21 +35,19 @@
               <li>Not again</li>
             </ul>
 
-            <picture>
-              <source srcset="/404.webp" type="image/webp" />
-              <source srcset="/404.jpg" type="image/jpeg" />
-              <img
-                src="/404.jpg"
-                alt="Fluffy white cat laying on the floor."
-                width="512"
-                height="288"
-              />
-            </picture>
+            <NuxtPicture
+              format="webp"
+              src="/404.jpg"
+              alt="Fluffy white cat laying on the floor."
+              width="512"
+              height="288"
+              sizes="100vw sm:512px"
+            />
           </div>
         </section>
         <section class="lower">
           <div class="inner">
-            <p class="p1">404 Page not found</p>
+            <h2>Whoops</h2>
             <nuxt-link class="button" to="/">Return Home</nuxt-link>
           </div>
         </section>

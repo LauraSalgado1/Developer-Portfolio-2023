@@ -8,16 +8,14 @@
             <h1>I code websites and data-driven web apps</h1>
           </div>
           <div class="half">
-            <picture>
-              <source srcset="/Laura-Salgado-360-405.webp" type="image/webp" />
-              <source srcset="/Laura-Salgado-360-405.png" type="image/png" />
-              <img
-                src="/Laura-Salgado.png"
-                alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
-                width="360"
-                height="405"
-              />
-            </picture>
+            <NuxtPicture
+              format="webp"
+              src="/Laura-Salgado.png"
+              alt="Photo of Laura Salgado with a light yellow circular shape in the background. She's wearing a white and black striped t shirt."
+              width="360"
+              height="405"
+              sizes="200px md:304px lg:360px"
+            />
           </div>
         </div>
       </div>
@@ -582,9 +580,10 @@ section {
   justify-content: center;
   align-items: center;
   grid-gap: 64px;
-  img {
-    width: 360px;
-    margin: 0 0 0 auto;
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media (max-width: 992px) {
     grid-gap: 32px;
@@ -592,9 +591,8 @@ section {
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column-reverse;
-    img {
+    picture {
       width: 200px;
-      margin: 0 auto;
     }
   }
 }

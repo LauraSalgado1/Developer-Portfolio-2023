@@ -7,14 +7,14 @@
           🏠 Home
         </nuxt-link>
 
-        <picture>
-          <source :srcset="portfolioItem.image" type="image/webp" />
-          <source :srcset="portfolioItem.imageFallback" type="image/jpeg" />
-          <img
-            :src="portfolioItem.imageFallback"
-            :alt="portfolioItem.imageAlt"
-          />
-        </picture>
+        <NuxtPicture
+          format="webp"
+          :src="portfolioItem.imageFallback"
+          :alt="portfolioItem.imageAlt"
+          width="1072"
+          height="429"
+          sizes="100vw lg:1072px"
+        />
 
         <h1 v-html="portfolioItem.title"></h1>
         <ul class="tags no-format">
