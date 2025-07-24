@@ -322,6 +322,8 @@ const skillCardsLeft = [
     list: [
       "Shopify Custom Themes",
       "WP Custom themes and child themes",
+      "React Gutenberg blocks from scratch",
+
       "Customization of widely used WP plugins, e.g. WooCommerce",
     ],
   },
