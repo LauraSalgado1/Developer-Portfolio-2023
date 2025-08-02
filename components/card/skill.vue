@@ -36,6 +36,7 @@ const { skillItem } = defineProps(["skillItem"]);
   margin-bottom: 32px;
   @media (max-width: 750px) {
     border-radius: 16px;
+    padding: 16px;
   }
   @media (max-width: 370px) {
     grid-template-columns: 48px 1fr;

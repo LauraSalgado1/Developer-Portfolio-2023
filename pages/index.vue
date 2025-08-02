@@ -45,7 +45,7 @@
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
           :slides-per-view="1.1"
           :navigation="true"
-          :space-between="32"
+          :space-between="16"
         >
           <SwiperSlide v-for="(item, index) in portfolio" :key="index">
             <CardPortfolio :portfolioItem="item" />
@@ -113,7 +113,7 @@
           class="art-mobile"
           :modules="[SwiperA11y, SwiperNavigation, SwiperPagination]"
           :navigation="true"
-          :space-between="32"
+          :space-between="16"
           :slides-per-view="1.1"
         >
           <SwiperSlide v-for="artItem in artCards" :key="artItem.title">

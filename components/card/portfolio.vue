@@ -98,15 +98,17 @@ img {
   border-top-left-radius: 8px;
 }
 
-.tags {
+.tags.no-format {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   @media (max-width: 750px) {
-    display: block;
+    flex-direction: column;
     margin-bottom: 16px;
+    list-style: disc;
+    padding-left: 20px;
   }
   li {
     margin: 0 16px 4px 0;
