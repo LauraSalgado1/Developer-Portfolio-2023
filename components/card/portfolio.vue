@@ -69,6 +69,7 @@ h3 {
   }
 }
 
+picture,
 img {
   aspect-ratio: 16/9;
   object-fit: cover;
