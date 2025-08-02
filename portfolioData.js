@@ -1,18 +1,5 @@
 export const portfolio = [
   {
-    title: "Céline Dion",
-    image: "/celine-dion-home.webp",
-    imageFallback: "/celine-dion-home.jpg",
-    imageAlt:
-      "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
-    tags: ["Agency project", "Custom WordPress theme", "PHP", "CSS Animation"],
-    slug: "celine-dion",
-    content:
-      "<p>At officialCOMMUNITY, we had the privilege of working with Sony Music Canada to bring their opulent designs to life for Céline Dion.</p><p>To fulfill their specific design vision, I coded parallax images that animate from blur to sharp focus, parallax scollling text areas, and navigation menu transitions.</p><p>Check out the <a href='https://codepen.io/Laura_Salgado/pen/wOYWEV/5584324389d4380d4e4ef3a0274eed85' target='_blank'>CodePen</a> I used to workshop my scrolling animations.</p><p>I coded most of the custom WordPress theme, which also includes some contributions from officialCOMMUNITY's other (awesome!) front-end team members.</p>",
-    link: "https://www.celinedion.com/",
-    buttonText: "CelineDion.com",
-  },
-  {
     title: "Narratives Inc.",
     image: "/Narratives.webp",
     imageFallback: "/Narratives.png",
@@ -22,14 +9,34 @@ export const portfolio = [
       "Agency project",
       "Prismic CMS",
       "Headless",
-      "Vue / Nuxt",
       "MapBox API",
+      "Vue / Nuxt",
+      "Filtering",
     ],
     slug: "narratives-inc",
     content:
-      '<p>At The Hatchery Labs, I built the Prismic CMS website in Nuxt for Narratives Inc, an organization engaged on the path to reconcialiation "from the place where the Red meets the Assiniboine, within the traditional territories of the Anishinaabe, the Cree, the Anisininew, the Dakota, and the Dene peoples, in Treaty 1 territory, and the homeland of the Métis".</p><p>With the exception of the GSAP scrolling text animations found on the home, about, and career pages, I coded all aspects of this website. Some interesting challenges included filtering by communities of practice on the <a href="https://narrativesinc.com/team" target="_blank">Team Page</a>, filtering by multiple topics on the <a href="https://narrativesinc.com/journal" target="_blank">Journal</a>, and creating a sticky and style-transforming category navigation on the <a href="https://narrativesinc.com/services/planning" target="_blank">Services Section</a>.<p><p>Using the MapBox API, I built a custom, filterable map to visually demonstrate the scope of their <a href="https://narrativesinc.com/projects">Projects</a>. </p><p>I\'m proud of the work I\'ve done on this project, and the fact that my tech know-how can be used for important social justice movements.</p>',
+      '<p>I built the Prismic CMS website in Vue for Narratives Inc, an organization engaged on the path to reconcialiation "from the place where the Red meets the Assiniboine, within the traditional territories of the Anishinaabe, the Cree, the Anisininew, the Dakota, and the Dene peoples, in Treaty 1 territory, and the homeland of the Métis".</p><p>With the exception of the GSAP scrolling text animations found on the home, about, and career pages, I coded all aspects of this website.</p><p>Some interesting challenges included filtering by multiple topics on the <a href="https://narrativesinc.com/journal" target="_blank">Journal</a> (I really like this UI design of multiple queries with removable sticky notes!), and creating a style-transforming category navigation on the <a href="https://narrativesinc.com/services/planning" target="_blank">Services Section</a>.<p><p>The <strong>BIGGEST</strong> dev challenge was the <a href="https://narrativesinc.com/projects">interactive map</a> to visually demonstrate the scope of their Projects. Using the MapBox API, I coded a completely custom, multi-filterable map view. On the CMS side, each project is assigned x and y coordinates using Prismic\'s Geopoint field type, which I used as geojson in Mapbox to assign positions.</p><p>I\'m proud of the work I\'ve done on this project, and the fact that my tech know-how can be used for important social movements.</p>',
     link: "https://narrativesinc.com/",
     buttonText: "NarrativesInc.com",
+  },
+  {
+    title: "Céline Dion",
+    image: "/celine-dion-home.webp",
+    imageFallback: "/celine-dion-home.jpg",
+    imageAlt:
+      "Screenshot of Celine Dion's website. Photo of Celine Dion wearing a sparkling red ballgown and standing in front of a tall flame. Text reads Celine Dion Courage.",
+    tags: [
+      "Agency project",
+      "Custom WordPress theme",
+      "PHP",
+      "GSAP",
+      "Flexible Content",
+    ],
+    slug: "celine-dion",
+    content:
+      "<p>This site is multilingual (obvs), and the custom PHP WordPress theme was built using Advanced Custom Fields and custom post types. I built it in 2018, so it uses a page template style of theme, rather than the more modern \"full site editing\" themes and blocks we use today.</p><p>Using GSAP, I coded parallax-movement images that also animate from blur to sharp focus on scroll. It uses an SVG filter and tweens to define the start and end states of \"top\" and \"opacity\" CSS properties. Check out the <a href='https://codepen.io/Laura_Salgado/pen/wOYWEV/5584324389d4380d4e4ef3a0274eed85' target='_blank'>CodePen</a> I used to workshop my scrolling animations!</p><p>I used ACF's flexible content field type to allow for multiple layout options per page all over the site. I guess I was thinking in blocks already.</p><p>On the home page, each callout's data includes a group of radio buttons to assign one of four heading positions (using a mix of top, bottom, left, and right CSS properties) from the WordPress admin dashboard. In the bottom row, you can see how the heading for Team Celine is aligned to the bottom right, and the heading for Music is aligned to the bottom left. I like to make the content and style editing experience easy and intuitive for the WordPress user.</p>",
+    link: "https://www.celinedion.com/",
+    buttonText: "CelineDion.com",
   },
   {
     title: "Mark Knopfler - Dire Straits",
@@ -45,7 +52,7 @@ export const portfolio = [
     ],
     slug: "mark-knopfler",
     content:
-      "At officialCOMMUNITY, I designed all aspects of this website (2019 version, no longer online) to complement the Dire Straits frontperson's album, ‘Down The Road Wherever’.</p><p>I built the custom WordPress theme to showcase his various content types, including a library of all past concerts with a linked retail offering of each date's authorized audio recording.</p><p>I also applied functionality customizations in PHP to his WooCommerce Store.</p>",
+      "I designed all aspects of this website (2019 version, no longer online) to complement the album art of Mark Knopfler's solo album, \"Down The Road Wherever\".</p><p>I coded the custom WordPress PHP theme to showcase his various content types.</p><p>One touch I thought was really special was a library of all past concerts, featuring a linked retail offering of <strong>each concert's</strong> individual authorized audio recording. I think granting a devoted fan the opportunity to be able to collect the audio they actually heard live is pretty unique.</p><p>I also applied functionality customizations in PHP to his WordPress WooCommerce Store.</p>",
   },
   {
     title: "Animal Movie Generator",
