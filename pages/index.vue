@@ -309,7 +309,22 @@ const skillCardsLeft = [
   {
     heading: "JavaScript Frameworks",
     icon: "mdi:language-javascript",
-    list: ["React", "Vue", "Nuxt 2", "Nuxt 3"],
+    list: [
+      "React & Next",
+      "Vue & Nuxt",
+      "PostgreSQL Databases",
+      "CI/CD: Vercel, Netlify",
+    ],
+  },
+  {
+    heading: "Code Basics",
+    icon: "ic:baseline-code",
+    list: [
+      "HTML5",
+      "CSS3 with Sass, Tailwind",
+      "JavaScript (ES16), TypeScript",
+      "PHP",
+    ],
   },
   {
     heading: "Headless CMS",
@@ -320,21 +335,10 @@ const skillCardsLeft = [
     heading: "Theming CMS",
     icon: "ion:logo-wordpress",
     list: [
-      "Shopify Custom Themes",
+      "Shopify Custom Themes, Liquid",
       "WP Custom themes and child themes",
       "React Gutenberg blocks from scratch",
-
       "Customization of widely used WP plugins, e.g. WooCommerce",
-    ],
-  },
-  {
-    heading: "Code Basics",
-    icon: "ic:baseline-code",
-    list: [
-      "HTML5",
-      "CSS3 with Sass, Tailwind",
-      "JavaScript, TypeScript",
-      "PHP",
     ],
   },
 ];
