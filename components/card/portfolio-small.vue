@@ -61,6 +61,7 @@ a {
   }
 }
 
+picture,
 img {
   aspect-ratio: 16/9;
   object-fit: cover;
