@@ -11,9 +11,9 @@
           format="webp"
           :src="portfolioItem.imageFallback"
           :alt="portfolioItem.imageAlt"
-          width="1072"
+          width="757"
           height="429"
-          sizes="100vw lg:1072px"
+          sizes="100vw lg:757px"
         />
 
         <h1 v-html="portfolioItem.title"></h1>
@@ -123,13 +123,8 @@ useSeoMeta({
 
 <style scoped lang="scss">
 section.header {
-  img {
-    display: block;
-    border-radius: 8px;
-    width: 100%;
-    aspect-ratio: 2.5/1;
-    object-fit: cover;
-    object-position: top center;
+  .inner {
+    width: 885px;
   }
   h1 {
     margin: 32px 0 8px;
@@ -163,7 +158,7 @@ section {
   }
 }
 
-.tags {
+.tags.no-format {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -173,8 +168,13 @@ section {
   font-weight: 400;
   gap: 16px;
   @media (max-width: 750px) {
-    display: block;
-    text-align: center;
+    flex-direction: column;
+    text-align: left;
+    list-style: disc;
+    padding-left: 20px;
+    width: 140px;
+    margin: 0 auto 20px;
+    gap: 4px;
   }
   li {
     span {
