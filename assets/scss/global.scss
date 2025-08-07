@@ -40,7 +40,10 @@ svg {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   background: $c-black;
   color: $c-white;
   text-decoration: none;
