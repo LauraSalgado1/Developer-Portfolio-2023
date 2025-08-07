@@ -46,6 +46,12 @@
           color="#272727"
           class="icon"
         />
+        <Icon
+          name="cuida:open-in-new-tab-outline"
+          width="18"
+          height="18"
+          color="#272727"
+        />
       </p>
     </div>
   </a>

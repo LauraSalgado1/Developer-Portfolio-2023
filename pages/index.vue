@@ -6,6 +6,17 @@
           <div class="half">
             <p class="eyebrow">Howdy 👋🤠</p>
             <h1>I code websites and data-driven web apps</h1>
+            <a
+              class="button"
+              href="/laura-salgado-resume-2025.pdf"
+              target="_blank"
+              >View Resume PDF
+              <Icon
+                name="cuida:open-in-new-tab-outline"
+                width="16"
+                height="16"
+                color="#fff"
+            /></a>
           </div>
           <div class="half">
             <NuxtPicture
@@ -321,8 +332,8 @@ const skillCardsLeft = [
     icon: "ic:baseline-code",
     list: [
       "HTML5",
-      "CSS3 with Sass, Tailwind",
-      "JavaScript (ES16), TypeScript",
+      "CSS3, SCSS, Tailwind",
+      "JavaScript (ES6+), TypeScript",
       "PHP",
     ],
   },
@@ -371,7 +382,7 @@ const skillCardsRight = [
     heading: "Design Tools",
     icon: "ic:sharp-select-all",
     iconSmall: true,
-    list: ["Figma", "Adobe", "Sketch"],
+    list: ["Figma", "Adobe"],
   },
 ];
 
